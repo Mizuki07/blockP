@@ -345,16 +345,6 @@
                                         "children": []
                                     }
                                 ]
-                            },
-                            {
-                                "id": "c9b98fab-b923-549f-ef3a-0bb3e3948925",
-                                "type": "/Story/Chara",
-                                "x": 20,
-                                "y": 1190,
-                                "parameters": {},
-                                "ports": [],
-                                "dynamicports": [],
-                                "children": []
                             }
                         ]
                     },
@@ -17537,7 +17527,7 @@
                         "y": 491.2570428543712,
                         "parameters": {
                             "enabled": true,
-                            "topic": "/word"
+                            "topic": "/string"
                         },
                         "ports": [
                             {
@@ -18044,7 +18034,7 @@
                 "connections": [
                     {
                         "fromId": "b9902576-9867-b33c-6fb9-64f90576370d",
-                        "fromProperty": "word",
+                        "fromProperty": "string",
                         "toId": "ffa9b21d-46ab-ee16-59b6-b04a54a07e3b",
                         "toProperty": "text"
                     },
@@ -18061,14 +18051,8 @@
                         "toProperty": "quest"
                     },
                     {
-                        "fromId": "107a6df8-137f-eb96-00ed-b2a06c169743",
-                        "fromProperty": "judgment",
-                        "toId": "2219c3aa-18db-50ce-ec45-4c8c99b84db5",
-                        "toProperty": "text"
-                    },
-                    {
                         "fromId": "b9902576-9867-b33c-6fb9-64f90576370d",
-                        "fromProperty": "word",
+                        "fromProperty": "string",
                         "toId": "107a6df8-137f-eb96-00ed-b2a06c169743",
                         "toProperty": "word"
                     },
@@ -18157,31 +18141,13 @@
                                 "ports": [],
                                 "dynamicports": [],
                                 "children": []
-                            },
-                            {
-                                "id": "2219c3aa-18db-50ce-ec45-4c8c99b84db5",
-                                "type": "Text",
-                                "version": 2,
-                                "label": "judgement",
-                                "x": 604.1156082189029,
-                                "y": 744.2627257414317,
-                                "parameters": {
-                                    "fontSize": 200,
-                                    "text": "judgement",
-                                    "color": "#ffba4b",
-                                    "fontFamily": "A-OTF-FutoMinA101Pro-Bold.otf",
-                                    "alignX": "center"
-                                },
-                                "ports": [],
-                                "dynamicports": [],
-                                "children": []
                             }
                         ]
                     },
                     {
                         "id": "1c38e7d3-3c44-73db-0ee0-8c5010a47f52",
                         "type": "Component Inputs",
-                        "x": 394.0838343410486,
+                        "x": 377.0668149386298,
                         "y": 479.21911901120245,
                         "parameters": {},
                         "ports": [
@@ -18208,15 +18174,15 @@
                     {
                         "id": "b9902576-9867-b33c-6fb9-64f90576370d",
                         "type": "Receive Message",
-                        "x": 384.2251094452365,
-                        "y": 689.6162244577157,
+                        "x": 154.2410926619786,
+                        "y": 876.5491830337173,
                         "parameters": {
                             "enabled": true,
-                            "topic": "/word"
+                            "topic": "/string"
                         },
                         "ports": [
                             {
-                                "name": "word",
+                                "name": "string",
                                 "plug": "outputs",
                                 "type": {
                                     "name": "*",
@@ -18327,8 +18293,8 @@
                     {
                         "id": "422b395a-49fb-60fc-c5ba-dbda12b760af",
                         "type": "Expression",
-                        "x": 100.96930056420362,
-                        "y": 751.3771900617762,
+                        "x": 95.29696076339741,
+                        "y": 757.0495298625825,
                         "parameters": {
                             "expression": "id.slice(1,2)"
                         },
@@ -18361,8 +18327,8 @@
                     {
                         "id": "b8d0657b-f770-e9be-6f1a-a4cff9415dd7",
                         "type": "Component Outputs",
-                        "x": 642.0622129445331,
-                        "y": 907.4674714428984,
+                        "x": 623.2887461311221,
+                        "y": 801.8956664814042,
                         "parameters": {},
                         "ports": [
                             {
@@ -19116,8 +19082,8 @@
                                 "id": "bbf0e218-840b-8c1d-a790-c90b0c2981f4",
                                 "type": "Image",
                                 "version": 2,
-                                "x": 20,
-                                "y": 168,
+                                "x": 196,
+                                "y": 439,
                                 "parameters": {
                                     "image": "moji.png",
                                     "alignY": "bottom"
@@ -19146,8 +19112,8 @@
                                 "id": "b461ab49-8405-42ac-dc90-21a866db0a24",
                                 "type": "Group",
                                 "version": 2,
-                                "x": 196,
-                                "y": 561,
+                                "x": 20,
+                                "y": 290,
                                 "parameters": {
                                     "height": {
                                         "value": 160,
@@ -19243,7 +19209,9 @@
                         "label": "Root",
                         "x": 155,
                         "y": 368,
-                        "parameters": {},
+                        "parameters": {
+                            "padding": 40
+                        },
                         "ports": [],
                         "dynamicports": [],
                         "children": [
@@ -19266,7 +19234,10 @@
                                 "x": 20,
                                 "y": 107,
                                 "parameters": {
-                                    "text": "XXだね"
+                                    "text": "XXだね",
+                                    "color": "#000000",
+                                    "fontSize": 64,
+                                    "alignX": "center"
                                 },
                                 "ports": [],
                                 "dynamicports": [],
@@ -19345,9 +19316,11 @@
                         "type": "Group",
                         "version": 2,
                         "label": "Root",
-                        "x": 149,
-                        "y": 427,
-                        "parameters": {},
+                        "x": 147.94141241060595,
+                        "y": 428.05858758939405,
+                        "parameters": {
+                            "padding": 40
+                        },
                         "ports": [],
                         "dynamicports": [],
                         "children": [
@@ -19371,8 +19344,9 @@
                                 "y": 107,
                                 "parameters": {
                                     "text": "こんにちは！",
-                                    "fontFamily": "A-OTF-FutoMinA101Pro-Bold.otf",
-                                    "color": "#000000"
+                                    "color": "#000000",
+                                    "fontSize": 64,
+                                    "alignX": "center"
                                 },
                                 "ports": [],
                                 "dynamicports": [],
@@ -19467,7 +19441,7 @@
             }
         },
         {
-            "name": "/Story/Scene/scene04",
+            "name": "/Story/Scene/Scene",
             "graph": {
                 "connections": [
                     {
@@ -19493,6 +19467,42 @@
                         "fromProperty": "Num",
                         "toId": "b0edc4ba-c6af-bde8-13e5-ad0b13728789",
                         "toProperty": "sceneNum"
+                    },
+                    {
+                        "fromId": "176a8c52-5cb9-6985-b090-0f339527e966",
+                        "fromProperty": "bgPath",
+                        "toId": "b5851ab9-8409-7b27-7682-699dccc63fd3",
+                        "toProperty": "image"
+                    },
+                    {
+                        "fromId": "176a8c52-5cb9-6985-b090-0f339527e966",
+                        "fromProperty": "expression",
+                        "toId": "3a892177-ef26-a07b-aaff-d131a4a328a6",
+                        "toProperty": "exp"
+                    },
+                    {
+                        "fromId": "3a892177-ef26-a07b-aaff-d131a4a328a6",
+                        "fromProperty": "formatted",
+                        "toId": "78d7bc8d-b70e-821d-b7af-edc03e488bf8",
+                        "toProperty": "image"
+                    },
+                    {
+                        "fromId": "63e30fb1-5424-0c37-aff0-40fc3f7afc93",
+                        "fromProperty": "formatted",
+                        "toId": "5e5b01e9-58fc-c768-e0cb-c476f7364791",
+                        "toProperty": "modelId"
+                    },
+                    {
+                        "fromId": "176a8c52-5cb9-6985-b090-0f339527e966",
+                        "fromProperty": "Num",
+                        "toId": "63e30fb1-5424-0c37-aff0-40fc3f7afc93",
+                        "toProperty": "num"
+                    },
+                    {
+                        "fromId": "5e5b01e9-58fc-c768-e0cb-c476f7364791",
+                        "fromProperty": "text",
+                        "toId": "c96d7290-c736-a049-5ef1-1327bd868bae",
+                        "toProperty": "text"
                     }
                 ],
                 "roots": [
@@ -19501,20 +19511,21 @@
                         "type": "Group",
                         "version": 2,
                         "label": "Root",
-                        "x": 53,
-                        "y": 484,
-                        "parameters": {},
+                        "x": 51.96874554708819,
+                        "y": 486.0625089058236,
+                        "parameters": {
+                            "padding": 40
+                        },
                         "ports": [],
                         "dynamicports": [],
                         "children": [
                             {
-                                "id": "a5bd9616-e004-269a-a101-7be1166b478d",
-                                "type": "Rectangle",
-                                "x": 20,
-                                "y": 61,
-                                "parameters": {
-                                    "color": "#ffffff"
-                                },
+                                "id": "b5851ab9-8409-7b27-7682-699dccc63fd3",
+                                "type": "Image",
+                                "version": 2,
+                                "x": 71.96874554708819,
+                                "y": 547.0625089058236,
+                                "parameters": {},
                                 "ports": [],
                                 "dynamicports": [],
                                 "children": []
@@ -19523,10 +19534,38 @@
                                 "id": "c96d7290-c736-a049-5ef1-1327bd868bae",
                                 "type": "Text",
                                 "version": 2,
-                                "x": 73,
-                                "y": 591,
+                                "x": 71.96874554708819,
+                                "y": 629.0625089058236,
                                 "parameters": {
-                                    "text": "一緒にいかない？"
+                                    "text": "一緒にいかない？",
+                                    "color": "#000000",
+                                    "fontSize": 64,
+                                    "alignX": "center"
+                                },
+                                "ports": [],
+                                "dynamicports": [],
+                                "children": []
+                            },
+                            {
+                                "id": "78d7bc8d-b70e-821d-b7af-edc03e488bf8",
+                                "type": "Image",
+                                "version": 2,
+                                "x": 71.96874554708819,
+                                "y": 726.0625089058236,
+                                "parameters": {},
+                                "ports": [],
+                                "dynamicports": [],
+                                "children": []
+                            },
+                            {
+                                "id": "440f4f15-df07-0a3e-b09b-0e79f6ccc051",
+                                "type": "Image",
+                                "version": 2,
+                                "x": 110.92024716153583,
+                                "y": 494.45537912220414,
+                                "parameters": {
+                                    "image": "moji.png",
+                                    "alignY": "bottom"
                                 },
                                 "ports": [],
                                 "dynamicports": [],
@@ -19537,8 +19576,8 @@
                     {
                         "id": "6514f4d0-dbce-9579-253b-4c39081df87a",
                         "type": "Component Outputs",
-                        "x": 388.9744663531726,
-                        "y": 715.8475950871826,
+                        "x": -106.19799853413897,
+                        "y": 876.9220441040317,
                         "parameters": {},
                         "ports": [
                             {
@@ -19556,8 +19595,8 @@
                     {
                         "id": "3f13c3dd-2470-70a5-8099-f971a94eb2f9",
                         "type": "Timer",
-                        "x": 215.86419558306727,
-                        "y": 714.8694480501138,
+                        "x": -279.30826930424433,
+                        "y": 875.9438970669628,
                         "parameters": {
                             "duration": 3000
                         },
@@ -19568,8 +19607,8 @@
                     {
                         "id": "176a8c52-5cb9-6985-b090-0f339527e966",
                         "type": "Component Inputs",
-                        "x": -156.45596677610024,
-                        "y": 698.554537775922,
+                        "x": -308.068982949998,
+                        "y": 382.23305555570363,
                         "parameters": {},
                         "ports": [
                             {
@@ -19587,6 +19626,22 @@
                                     "name": "*"
                                 },
                                 "index": 2
+                            },
+                            {
+                                "name": "bgPath",
+                                "plug": "output",
+                                "type": {
+                                    "name": "*"
+                                },
+                                "index": 4
+                            },
+                            {
+                                "name": "expression",
+                                "plug": "output",
+                                "type": {
+                                    "name": "*"
+                                },
+                                "index": 5
                             }
                         ],
                         "dynamicports": [],
@@ -19595,8 +19650,8 @@
                     {
                         "id": "b0edc4ba-c6af-bde8-13e5-ad0b13728789",
                         "type": "Expression",
-                        "x": 44.29802645592197,
-                        "y": 682.7873266553547,
+                        "x": -450.87443843138954,
+                        "y": 843.8617756722037,
                         "parameters": {
                             "expression": "index == sceneNum-1"
                         },
@@ -19616,12 +19671,74 @@
                             }
                         ],
                         "children": []
+                    },
+                    {
+                        "id": "3a892177-ef26-a07b-aaff-d131a4a328a6",
+                        "type": "String Format",
+                        "x": -198.22699537193552,
+                        "y": 745.4593693438557,
+                        "parameters": {
+                            "format": "exp/{exp}.png"
+                        },
+                        "ports": [],
+                        "dynamicports": [
+                            {
+                                "name": "exp",
+                                "type": "*",
+                                "plug": "input",
+                                "index": 2
+                            }
+                        ],
+                        "children": []
+                    },
+                    {
+                        "id": "63e30fb1-5424-0c37-aff0-40fc3f7afc93",
+                        "type": "String Format",
+                        "x": -336.2343773164376,
+                        "y": 609.0269473497278,
+                        "parameters": {
+                            "format": "st_{num}"
+                        },
+                        "ports": [],
+                        "dynamicports": [
+                            {
+                                "name": "num",
+                                "type": "*",
+                                "plug": "input",
+                                "index": 2
+                            }
+                        ],
+                        "children": []
+                    },
+                    {
+                        "id": "5e5b01e9-58fc-c768-e0cb-c476f7364791",
+                        "type": "Model",
+                        "label": "Story text",
+                        "x": -137.24718025278918,
+                        "y": 584.988225556804,
+                        "parameters": {
+                            "properties": "text"
+                        },
+                        "ports": [],
+                        "dynamicports": [
+                            {
+                                "type": {
+                                    "name": "*",
+                                    "allowConnectionsOnly": true
+                                },
+                                "plug": "input/output",
+                                "group": "Properties",
+                                "name": "text",
+                                "index": 7
+                            }
+                        ],
+                        "children": []
                     }
                 ]
             }
         },
         {
-            "name": "/Story/Scene/scene05",
+            "name": "/Story/Scene/Qestion",
             "graph": {
                 "connections": [
                     {
@@ -19635,6 +19752,48 @@
                         "fromProperty": "switchedToOn",
                         "toId": "008e0288-c71d-0bd9-b4af-d30e5466ee8c",
                         "toProperty": "Finished"
+                    },
+                    {
+                        "fromId": "8f10c747-9236-6dfc-8f16-3b4a8737fc0d",
+                        "fromProperty": "bgPath",
+                        "toId": "c864f02d-6c20-3c46-c5b7-255a649e0715",
+                        "toProperty": "image"
+                    },
+                    {
+                        "fromId": "8f10c747-9236-6dfc-8f16-3b4a8737fc0d",
+                        "fromProperty": "expression",
+                        "toId": "d52f1ab0-ff2c-890f-7466-56068f681431",
+                        "toProperty": "exp"
+                    },
+                    {
+                        "fromId": "d52f1ab0-ff2c-890f-7466-56068f681431",
+                        "fromProperty": "formatted",
+                        "toId": "f1d56a59-e391-b217-79f3-8372352f7a5c",
+                        "toProperty": "image"
+                    },
+                    {
+                        "fromId": "8f10c747-9236-6dfc-8f16-3b4a8737fc0d",
+                        "fromProperty": "qNum",
+                        "toId": "7bdd3d0a-faca-094b-2143-1eefacccde29",
+                        "toProperty": "SceneId"
+                    },
+                    {
+                        "fromId": "b74d3abd-4219-3283-d7a4-4c34931fb7bf",
+                        "fromProperty": "formatted",
+                        "toId": "0a71f5ef-0efb-a0fb-bcb9-478cf610eff7",
+                        "toProperty": "modelId"
+                    },
+                    {
+                        "fromId": "8f10c747-9236-6dfc-8f16-3b4a8737fc0d",
+                        "fromProperty": "Num",
+                        "toId": "b74d3abd-4219-3283-d7a4-4c34931fb7bf",
+                        "toProperty": "num"
+                    },
+                    {
+                        "fromId": "0a71f5ef-0efb-a0fb-bcb9-478cf610eff7",
+                        "fromProperty": "text",
+                        "toId": "496da542-66c8-f75c-c23d-f91a38efe4ae",
+                        "toProperty": "text"
                     }
                 ],
                 "roots": [
@@ -19643,32 +19802,37 @@
                         "type": "Group",
                         "version": 2,
                         "label": "Root",
-                        "x": 162,
-                        "y": 289,
-                        "parameters": {},
+                        "x": 59.957238336908574,
+                        "y": 205.07703867819072,
+                        "parameters": {
+                            "padding": 40
+                        },
                         "ports": [],
                         "dynamicports": [],
                         "children": [
                             {
-                                "id": "bd8a2adc-c22a-b015-b1b2-9c8dbc0922f2",
-                                "type": "Rectangle",
+                                "id": "c864f02d-6c20-3c46-c5b7-255a649e0715",
+                                "type": "Image",
+                                "version": 2,
+                                "label": "BG",
                                 "x": 20,
                                 "y": 61,
-                                "parameters": {
-                                    "color": "#ffffff"
-                                },
+                                "parameters": {},
                                 "ports": [],
                                 "dynamicports": [],
                                 "children": []
                             },
                             {
-                                "id": "c32effb5-2945-843f-e184-ef1fe4fab269",
+                                "id": "496da542-66c8-f75c-c23d-f91a38efe4ae",
                                 "type": "Text",
                                 "version": 2,
-                                "x": 182,
-                                "y": 396,
+                                "x": 194.0828271473456,
+                                "y": 345.7050214025868,
                                 "parameters": {
-                                    "text": "このみちをまっすぐ"
+                                    "text": "一緒にいかない？",
+                                    "color": "#000000",
+                                    "fontSize": 64,
+                                    "alignX": "center"
                                 },
                                 "ports": [],
                                 "dynamicports": [],
@@ -19677,23 +19841,20 @@
                             {
                                 "id": "7bdd3d0a-faca-094b-2143-1eefacccde29",
                                 "type": "/Story/Judge",
-                                "x": 182,
-                                "y": 457,
+                                "x": 20,
+                                "y": 255,
                                 "parameters": {},
                                 "ports": [],
                                 "dynamicports": [],
                                 "children": []
                             },
                             {
-                                "id": "a24c6bbb-10cf-b281-0d2c-68a4620cd266",
-                                "type": "Text",
+                                "id": "f1d56a59-e391-b217-79f3-8372352f7a5c",
+                                "type": "Image",
                                 "version": 2,
-                                "x": 182,
-                                "y": 539,
-                                "parameters": {
-                                    "text": "「みち」を入力してみよう",
-                                    "alignY": "bottom"
-                                },
+                                "x": 168.4474470491841,
+                                "y": 320.46853203597686,
+                                "parameters": {},
                                 "ports": [],
                                 "dynamicports": [],
                                 "children": []
@@ -19703,8 +19864,8 @@
                     {
                         "id": "008e0288-c71d-0bd9-b4af-d30e5466ee8c",
                         "type": "Component Outputs",
-                        "x": 547.7503332480908,
-                        "y": 462.0762090931561,
+                        "x": 463.58000865668333,
+                        "y": 399.62725858985385,
                         "parameters": {},
                         "ports": [
                             {
@@ -19722,11 +19883,137 @@
                     {
                         "id": "c32fb195-93a4-e5bc-e98b-35e00a2a29e6",
                         "type": "Switch",
-                        "x": 366.3687752508595,
-                        "y": 448.52471338071916,
+                        "x": 282.1984506594522,
+                        "y": 386.07576287741693,
                         "parameters": {},
                         "ports": [],
                         "dynamicports": [],
+                        "children": []
+                    },
+                    {
+                        "id": "8f10c747-9236-6dfc-8f16-3b4a8737fc0d",
+                        "type": "Component Inputs",
+                        "x": -390.6164341023702,
+                        "y": 50.6954827020777,
+                        "parameters": {},
+                        "ports": [
+                            {
+                                "name": "index",
+                                "plug": "output",
+                                "type": {
+                                    "name": "*"
+                                },
+                                "index": 1
+                            },
+                            {
+                                "name": "qNum",
+                                "plug": "output",
+                                "type": {
+                                    "name": "*"
+                                },
+                                "index": 2
+                            },
+                            {
+                                "name": "bgPath",
+                                "plug": "output",
+                                "type": {
+                                    "name": "*"
+                                },
+                                "index": 4
+                            },
+                            {
+                                "name": "expression",
+                                "plug": "output",
+                                "type": {
+                                    "name": "*"
+                                },
+                                "index": 5
+                            },
+                            {
+                                "name": "Num",
+                                "plug": "output",
+                                "type": {
+                                    "name": "*"
+                                },
+                                "index": 6
+                            }
+                        ],
+                        "dynamicports": [],
+                        "children": []
+                    },
+                    {
+                        "id": "d52f1ab0-ff2c-890f-7466-56068f681431",
+                        "type": "String Format",
+                        "x": -306.66884345691705,
+                        "y": 710.5933524795914,
+                        "parameters": {
+                            "format": "exp/{exp}.png"
+                        },
+                        "ports": [],
+                        "dynamicports": [
+                            {
+                                "name": "exp",
+                                "type": "*",
+                                "plug": "input",
+                                "index": 2
+                            }
+                        ],
+                        "children": []
+                    },
+                    {
+                        "id": "3ee136cf-a200-53a3-b523-6648192d7688",
+                        "type": "Static Data",
+                        "label": "question text",
+                        "x": -601.4488892808712,
+                        "y": 516.641539863531,
+                        "parameters": {
+                            "csv": "id,text\nt_q0,あいう\nt_q1,かきく"
+                        },
+                        "ports": [],
+                        "dynamicports": [],
+                        "children": []
+                    },
+                    {
+                        "id": "b74d3abd-4219-3283-d7a4-4c34931fb7bf",
+                        "type": "String Format",
+                        "x": -393.67375458459156,
+                        "y": 344.74891091593173,
+                        "parameters": {
+                            "format": "st_{num}"
+                        },
+                        "ports": [],
+                        "dynamicports": [
+                            {
+                                "name": "num",
+                                "type": "*",
+                                "plug": "input",
+                                "index": 2
+                            }
+                        ],
+                        "children": []
+                    },
+                    {
+                        "id": "0a71f5ef-0efb-a0fb-bcb9-478cf610eff7",
+                        "type": "Model",
+                        "label": "Story text",
+                        "x": -317.11806070629154,
+                        "y": 465.24738038348875,
+                        "parameters": {
+                            "properties": "text"
+                        },
+                        "ports": [],
+                        "dynamicports": [
+                            {
+                                "type": {
+                                    "name": "*",
+                                    "allowConnectionsOnly": true
+                                },
+                                "plug": "input/output",
+                                "group": "Properties",
+                                "name": "text",
+                                "index": 7
+                            }
+                        ],
                         "children": []
                     }
                 ]
@@ -19795,6 +20082,186 @@
                         "fromProperty": "Finished",
                         "toId": "2e05d447-f8b3-c932-0757-1c392988fed4",
                         "toProperty": "goToNext"
+                    },
+                    {
+                        "fromId": "0ef7ddbd-44f5-d297-19d0-0cadcb5dd0b0",
+                        "fromProperty": "Finished",
+                        "toId": "2e05d447-f8b3-c932-0757-1c392988fed4",
+                        "toProperty": "goToNext"
+                    },
+                    {
+                        "fromId": "49c1983b-b4a7-ca32-7877-59b00e7a362d",
+                        "fromProperty": "Finished",
+                        "toId": "2e05d447-f8b3-c932-0757-1c392988fed4",
+                        "toProperty": "goToNext"
+                    },
+                    {
+                        "fromId": "2e05d447-f8b3-c932-0757-1c392988fed4",
+                        "fromProperty": "index",
+                        "toId": "49c1983b-b4a7-ca32-7877-59b00e7a362d",
+                        "toProperty": "index"
+                    },
+                    {
+                        "fromId": "f993e0b2-128e-2117-b6ae-1fc1546781b2",
+                        "fromProperty": "Finished",
+                        "toId": "2e05d447-f8b3-c932-0757-1c392988fed4",
+                        "toProperty": "goToNext"
+                    },
+                    {
+                        "fromId": "f6228e44-b2c2-e522-322a-b3bbc5ac3db9",
+                        "fromProperty": "Finished",
+                        "toId": "2e05d447-f8b3-c932-0757-1c392988fed4",
+                        "toProperty": "goToNext"
+                    },
+                    {
+                        "fromId": "1c32f5e9-128d-4d72-5aa7-c83484714394",
+                        "fromProperty": "Finished",
+                        "toId": "2e05d447-f8b3-c932-0757-1c392988fed4",
+                        "toProperty": "goToNext"
+                    },
+                    {
+                        "fromId": "f7ab90ee-0936-9d4a-e130-ab445977b257",
+                        "fromProperty": "Finished",
+                        "toId": "2e05d447-f8b3-c932-0757-1c392988fed4",
+                        "toProperty": "goToNext"
+                    },
+                    {
+                        "fromId": "f4bb739a-3794-2ebd-3eea-6a82b6cdde0b",
+                        "fromProperty": "Finished",
+                        "toId": "2e05d447-f8b3-c932-0757-1c392988fed4",
+                        "toProperty": "goToNext"
+                    },
+                    {
+                        "fromId": "82cb20ef-0b3a-dd6d-72cd-baa6d19a193e",
+                        "fromProperty": "Finished",
+                        "toId": "2e05d447-f8b3-c932-0757-1c392988fed4",
+                        "toProperty": "goToNext"
+                    },
+                    {
+                        "fromId": "33ef1f28-2035-a6ed-5c6e-3adf99620c27",
+                        "fromProperty": "Finished",
+                        "toId": "2e05d447-f8b3-c932-0757-1c392988fed4",
+                        "toProperty": "goToNext"
+                    },
+                    {
+                        "fromId": "62b6297b-cda2-9caa-b71e-0809244f88f7",
+                        "fromProperty": "Finished",
+                        "toId": "2e05d447-f8b3-c932-0757-1c392988fed4",
+                        "toProperty": "goToNext"
+                    },
+                    {
+                        "fromId": "bbf5da0f-2ae2-e3b4-0a7e-de7cb2b2d03c",
+                        "fromProperty": "Finished",
+                        "toId": "2e05d447-f8b3-c932-0757-1c392988fed4",
+                        "toProperty": "goToNext"
+                    },
+                    {
+                        "fromId": "7225dddb-739e-82e3-7add-77375b0cf625",
+                        "fromProperty": "Finished",
+                        "toId": "2e05d447-f8b3-c932-0757-1c392988fed4",
+                        "toProperty": "goToNext"
+                    },
+                    {
+                        "fromId": "41d74b4c-cff0-82a1-da62-793f8be4b94f",
+                        "fromProperty": "Finished",
+                        "toId": "2e05d447-f8b3-c932-0757-1c392988fed4",
+                        "toProperty": "goToNext"
+                    },
+                    {
+                        "fromId": "9820dd42-36e2-2bc5-a64a-3dd34aa90002",
+                        "fromProperty": "Finished",
+                        "toId": "2e05d447-f8b3-c932-0757-1c392988fed4",
+                        "toProperty": "goToNext"
+                    },
+                    {
+                        "fromId": "ff5a4532-7a72-6249-65ac-68cfef86280f",
+                        "fromProperty": "Finished",
+                        "toId": "2e05d447-f8b3-c932-0757-1c392988fed4",
+                        "toProperty": "goToNext"
+                    },
+                    {
+                        "fromId": "10847c53-dce3-90eb-0c23-10a57e5df235",
+                        "fromProperty": "Finished",
+                        "toId": "2e05d447-f8b3-c932-0757-1c392988fed4",
+                        "toProperty": "goToNext"
+                    },
+                    {
+                        "fromId": "1d4d9886-92d6-8a2a-84d6-e2be27ed8a94",
+                        "fromProperty": "Finished",
+                        "toId": "2e05d447-f8b3-c932-0757-1c392988fed4",
+                        "toProperty": "goToNext"
+                    },
+                    {
+                        "fromId": "74c7b1fe-73cb-341f-8868-c6ff337d76e1",
+                        "fromProperty": "Finished",
+                        "toId": "2e05d447-f8b3-c932-0757-1c392988fed4",
+                        "toProperty": "goToNext"
+                    },
+                    {
+                        "fromId": "98e7e4bf-690c-088f-d45e-8265076e0f46",
+                        "fromProperty": "Finished",
+                        "toId": "2e05d447-f8b3-c932-0757-1c392988fed4",
+                        "toProperty": "goToNext"
+                    },
+                    {
+                        "fromId": "2e05d447-f8b3-c932-0757-1c392988fed4",
+                        "fromProperty": "index",
+                        "toId": "62b6297b-cda2-9caa-b71e-0809244f88f7",
+                        "toProperty": "index"
+                    },
+                    {
+                        "fromId": "2e05d447-f8b3-c932-0757-1c392988fed4",
+                        "fromProperty": "index",
+                        "toId": "bbf5da0f-2ae2-e3b4-0a7e-de7cb2b2d03c",
+                        "toProperty": "index"
+                    },
+                    {
+                        "fromId": "2e05d447-f8b3-c932-0757-1c392988fed4",
+                        "fromProperty": "index",
+                        "toId": "7225dddb-739e-82e3-7add-77375b0cf625",
+                        "toProperty": "index"
+                    },
+                    {
+                        "fromId": "2e05d447-f8b3-c932-0757-1c392988fed4",
+                        "fromProperty": "index",
+                        "toId": "41d74b4c-cff0-82a1-da62-793f8be4b94f",
+                        "toProperty": "index"
+                    },
+                    {
+                        "fromId": "2e05d447-f8b3-c932-0757-1c392988fed4",
+                        "fromProperty": "index",
+                        "toId": "9820dd42-36e2-2bc5-a64a-3dd34aa90002",
+                        "toProperty": "index"
+                    },
+                    {
+                        "fromId": "2e05d447-f8b3-c932-0757-1c392988fed4",
+                        "fromProperty": "index",
+                        "toId": "ff5a4532-7a72-6249-65ac-68cfef86280f",
+                        "toProperty": "index"
+                    },
+                    {
+                        "fromId": "2e05d447-f8b3-c932-0757-1c392988fed4",
+                        "fromProperty": "index",
+                        "toId": "10847c53-dce3-90eb-0c23-10a57e5df235",
+                        "toProperty": "index"
+                    },
+                    {
+                        "fromId": "2e05d447-f8b3-c932-0757-1c392988fed4",
+                        "fromProperty": "index",
+                        "toId": "1d4d9886-92d6-8a2a-84d6-e2be27ed8a94",
+                        "toProperty": "index"
+                    },
+                    {
+                        "fromId": "2e05d447-f8b3-c932-0757-1c392988fed4",
+                        "fromProperty": "index",
+                        "toId": "74c7b1fe-73cb-341f-8868-c6ff337d76e1",
+                        "toProperty": "index"
+                    },
+                    {
+                        "fromId": "2e05d447-f8b3-c932-0757-1c392988fed4",
+                        "fromProperty": "index",
+                        "toId": "98e7e4bf-690c-088f-d45e-8265076e0f46",
+                        "toProperty": "index"
                     }
                 ],
                 "roots": [
@@ -19858,7 +20325,7 @@
                                     },
                                     {
                                         "id": "365048fc-37dd-2ee6-8a46-e3ffee379bce",
-                                        "type": "/Story/Scene/scene04",
+                                        "type": "/Story/Scene/Scene",
                                         "x": 20,
                                         "y": 368,
                                         "parameters": {
@@ -19870,20 +20337,248 @@
                                     },
                                     {
                                         "id": "c8d68177-32e3-2020-305a-bd25079e02bb",
-                                        "type": "/Story/Scene/scene05",
+                                        "type": "/Story/Scene/Qestion",
                                         "x": 20,
                                         "y": 470,
-                                        "parameters": {},
+                                        "parameters": {
+                                            "Num": "5"
+                                        },
                                         "ports": [],
                                         "dynamicports": [],
                                         "children": []
                                     },
                                     {
-                                        "id": "307b46ad-6d74-83de-a97c-d32ceb929099",
-                                        "type": "/Story/Scene/scene06",
+                                        "id": "0ef7ddbd-44f5-d297-19d0-0cadcb5dd0b0",
+                                        "type": "/Story/Scene/Qestion",
                                         "x": 20,
                                         "y": 552,
-                                        "parameters": {},
+                                        "parameters": {
+                                            "qNum": "q1",
+                                            "Num": "6"
+                                        },
+                                        "ports": [],
+                                        "dynamicports": [],
+                                        "children": []
+                                    },
+                                    {
+                                        "id": "49c1983b-b4a7-ca32-7877-59b00e7a362d",
+                                        "type": "/Story/Scene/Scene",
+                                        "x": 20,
+                                        "y": 634,
+                                        "parameters": {
+                                            "Num": 7
+                                        },
+                                        "ports": [],
+                                        "dynamicports": [],
+                                        "children": []
+                                    },
+                                    {
+                                        "id": "f993e0b2-128e-2117-b6ae-1fc1546781b2",
+                                        "type": "/Story/Scene/Qestion",
+                                        "x": 20,
+                                        "y": 736,
+                                        "parameters": {
+                                            "qNum": "q2",
+                                            "Num": "8"
+                                        },
+                                        "ports": [],
+                                        "dynamicports": [],
+                                        "children": []
+                                    },
+                                    {
+                                        "id": "62b6297b-cda2-9caa-b71e-0809244f88f7",
+                                        "type": "/Story/Scene/Scene",
+                                        "x": 20,
+                                        "y": 818,
+                                        "parameters": {
+                                            "Num": 9
+                                        },
+                                        "ports": [],
+                                        "dynamicports": [],
+                                        "children": []
+                                    },
+                                    {
+                                        "id": "f6228e44-b2c2-e522-322a-b3bbc5ac3db9",
+                                        "type": "/Story/Scene/Qestion",
+                                        "x": 20,
+                                        "y": 920,
+                                        "parameters": {
+                                            "qNum": "q3",
+                                            "Num": "10"
+                                        },
+                                        "ports": [],
+                                        "dynamicports": [],
+                                        "children": []
+                                    },
+                                    {
+                                        "id": "bbf5da0f-2ae2-e3b4-0a7e-de7cb2b2d03c",
+                                        "type": "/Story/Scene/Scene",
+                                        "x": 20,
+                                        "y": 1002,
+                                        "parameters": {
+                                            "Num": 11
+                                        },
+                                        "ports": [],
+                                        "dynamicports": [],
+                                        "children": []
+                                    },
+                                    {
+                                        "id": "7225dddb-739e-82e3-7add-77375b0cf625",
+                                        "type": "/Story/Scene/Scene",
+                                        "x": 20,
+                                        "y": 1104,
+                                        "parameters": {
+                                            "Num": 12
+                                        },
+                                        "ports": [],
+                                        "dynamicports": [],
+                                        "children": []
+                                    },
+                                    {
+                                        "id": "1c32f5e9-128d-4d72-5aa7-c83484714394",
+                                        "type": "/Story/Scene/Qestion",
+                                        "x": 20,
+                                        "y": 1206,
+                                        "parameters": {
+                                            "qNum": "q4",
+                                            "Num": "13"
+                                        },
+                                        "ports": [],
+                                        "dynamicports": [],
+                                        "children": []
+                                    },
+                                    {
+                                        "id": "41d74b4c-cff0-82a1-da62-793f8be4b94f",
+                                        "type": "/Story/Scene/Scene",
+                                        "x": 20,
+                                        "y": 1288,
+                                        "parameters": {
+                                            "Num": 14
+                                        },
+                                        "ports": [],
+                                        "dynamicports": [],
+                                        "children": []
+                                    },
+                                    {
+                                        "id": "f7ab90ee-0936-9d4a-e130-ab445977b257",
+                                        "type": "/Story/Scene/Qestion",
+                                        "x": 20,
+                                        "y": 1390,
+                                        "parameters": {
+                                            "qNum": "q5",
+                                            "Num": "15"
+                                        },
+                                        "ports": [],
+                                        "dynamicports": [],
+                                        "children": []
+                                    },
+                                    {
+                                        "id": "f4bb739a-3794-2ebd-3eea-6a82b6cdde0b",
+                                        "type": "/Story/Scene/Qestion",
+                                        "x": 20,
+                                        "y": 1472,
+                                        "parameters": {
+                                            "qNum": "q6",
+                                            "Num": "16"
+                                        },
+                                        "ports": [],
+                                        "dynamicports": [],
+                                        "children": []
+                                    },
+                                    {
+                                        "id": "9820dd42-36e2-2bc5-a64a-3dd34aa90002",
+                                        "type": "/Story/Scene/Scene",
+                                        "x": 20,
+                                        "y": 1554,
+                                        "parameters": {
+                                            "Num": 17
+                                        },
+                                        "ports": [],
+                                        "dynamicports": [],
+                                        "children": []
+                                    },
+                                    {
+                                        "id": "82cb20ef-0b3a-dd6d-72cd-baa6d19a193e",
+                                        "type": "/Story/Scene/Qestion",
+                                        "x": 20,
+                                        "y": 1656,
+                                        "parameters": {
+                                            "qNum": "q7",
+                                            "Num": "18"
+                                        },
+                                        "ports": [],
+                                        "dynamicports": [],
+                                        "children": []
+                                    },
+                                    {
+                                        "id": "33ef1f28-2035-a6ed-5c6e-3adf99620c27",
+                                        "type": "/Story/Scene/Qestion",
+                                        "x": 20,
+                                        "y": 1738,
+                                        "parameters": {
+                                            "qNum": "q8",
+                                            "Num": "19"
+                                        },
+                                        "ports": [],
+                                        "dynamicports": [],
+                                        "children": []
+                                    },
+                                    {
+                                        "id": "ff5a4532-7a72-6249-65ac-68cfef86280f",
+                                        "type": "/Story/Scene/Scene",
+                                        "x": 20,
+                                        "y": 1820,
+                                        "parameters": {
+                                            "Num": 20
+                                        },
+                                        "ports": [],
+                                        "dynamicports": [],
+                                        "children": []
+                                    },
+                                    {
+                                        "id": "10847c53-dce3-90eb-0c23-10a57e5df235",
+                                        "type": "/Story/Scene/Scene",
+                                        "x": 20,
+                                        "y": 1406,
+                                        "parameters": {
+                                            "Num": 21
+                                        },
+                                        "ports": [],
+                                        "dynamicports": [],
+                                        "children": []
+                                    },
+                                    {
+                                        "id": "1d4d9886-92d6-8a2a-84d6-e2be27ed8a94",
+                                        "type": "/Story/Scene/Scene",
+                                        "x": 20,
+                                        "y": 1452,
+                                        "parameters": {
+                                            "Num": 22
+                                        },
+                                        "ports": [],
+                                        "dynamicports": [],
+                                        "children": []
+                                    },
+                                    {
+                                        "id": "74c7b1fe-73cb-341f-8868-c6ff337d76e1",
+                                        "type": "/Story/Scene/Scene",
+                                        "x": 189.86086679949437,
+                                        "y": 1757.8144890659926,
+                                        "parameters": {
+                                            "Num": 23
+                                        },
+                                        "ports": [],
+                                        "dynamicports": [],
+                                        "children": []
+                                    },
+                                    {
+                                        "id": "98e7e4bf-690c-088f-d45e-8265076e0f46",
+                                        "type": "/Story/Scene/Scene",
+                                        "x": 214.4911513659343,
+                                        "y": 334.16565545866126,
+                                        "parameters": {
+                                            "Num": 24
+                                        },
                                         "ports": [],
                                         "dynamicports": [],
                                         "children": []
@@ -19922,8 +20617,8 @@
                     {
                         "id": "2e05d447-f8b3-c932-0757-1c392988fed4",
                         "type": "Javascript2",
-                        "x": 449.74516325634147,
-                        "y": 449.36542730791814,
+                        "x": 751.0500171997303,
+                        "y": 1269.739949855568,
                         "parameters": {
                             "code": "define({\n    inputs: {\n        goToNext: \"boolean\",\n        indexChanged:\"boolean\",\n        init:\"boolean\"\n    },\n    outputs: {\n        goto: \"boolean\",\n        index:'number'\n    },\n    destroy: function(inputs, outputs) {\n\n    },\n    setup: function(inputs, outputs) {\n        this.index = 0;\n    },\n    run: function(inputs, outputs, changedInputs) {\n        \n        if(inputs.goToNext){\n            this.index ++;\n        }\n        outputs.index = this.index;\n        this.sendSignalOnOutput('goto');\n        \n        if(inputs.init){\n            outputs.index=0;\n            this.sendSignalOnOutput('goto');\n        }\n        \n        \n       \n    }\n});"
                         },
@@ -19976,117 +20671,16 @@
                             }
                         ],
                         "children": []
-                    }
-                ]
-            }
-        },
-        {
-            "name": "/Story/Scene/scene06",
-            "graph": {
-                "connections": [
-                    {
-                        "fromId": "8e189c3f-5193-640f-1ad0-81f618788b34",
-                        "fromProperty": "goToNext",
-                        "toId": "4567126c-7b2b-f5a9-4a85-661736e46f7b",
-                        "toProperty": "on"
                     },
                     {
-                        "fromId": "4567126c-7b2b-f5a9-4a85-661736e46f7b",
-                        "fromProperty": "switchedToOn",
-                        "toId": "60a4a88e-03d8-b7f3-eb55-42816f414130",
-                        "toProperty": "Finished"
-                    }
-                ],
-                "roots": [
-                    {
-                        "id": "58d6b734-8772-6c76-3bcd-513e5997e4e5",
-                        "type": "Group",
-                        "version": 2,
-                        "label": "Root",
-                        "x": 183.99536580592255,
-                        "y": 464.08335851776536,
-                        "parameters": {},
-                        "ports": [],
-                        "dynamicports": [],
-                        "children": [
-                            {
-                                "id": "13ca2ad7-5f6d-63df-e5b8-f290644c3754",
-                                "type": "Rectangle",
-                                "x": 20,
-                                "y": 61,
-                                "parameters": {
-                                    "color": "#ffffff"
-                                },
-                                "ports": [],
-                                "dynamicports": [],
-                                "children": []
-                            },
-                            {
-                                "id": "afd3722c-2f3f-fba7-aecc-84dfde185e54",
-                                "type": "Text",
-                                "version": 2,
-                                "x": 20,
-                                "y": 107,
-                                "parameters": {
-                                    "text": "あっ！もり"
-                                },
-                                "ports": [],
-                                "dynamicports": [],
-                                "children": []
-                            },
-                            {
-                                "id": "8e189c3f-5193-640f-1ad0-81f618788b34",
-                                "type": "/Story/Judge",
-                                "x": 20,
-                                "y": 168,
-                                "parameters": {
-                                    "SceneId": "q1"
-                                },
-                                "ports": [],
-                                "dynamicports": [],
-                                "children": []
-                            },
-                            {
-                                "id": "cd14f5cb-1895-39d5-6c2f-3be7eb6aeb9e",
-                                "type": "Text",
-                                "version": 2,
-                                "x": 20,
-                                "y": 250,
-                                "parameters": {
-                                    "text": "「もり」を入力してみよう",
-                                    "alignY": "bottom"
-                                },
-                                "ports": [],
-                                "dynamicports": [],
-                                "children": []
-                            }
-                        ]
-                    },
-                    {
-                        "id": "60a4a88e-03d8-b7f3-eb55-42816f414130",
-                        "type": "Component Outputs",
-                        "x": 569.7456990540134,
-                        "y": 637.1595676109214,
-                        "parameters": {},
-                        "ports": [
-                            {
-                                "name": "Finished",
-                                "plug": "input",
-                                "type": {
-                                    "name": "*"
-                                },
-                                "index": 1
-                            }
-                        ],
-                        "dynamicports": [],
-                        "children": []
-                    },
-                    {
-                        "id": "4567126c-7b2b-f5a9-4a85-661736e46f7b",
-                        "type": "Switch",
-                        "x": 388.36414105678205,
-                        "y": 623.6080718984845,
-                        "parameters": {},
+                        "id": "94ca5bec-d6e5-626d-88ee-93e11cf5844a",
+                        "type": "Static Data",
+                        "label": "Story text",
+                        "x": -151.19540735688383,
+                        "y": 1827.978960207878,
+                        "parameters": {
+                            "csv": "id,text\nst_1,\"僕は「タロムシ」。キミの名前は？ボビンを転がして教えてね\"\nst_2,だね？\nst_3,こんにちは！\nst_4,これからお花畑に行くんだけど一緒に行かない？\nst_5,この「みち」をまっすぐだよ\nst_6,あっ！「もり」が見えてきたね\nst_7,あの森の中でひとやすみしよう\nst_8,\"お腹が空いたなあ、「りんご」を探そうよ\"\nst_9,\"おなかもいっぱいになったことだし先に進もう！\"\nst_10,「かわ」が見えてきたね\nst_11,渡れそうにないね、だれか道を知らないかな\nst_12,\"あ、あそこに「しっぽ」が見えているよ。誰のだろう？\"\nst_13,あ！「りす」さんだ！話しかけてみようよ！\nst_14,\"りすさん！りすさん！川を渡りたいんだけど、道を知らないかい？\"\nst_15,おいら、知ってるぜ！あっちの方向に「はし」があるよ！そこからきっと渡れるさ！\nst_16,「ありがとう」りすさん！行ってみるよ！\nst_17,橋はこっちだね、行こう\nst_18,あ、「とり」さんだ！\nst_19,とりさん、素敵な「はな」を持ってるね\nst_20,そうでしょ？この先にそれは美しいお花畑あってね。そこから分けてもらったのさ\nst_21,僕たちもお花畑に向かっているところさ！\nst_22,\"それなら、もうすぐそこさ！楽しんでおいで！\"\nst_23,\"わあ！！みてごらん！とても素敵なお花畑だね！\"\nst_24,今日はとても楽しかった！また、来ようね！"
+                        },
                         "ports": [],
                         "dynamicports": [],
                         "children": []
@@ -20097,44 +20691,143 @@
         {
             "name": "/Story/Chara",
             "graph": {
-                "connections": [],
-                "roots": [
+                "connections": [
                     {
-                        "id": "2edaefff-9046-90b0-81c6-4685ef721d00",
-                        "type": "Group",
-                        "version": 2,
-                        "x": 126.30964894679556,
-                        "y": 289.6192978935912,
-                        "parameters": {},
-                        "ports": [],
-                        "dynamicports": [],
-                        "children": [
-                            {
-                                "id": "91b33d33-a523-35bd-ac12-dfbe10a66cea",
-                                "type": "Text",
-                                "version": 2,
-                                "x": 20,
-                                "y": 46,
-                                "parameters": {},
-                                "ports": [],
-                                "dynamicports": [],
-                                "children": []
-                            }
-                        ]
+                        "fromId": "8e8e0fa2-57bc-6e2b-a5e9-f962a3999be3",
+                        "fromProperty": "word",
+                        "toId": "38cde5bc-3fe8-c6c2-f3b9-a76a46860a63",
+                        "toProperty": "modelId"
                     },
+                    {
+                        "fromId": "ed18f178-62e5-a6e4-da23-6182d7f53fed",
+                        "fromProperty": "result",
+                        "toId": "26b24f5d-06ee-d8bd-6b23-b3f50e4b5a16",
+                        "toProperty": "string"
+                    },
+                    {
+                        "fromId": "38cde5bc-3fe8-c6c2-f3b9-a76a46860a63",
+                        "fromProperty": "chara",
+                        "toId": "ed18f178-62e5-a6e4-da23-6182d7f53fed",
+                        "toProperty": "chara"
+                    }
+                ],
+                "roots": [
                     {
                         "id": "ee65fb97-9758-29d5-3992-9a699d26dcc8",
                         "type": "Static Data",
-                        "label": "question",
-                        "x": -158.68605862398977,
-                        "y": 337.15922246388715,
+                        "label": "charactor",
+                        "x": 216.68677804536912,
+                        "y": 291.6185164175367,
                         "parameters": {
                             "type": "csv",
-                            "csv": "chara,id,imgPath\nあ,04 63 cc ca 4c 58 81,chara/1.png\nい,04 45 cc ca 4c 58 81,chara/2.png\nう,04 79 cd ca 4c 58 81,chara/3.png\nえ,04 64 cc ca 4c 58 81,chara/4.png\nお,04 5b cd ca 4c 58 81,chara/5.png\nか,04 78 cd ca 4c 58 81,chara/6.png\nき,04 3d cd ca 4c 58 81,chara/7.png\nく,04 5a cd ca 4c 58 81,chara/8.png\nけ,04 1f cd ca 4c 58 81,chara/9.png\nこ,04 3c cd ca 4c 58 81,chara/10.png\nさ,04 7f 77 d2 c7 55 81,chara/11.png\nし,04 70 77 d2 c7 55 81,chara/12.png\nす,04 61 77 d2 c7 55 81,chara/13.png\nせ,04 52 77 d2 c7 55 81,chara/14.png\nそ,04 43 77 d2 c7 55 81,chara/15.png\nた,04 69 76 d2 c7 55 80,chara/16.png\nち,04 78 76 d2 c7 55 80,chara/17.png\nつ,04 89 76 d2 c7 55 80,chara/18.png\nて,04 9a 76 d2 c7 55 80,chara/19.png\nと,04 a9 76 d2 c7 55 80,chara/20.png\nな,04 5c 77 d2 c7 55 80,chara/21.png\nに,04 6c 77 d2 c7 55 80,chara/22.png\nぬ,04 7b 77 d2 c7 55 80,chara/23.png\nね,04 8a 77 d2 c7 55 80,chara/24.png\nの,04 99 77 d2 c7 55 80,chara/25.png\nは,04 11 77 d2 c7 55 80,chara/26.png\nひ,04 20 77 d2 c7 55 80,chara/27.png\nふ,04 2f 77 d2 c7 55 80,chara/28.png\nへ,04 3e 77 d2 c7 55 80,chara/29.png\nほ,04 4d 77 d2 c7 55 80,chara/30.png\nま,04 c5 cd ca 4c 58 80,chara/31.png\nみ,04 00 cd ca 4c 58 81,chara/32.png\nむ,04 e3 cd ca 4c 58 80,chara/33.png\nめ,04 1e cd ca 4c 58 81,chara/34.png\nも,04 01 cd ca 4c 58 81,chara/35.png\nや,04 a6 cd ca 4c 58 80,chara/36.png\nゆ,04 89 cd ca 4c 58 80,chara/37.png\nよ,04 c4 cd ca 4c 58 80,chara/38.png\nら,04 a7 cd ca 4c 58 80,chara/39.png\nり,04 e2 cd ca 4c 58 80,chara/40.png\nる,04 0b 0f c2 4c 58 85,chara/41.png\nれ,04 cb 0f c2 4c 58 84,chara/42.png\nろ,04 eb 0f c2 4c 58 84,chara/43.png\nわ,04 ad 0f c2 4c 58 84,chara/44.png\nを,04 ca 0f c2 4c 58 84,chara/45.png\nん,04 05 0e c2 4c 58 85,chara/46.png\nゃ,04 e5 0e c2 4c 58 84,chara/47.png\nゅ,04 0c 0f c2 4c 58 85,chara/48.png\nょ,04 06 0e c2 4c 58 85,chara/49.png\nっ,04 ec 0f c2 4c 58 84,chara/50.png\n゛,04 fa f9 c2 4c 58 80,chara/51.png\n゜,04 dd f9 c2 4c 58 80,chara/52.png\nー,04 18 f9 c2 4c 58 81,chara/53.png",
+                            "csv": "chara,id,imgPath\nあ,04 ad 71 ca 4c 58 80,chara/1.png\nい,04 e9 71 ca 4c 58 80,chara/2.png\nう,04 cc 71 ca 4c 58 80,chara/3.png\nえ,04 08 71 ca 4c 58 81,chara/4.png\nお,04 ea 71 ca 4c 58 80,chara/5.png\nか,04 26 71 ca 4c 58 81,chara/6.png\nき,04 09 71 ca 4c 58 81,chara/7.png\nく,04 44 71 ca 4c 58 81,chara/8.png\nけ,04 27 71 ca 4c 58 81,chara/9.png\nこ,04 62 71 ca 4c 58 81,chara/10.png\nさ,04 f4 05 c2 4c 58 84,chara/11.png\nし,04 b7 05 c2 4c 58 84,chara/12.png\nす,04 d6 05 c2 4c 58 84,chara/13.png\nせ,04 97 05 c2 4c 58 84,chara/14.png\nそ,04 b6 05 c2 4c 58 84,chara/15.png\nた,04 01 0a ca 4c 58 81,chara/16.png\nち,04 c6 0a ca 4c 58 80,chara/17.png\nつ,04 e3 0a ca 4c 58 80,chara/18.png\nて,04 a6 0a ca 4c 58 80,chara/19.png\nと,04 c5 0a ca 4c 58 80,chara/20.png\nな,04 d8 0a c2 4c 58 84,chara/21.png\nに,04 f5 0a c2 4c 58 84,chara/22.png\nぬ,04 b7 0a c2 4c 58 84,chara/23.png\nね,04 d7 0a c2 4c 58 84,chara/24.png\nの,04 97 0a c2 4c 58 84,chara/25.png\nは,04 2b 07 c2 4c 58 85,chara/26.png\nひ,04 f6 06 c2 4c 58 84,chara/27.png\nふ,04 15 06 c2 4c 58 85,chara/28.png\nへ,04 d8 06 c2 4c 58 84,chara/29.png\nほ,04 f5 06 c2 4c 58 84,chara/30.png\nま,04 0b 07 c2 4c 58 85,chara/31.png\nみ,04 ec 07 c2 4c 58 84,chara/32.png\nむ,04 2a 07 c2 4c 58 85,chara/33.png\nめ,04 0c 07 c2 4c 58 85,chara/34.png\nも,04 16 06 c2 4c 58 85,chara/35.png\nや,04 8e 07 c2 4c 58 84,chara/36.png\nゆ,04 cb 07 c2 4c 58 84,chara/37.png\nよ,04 ae 07 c2 4c 58 84,chara/38.png\nら,04 eb 07 c2 4c 58 84,chara/39.png\nり,04 ce 07 c2 4c 58 84,chara/40.png\nる,04 79 05 c2 4c 58 84,chara/41.png\nれ,04 96 05 c2 4c 58 84,chara/42.png\nろ,04 79 06 c2 4c 58 84,chara/43.png\nわ,04 78 05 c2 4c 58 84,chara/44.png\nを,04 97 06 c2 4c 58 84,chara/45.png\nん,04 bc 0c c2 4c 58 84,chara/46.png\nゃ,04 db 0c c2 4c 58 84,chara/47.png\nゅ,04 9e 0c c2 4c 58 84,chara/48.png\nょ,04 bb 0c c2 4c 58 84,chara/49.png\nっ,04 7e 0c c2 4c 58 84,chara/50.png\n゛,04 ad 07 c2 4c 58 84,chara/51.png\n゜,04 6f 07 c2 4c 58 84,chara/52.png\nー,04 8d 07 c2 4c 58 84,chara/53.png",
                             "json": "[\n    {\n        \"id\" :\"q0\",\n        \"question\" :\"みち\"\n    }\n]"
                         },
                         "ports": [],
                         "dynamicports": [],
+                        "children": []
+                    },
+                    {
+                        "id": "8e8e0fa2-57bc-6e2b-a5e9-f962a3999be3",
+                        "type": "Receive Message",
+                        "x": 33.96815901255269,
+                        "y": 329.0032942025823,
+                        "parameters": {
+                            "enabled": true,
+                            "topic": "/word"
+                        },
+                        "ports": [
+                            {
+                                "name": "word",
+                                "plug": "outputs",
+                                "type": {
+                                    "name": "*",
+                                    "allowConnectionOnly": true
+                                },
+                                "group": "Payload",
+                                "index": 1
+                            }
+                        ],
+                        "dynamicports": [],
+                        "children": []
+                    },
+                    {
+                        "id": "38cde5bc-3fe8-c6c2-f3b9-a76a46860a63",
+                        "type": "Model",
+                        "x": 236.11656522847545,
+                        "y": 359.79709604347727,
+                        "parameters": {
+                            "properties": "chara",
+                            "modelId": ""
+                        },
+                        "ports": [],
+                        "dynamicports": [
+                            {
+                                "type": {
+                                    "name": "*",
+                                    "allowConnectionsOnly": true
+                                },
+                                "plug": "input/output",
+                                "group": "Properties",
+                                "name": "chara",
+                                "index": 7
+                            }
+                        ],
+                        "children": []
+                    },
+                    {
+                        "id": "26b24f5d-06ee-d8bd-6b23-b3f50e4b5a16",
+                        "type": "Send Message",
+                        "x": 460.88881655027615,
+                        "y": 339.50176449219373,
+                        "parameters": {
+                            "topic": "/string",
+                            "publishOnInputsChanged": true
+                        },
+                        "ports": [
+                            {
+                                "name": "string",
+                                "plug": "input",
+                                "type": {
+                                    "name": "*",
+                                    "allowConnectionOnly": true
+                                },
+                                "group": "Payload",
+                                "index": 1
+                            }
+                        ],
+                        "dynamicports": [],
+                        "children": []
+                    },
+                    {
+                        "id": "ed18f178-62e5-a6e4-da23-6182d7f53fed",
+                        "type": "Javascript2",
+                        "x": 233.95785717542554,
+                        "y": 472.3602970129306,
+                        "parameters": {
+                            "code": "var word = \"\";\n\ndefine({\n    inputs: {\n        chara: \"string\"\n    },\n    outputs: {\n        result: \"string\"\n    },\n    destroy: function(inputs, outputs) {\n\n    },\n    setup: function(inputs, outputs) {\n    \n    },\n    run: function(inputs, outputs, changedInputs) {\n        if(inputs.chara){\n            word = word + inputs.chara;\n            outputs.result = word;\n        }\n        \n    }\n});"
+                        },
+                        "ports": [],
+                        "dynamicports": [
+                            {
+                                "name": "chara",
+                                "plug": "input",
+                                "type": {
+                                    "name": "string"
+                                },
+                                "group": "Inputs",
+                                "index": 2
+                            },
+                            {
+                                "name": "result",
+                                "type": {
+                                    "name": "string"
+                                },
+                                "plug": "output",
+                                "group": "Outputs",
+                                "index": 3
+                            }
+                        ],
                         "children": []
                     }
                 ]
