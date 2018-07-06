@@ -118,6 +118,12 @@
                         "fromProperty": "Tap",
                         "toId": "0bbda452-3786-b6ce-9b97-8c1cd569d086",
                         "toProperty": "Initialize"
+                    },
+                    {
+                        "fromId": "20914988-82ad-9516-65da-6734b6c1ed42",
+                        "fromProperty": "Tap",
+                        "toId": "0bbda452-3786-b6ce-9b97-8c1cd569d086",
+                        "toProperty": "start"
                     }
                 ],
                 "roots": [
@@ -18029,406 +18035,6 @@
             }
         },
         {
-            "name": "/Story/Judge",
-            "graph": {
-                "connections": [
-                    {
-                        "fromId": "3c2acbdd-0a5f-7e67-4072-e336b7b7409e",
-                        "fromProperty": "text",
-                        "toId": "561af1f4-3b30-f4ce-11ab-fb50cbc393cc",
-                        "toProperty": "text"
-                    },
-                    {
-                        "fromId": "3c2acbdd-0a5f-7e67-4072-e336b7b7409e",
-                        "fromProperty": "text",
-                        "toId": "107a6df8-137f-eb96-00ed-b2a06c169743",
-                        "toProperty": "quest"
-                    },
-                    {
-                        "fromId": "217f7a41-09b6-ba46-f05b-db5f87ede2bd",
-                        "fromProperty": "question",
-                        "toId": "3c2acbdd-0a5f-7e67-4072-e336b7b7409e",
-                        "toProperty": "text"
-                    },
-                    {
-                        "fromId": "217f7a41-09b6-ba46-f05b-db5f87ede2bd",
-                        "fromProperty": "id",
-                        "toId": "422b395a-49fb-60fc-c5ba-dbda12b760af",
-                        "toProperty": "id"
-                    },
-                    {
-                        "fromId": "422b395a-49fb-60fc-c5ba-dbda12b760af",
-                        "fromProperty": "result",
-                        "toId": "107a6df8-137f-eb96-00ed-b2a06c169743",
-                        "toProperty": "qNum"
-                    },
-                    {
-                        "fromId": "1c38e7d3-3c44-73db-0ee0-8c5010a47f52",
-                        "fromProperty": "SceneId",
-                        "toId": "217f7a41-09b6-ba46-f05b-db5f87ede2bd",
-                        "toProperty": "modelId"
-                    },
-                    {
-                        "fromId": "107a6df8-137f-eb96-00ed-b2a06c169743",
-                        "fromProperty": "goToNext",
-                        "toId": "b8d0657b-f770-e9be-6f1a-a4cff9415dd7",
-                        "toProperty": "goToNext"
-                    },
-                    {
-                        "fromId": "3aa21979-b57a-bf7a-cdb9-67bdb53d938b",
-                        "fromProperty": "word",
-                        "toId": "8e909c90-4111-7803-4712-4f774c3d3c85",
-                        "toProperty": "modelId"
-                    },
-                    {
-                        "fromId": "d9c574f5-5d2f-91cc-d63e-e237349615bc",
-                        "fromProperty": "touch.tap",
-                        "toId": "107a6df8-137f-eb96-00ed-b2a06c169743",
-                        "toProperty": "deleteChara"
-                    },
-                    {
-                        "fromId": "107a6df8-137f-eb96-00ed-b2a06c169743",
-                        "fromProperty": "word",
-                        "toId": "ffa9b21d-46ab-ee16-59b6-b04a54a07e3b",
-                        "toProperty": "text"
-                    },
-                    {
-                        "fromId": "8e909c90-4111-7803-4712-4f774c3d3c85",
-                        "fromProperty": "chara",
-                        "toId": "107a6df8-137f-eb96-00ed-b2a06c169743",
-                        "toProperty": "chara"
-                    }
-                ],
-                "roots": [
-                    {
-                        "id": "f2582253-7715-d1dd-2e16-05dcc0f00942",
-                        "type": "Group",
-                        "version": 2,
-                        "label": "Root",
-                        "x": 608.9971727218178,
-                        "y": 517.1134891674737,
-                        "parameters": {},
-                        "ports": [],
-                        "dynamicports": [],
-                        "children": [
-                            {
-                                "id": "561af1f4-3b30-f4ce-11ab-fb50cbc393cc",
-                                "type": "Text",
-                                "version": 2,
-                                "label": "quest",
-                                "x": 20,
-                                "y": 143,
-                                "parameters": {
-                                    "fontSize": 380,
-                                    "text": "りんご",
-                                    "alignX": "center",
-                                    "alignY": "center",
-                                    "color": "#ff504b",
-                                    "lineHeight": 0,
-                                    "y": 100,
-                                    "alignment": "center",
-                                    "verticalAlignment": "center",
-                                    "fontFamily": "A-OTF-FutoMinA101Pro-Bold.otf"
-                                },
-                                "ports": [],
-                                "dynamicports": [],
-                                "children": []
-                            },
-                            {
-                                "id": "ffa9b21d-46ab-ee16-59b6-b04a54a07e3b",
-                                "type": "Text",
-                                "version": 2,
-                                "label": "ReceiveText",
-                                "x": 604.1156082189029,
-                                "y": 647.2627257414317,
-                                "parameters": {
-                                    "fontSize": 160,
-                                    "alignX": "center",
-                                    "alignY": "bottom",
-                                    "y": -100,
-                                    "fontFamily": "A-OTF-FutoMinA101Pro-Bold.otf",
-                                    "text": "-",
-                                    "color": "#888888"
-                                },
-                                "ports": [],
-                                "dynamicports": [],
-                                "children": []
-                            },
-                            {
-                                "id": "d9c574f5-5d2f-91cc-d63e-e237349615bc",
-                                "type": "Rectangle",
-                                "label": "Rectangle",
-                                "x": 20,
-                                "y": 255,
-                                "parameters": {
-                                    "width": {
-                                        "value": 300,
-                                        "unit": "px"
-                                    },
-                                    "height": {
-                                        "value": 200,
-                                        "unit": "px"
-                                    },
-                                    "alignY": "bottom"
-                                },
-                                "ports": [],
-                                "dynamicports": [],
-                                "children": []
-                            }
-                        ]
-                    },
-                    {
-                        "id": "1c38e7d3-3c44-73db-0ee0-8c5010a47f52",
-                        "type": "Component Inputs",
-                        "x": 377.0668149386298,
-                        "y": 479.21911901120245,
-                        "parameters": {},
-                        "ports": [
-                            {
-                                "name": "Opacity",
-                                "plug": "output",
-                                "type": {
-                                    "name": "*"
-                                },
-                                "index": 1
-                            },
-                            {
-                                "name": "SceneId",
-                                "plug": "output",
-                                "type": {
-                                    "name": "*"
-                                },
-                                "index": 2
-                            }
-                        ],
-                        "dynamicports": [],
-                        "children": []
-                    },
-                    {
-                        "id": "107a6df8-137f-eb96-00ed-b2a06c169743",
-                        "type": "Javascript2",
-                        "label": "Jadgement",
-                        "x": 360.4704736800805,
-                        "y": 915.0625057338865,
-                        "parameters": {
-                            "code": "var word = \"\";\ndefine({\n    inputs: {\n        quest:\"string\",\n        qNum:\"string\",\n        deleteChara:\"boolean\",\n        chara: \"string\"\n    },\n    outputs: {\n        goToNext:\"boolean\",\n        word:\"string\"\n    },\n    destroy: function(inputs, outputs) {\n\n    },\n    setup: function(inputs, outputs) {\n    },\n    run: function(inputs, outputs, changedInputs) {\n        \n        if(inputs.chara){\n            word = word + inputs.chara;\n            outputs.word = word;\n        }\n        \n        if(inputs.quest === inputs.word){\n          outputs.goToNext = true;\n        }else{\n        }\n        \n        if(inputs.deleteChara){\n            word = word.slice(0,word.length);\n            outputs.word = word;\n        }\n    }\n});"
-                        },
-                        "ports": [],
-                        "dynamicports": [
-                            {
-                                "name": "quest",
-                                "plug": "input",
-                                "type": {
-                                    "name": "string"
-                                },
-                                "group": "Inputs",
-                                "index": 2
-                            },
-                            {
-                                "name": "qNum",
-                                "plug": "input",
-                                "type": {
-                                    "name": "string"
-                                },
-                                "group": "Inputs",
-                                "index": 3
-                            },
-                            {
-                                "name": "deleteChara",
-                                "plug": "input",
-                                "type": {
-                                    "name": "boolean"
-                                },
-                                "group": "Inputs",
-                                "index": 4
-                            },
-                            {
-                                "name": "chara",
-                                "plug": "input",
-                                "type": {
-                                    "name": "string"
-                                },
-                                "group": "Inputs",
-                                "index": 5
-                            },
-                            {
-                                "name": "goToNext",
-                                "type": {
-                                    "name": "boolean"
-                                },
-                                "plug": "output",
-                                "group": "Outputs",
-                                "index": 6
-                            },
-                            {
-                                "name": "word",
-                                "type": {
-                                    "name": "string"
-                                },
-                                "plug": "output",
-                                "group": "Outputs",
-                                "index": 7
-                            }
-                        ],
-                        "children": []
-                    },
-                    {
-                        "id": "3c2acbdd-0a5f-7e67-4072-e336b7b7409e",
-                        "type": "Text Input",
-                        "x": 406.4169888540633,
-                        "y": 591.9898875836845,
-                        "parameters": {
-                            "text": "りんご",
-                            "fontFamily": "YuGothic"
-                        },
-                        "ports": [],
-                        "dynamicports": [],
-                        "children": []
-                    },
-                    {
-                        "id": "217f7a41-09b6-ba46-f05b-db5f87ede2bd",
-                        "type": "Model",
-                        "x": 51.0444087735701,
-                        "y": 638.6007734851709,
-                        "parameters": {
-                            "properties": "question",
-                            "modelId": "q0"
-                        },
-                        "ports": [],
-                        "dynamicports": [
-                            {
-                                "type": {
-                                    "name": "*",
-                                    "allowConnectionsOnly": true
-                                },
-                                "plug": "input/output",
-                                "group": "Properties",
-                                "name": "question",
-                                "index": 7
-                            }
-                        ],
-                        "children": []
-                    },
-                    {
-                        "id": "422b395a-49fb-60fc-c5ba-dbda12b760af",
-                        "type": "Expression",
-                        "x": -26.260183410892665,
-                        "y": 772.9048095374898,
-                        "parameters": {
-                            "expression": "id.slice(1,2)"
-                        },
-                        "ports": [],
-                        "dynamicports": [
-                            {
-                                "name": "id",
-                                "type": "number",
-                                "plug": "input",
-                                "index": 2
-                            }
-                        ],
-                        "children": []
-                    },
-                    {
-                        "id": "77c7547a-d743-13cd-b7ce-5515bdb8311d",
-                        "type": "Static Data",
-                        "label": "question",
-                        "x": 69.90847224619225,
-                        "y": 541.4464766495129,
-                        "parameters": {
-                            "type": "json",
-                            "csv": "りんご,みかん,くま,うみ",
-                            "json": "[\n    {\n        \"id\" :\"q0\",\n        \"question\" :\"みち\"\n    },\n    {\n        \"id\" :\"q1\",\n        \"question\" :\"もり\"\n    },\n    {\n        \"id\" :\"q2\",\n        \"question\" :\"りんご\"\n    },\n    {\n        \"id\" :\"q3\",\n        \"question\" :\"かわ\"\n    },\n    {\n        \"id\" :\"q4\",\n        \"question\" :\"りす\"\n    },\n    {\n        \"id\" :\"q5\",\n        \"question\" :\"はし\"\n    },{\n        \"id\" :\"q6\",\n        \"question\" :\"ありがとう\"\n    },\n    {\n        \"id\" :\"q7\",\n        \"question\" :\"とり\"\n    },\n    {\n        \"id\" :\"q8\",\n        \"question\" :\"はな\"\n    }\n]"
-                        },
-                        "ports": [],
-                        "dynamicports": [],
-                        "children": []
-                    },
-                    {
-                        "id": "b8d0657b-f770-e9be-6f1a-a4cff9415dd7",
-                        "type": "Component Outputs",
-                        "x": 691.0364047236292,
-                        "y": 944.2376568849528,
-                        "parameters": {},
-                        "ports": [
-                            {
-                                "name": "goToNext",
-                                "plug": "input",
-                                "type": {
-                                    "name": "*"
-                                },
-                                "index": 1
-                            }
-                        ],
-                        "dynamicports": [],
-                        "children": []
-                    },
-                    {
-                        "id": "d0d1174d-887d-04bf-0b6a-53d153b90ec2",
-                        "type": "Static Data",
-                        "label": "charactor",
-                        "x": -110.78505973917896,
-                        "y": 551.8664144630538,
-                        "parameters": {
-                            "type": "csv",
-                            "csv": "chara,id,imgPath\nあ,04 ad 71 ca 4c 58 80,chara/1.png\nい,04 e9 71 ca 4c 58 80,chara/2.png\nう,04 cc 71 ca 4c 58 80,chara/3.png\nえ,04 08 71 ca 4c 58 81,chara/4.png\nお,04 ea 71 ca 4c 58 80,chara/5.png\nか,04 26 71 ca 4c 58 81,chara/6.png\nき,04 09 71 ca 4c 58 81,chara/7.png\nく,04 44 71 ca 4c 58 81,chara/8.png\nけ,04 27 71 ca 4c 58 81,chara/9.png\nこ,04 62 71 ca 4c 58 81,chara/10.png\nさ,04 f4 05 c2 4c 58 84,chara/11.png\nし,04 b7 05 c2 4c 58 84,chara/12.png\nす,04 d6 05 c2 4c 58 84,chara/13.png\nせ,04 97 05 c2 4c 58 84,chara/14.png\nそ,04 b6 05 c2 4c 58 84,chara/15.png\nた,04 01 0a ca 4c 58 81,chara/16.png\nち,04 c6 0a ca 4c 58 80,chara/17.png\nつ,04 e3 0a ca 4c 58 80,chara/18.png\nて,04 a6 0a ca 4c 58 80,chara/19.png\nと,04 c5 0a ca 4c 58 80,chara/20.png\nな,04 d8 0a c2 4c 58 84,chara/21.png\nに,04 f5 0a c2 4c 58 84,chara/22.png\nぬ,04 b7 0a c2 4c 58 84,chara/23.png\nね,04 d7 0a c2 4c 58 84,chara/24.png\nの,04 97 0a c2 4c 58 84,chara/25.png\nは,04 2b 07 c2 4c 58 85,chara/26.png\nひ,04 f6 06 c2 4c 58 84,chara/27.png\nふ,04 15 06 c2 4c 58 85,chara/28.png\nへ,04 d8 06 c2 4c 58 84,chara/29.png\nほ,04 f5 06 c2 4c 58 84,chara/30.png\nま,04 0b 07 c2 4c 58 85,chara/31.png\nみ,04 ec 07 c2 4c 58 84,chara/32.png\nむ,04 2a 07 c2 4c 58 85,chara/33.png\nめ,04 0c 07 c2 4c 58 85,chara/34.png\nも,04 16 06 c2 4c 58 85,chara/35.png\nや,04 8e 07 c2 4c 58 84,chara/36.png\nゆ,04 cb 07 c2 4c 58 84,chara/37.png\nよ,04 ae 07 c2 4c 58 84,chara/38.png\nら,04 eb 07 c2 4c 58 84,chara/39.png\nり,04 ce 07 c2 4c 58 84,chara/40.png\nる,04 79 05 c2 4c 58 84,chara/41.png\nれ,04 96 05 c2 4c 58 84,chara/42.png\nろ,04 79 06 c2 4c 58 84,chara/43.png\nわ,04 78 05 c2 4c 58 84,chara/44.png\nを,04 97 06 c2 4c 58 84,chara/45.png\nん,04 bc 0c c2 4c 58 84,chara/46.png\nゃ,04 db 0c c2 4c 58 84,chara/47.png\nゅ,04 9e 0c c2 4c 58 84,chara/48.png\nょ,04 bb 0c c2 4c 58 84,chara/49.png\nっ,04 7e 0c c2 4c 58 84,chara/50.png\n゛,04 ad 07 c2 4c 58 84,chara/51.png\n゜,04 6f 07 c2 4c 58 84,chara/52.png\nー,04 8d 07 c2 4c 58 84,chara/53.png",
-                            "json": "[\n    {\n        \"id\" :\"q0\",\n        \"question\" :\"みち\"\n    }\n]"
-                        },
-                        "ports": [],
-                        "dynamicports": [],
-                        "children": []
-                    },
-                    {
-                        "id": "3aa21979-b57a-bf7a-cdb9-67bdb53d938b",
-                        "type": "Receive Message",
-                        "x": -234.18273156010662,
-                        "y": 946.3753241539727,
-                        "parameters": {
-                            "enabled": true,
-                            "topic": "/word"
-                        },
-                        "ports": [
-                            {
-                                "name": "word",
-                                "plug": "outputs",
-                                "type": {
-                                    "name": "*",
-                                    "allowConnectionOnly": true
-                                },
-                                "group": "Payload",
-                                "index": 1
-                            }
-                        ],
-                        "dynamicports": [],
-                        "children": []
-                    },
-                    {
-                        "id": "8e909c90-4111-7803-4712-4f774c3d3c85",
-                        "type": "Model",
-                        "x": 2.165934412937446,
-                        "y": 950.9381682993867,
-                        "parameters": {
-                            "properties": "chara",
-                            "modelId": ""
-                        },
-                        "ports": [],
-                        "dynamicports": [
-                            {
-                                "type": {
-                                    "name": "*",
-                                    "allowConnectionsOnly": true
-                                },
-                                "plug": "input/output",
-                                "group": "Properties",
-                                "name": "chara",
-                                "index": 7
-                            }
-                        ],
-                        "children": []
-                    }
-                ]
-            }
-        },
-        {
             "name": "/Parts/WordList",
             "graph": {
                 "connections": [
@@ -18526,239 +18132,6 @@
                         "parameters": {},
                         "ports": [],
                         "dynamicports": [],
-                        "children": []
-                    }
-                ]
-            }
-        },
-        {
-            "name": "/Parts/Judge",
-            "graph": {
-                "connections": [
-                    {
-                        "fromId": "6b1cf3c4-3dcc-a740-3712-0ba786af4ebe",
-                        "fromProperty": "word",
-                        "toId": "7dd5cbe8-14e1-bede-36de-e887d192e59c",
-                        "toProperty": "text"
-                    },
-                    {
-                        "fromId": "47163ece-a1da-8d88-b882-c7a7eb007a17",
-                        "fromProperty": "text",
-                        "toId": "07e01d2a-75b1-3aa1-6ec8-72ce337fb2ac",
-                        "toProperty": "text"
-                    },
-                    {
-                        "fromId": "47163ece-a1da-8d88-b882-c7a7eb007a17",
-                        "fromProperty": "text",
-                        "toId": "f1b09ba3-df87-b9fe-ba6e-f24a8d376010",
-                        "toProperty": "quest"
-                    },
-                    {
-                        "fromId": "f1b09ba3-df87-b9fe-ba6e-f24a8d376010",
-                        "fromProperty": "judgment",
-                        "toId": "5692b6d8-9203-c112-6b48-925d58db2337",
-                        "toProperty": "text"
-                    },
-                    {
-                        "fromId": "6b1cf3c4-3dcc-a740-3712-0ba786af4ebe",
-                        "fromProperty": "word",
-                        "toId": "f1b09ba3-df87-b9fe-ba6e-f24a8d376010",
-                        "toProperty": "word"
-                    },
-                    {
-                        "fromId": "42bcdb90-4d56-a8bb-9ea8-333dc0ac4f6d",
-                        "fromProperty": "question",
-                        "toId": "47163ece-a1da-8d88-b882-c7a7eb007a17",
-                        "toProperty": "text"
-                    }
-                ],
-                "roots": [
-                    {
-                        "id": "c6394d14-26be-49ce-855b-552c8b9b3d53",
-                        "type": "Group",
-                        "version": 2,
-                        "label": "Root",
-                        "x": 283,
-                        "y": 343,
-                        "parameters": {},
-                        "ports": [],
-                        "dynamicports": [],
-                        "children": [
-                            {
-                                "id": "47559074-cb0a-71d6-8296-b3003cf6fa9e",
-                                "type": "Rectangle",
-                                "label": "Bg",
-                                "x": 303,
-                                "y": 404,
-                                "parameters": {
-                                    "touchPropagation": false
-                                },
-                                "ports": [],
-                                "dynamicports": [],
-                                "children": []
-                            },
-                            {
-                                "id": "07e01d2a-75b1-3aa1-6ec8-72ce337fb2ac",
-                                "type": "Text",
-                                "version": 2,
-                                "label": "quest",
-                                "x": 303,
-                                "y": 465,
-                                "parameters": {
-                                    "fontSize": 380,
-                                    "text": "りんご",
-                                    "alignX": "center",
-                                    "alignY": "center",
-                                    "color": "#ff504b",
-                                    "lineHeight": 0,
-                                    "y": 100,
-                                    "alignment": "center",
-                                    "verticalAlignment": "center",
-                                    "fontFamily": "A-OTF-FutoMinA101Pro-Bold.otf"
-                                },
-                                "ports": [],
-                                "dynamicports": [],
-                                "children": []
-                            },
-                            {
-                                "id": "7dd5cbe8-14e1-bede-36de-e887d192e59c",
-                                "type": "Text",
-                                "version": 2,
-                                "label": "ReceiveText",
-                                "x": 303,
-                                "y": 562,
-                                "parameters": {
-                                    "fontSize": 160,
-                                    "alignX": "center",
-                                    "alignY": "bottom",
-                                    "y": -100,
-                                    "fontFamily": "A-OTF-FutoMinA101Pro-Bold.otf",
-                                    "text": "-",
-                                    "color": "#888888"
-                                },
-                                "ports": [],
-                                "dynamicports": [],
-                                "children": []
-                            },
-                            {
-                                "id": "5692b6d8-9203-c112-6b48-925d58db2337",
-                                "type": "Text",
-                                "version": 2,
-                                "label": "judgement",
-                                "x": 303,
-                                "y": 659,
-                                "parameters": {
-                                    "fontSize": 200,
-                                    "text": "judgement",
-                                    "color": "#ffba4b",
-                                    "fontFamily": "A-OTF-FutoMinA101Pro-Bold.otf",
-                                    "alignX": "center"
-                                },
-                                "ports": [],
-                                "dynamicports": [],
-                                "children": []
-                            }
-                        ]
-                    },
-                    {
-                        "id": "6b1cf3c4-3dcc-a740-3712-0ba786af4ebe",
-                        "type": "Receive Message",
-                        "x": 41.95752621376292,
-                        "y": 609.8278103111586,
-                        "parameters": {
-                            "enabled": true,
-                            "topic": "/word"
-                        },
-                        "ports": [
-                            {
-                                "name": "word",
-                                "plug": "outputs",
-                                "type": {
-                                    "name": "*",
-                                    "allowConnectionOnly": true
-                                },
-                                "group": "Payload",
-                                "index": 1
-                            }
-                        ],
-                        "dynamicports": [],
-                        "children": []
-                    },
-                    {
-                        "id": "f1b09ba3-df87-b9fe-ba6e-f24a8d376010",
-                        "type": "Javascript2",
-                        "x": 37.357412986362505,
-                        "y": 504.9526492328075,
-                        "parameters": {
-                            "code": "define({\n    inputs: {\n        word: \"string\",\n        quest:\"string\"\n    },\n    outputs: {\n        judgment: \"string\"\n    },\n    destroy: function(inputs, outputs) {\n\n    },\n    setup: function(inputs, outputs) {\n    },\n    run: function(inputs, outputs, changedInputs) {\n        if(inputs.quest === inputs.word){\n          outputs.judgment = \"◯\";\n        }else{\n          outputs.judgment = \"✕\";\n        }\n    }\n});"
-                        },
-                        "ports": [],
-                        "dynamicports": [
-                            {
-                                "name": "word",
-                                "plug": "input",
-                                "type": {
-                                    "name": "string"
-                                },
-                                "group": "Inputs",
-                                "index": 2
-                            },
-                            {
-                                "name": "quest",
-                                "plug": "input",
-                                "type": {
-                                    "name": "string"
-                                },
-                                "group": "Inputs",
-                                "index": 3
-                            },
-                            {
-                                "name": "judgment",
-                                "type": {
-                                    "name": "string"
-                                },
-                                "plug": "output",
-                                "group": "Outputs",
-                                "index": 4
-                            }
-                        ],
-                        "children": []
-                    },
-                    {
-                        "id": "47163ece-a1da-8d88-b882-c7a7eb007a17",
-                        "type": "Text Input",
-                        "x": 40.97286023919003,
-                        "y": 407.4647213696932,
-                        "parameters": {
-                            "text": "りんご",
-                            "fontFamily": "YuGothic"
-                        },
-                        "ports": [],
-                        "dynamicports": [],
-                        "children": []
-                    },
-                    {
-                        "id": "42bcdb90-4d56-a8bb-9ea8-333dc0ac4f6d",
-                        "type": "Model",
-                        "x": -200.76647842796345,
-                        "y": 407.56965826489125,
-                        "parameters": {
-                            "properties": "question",
-                            "modelId": "q01"
-                        },
-                        "ports": [],
-                        "dynamicports": [
-                            {
-                                "type": {
-                                    "name": "*",
-                                    "allowConnectionsOnly": true
-                                },
-                                "plug": "input/output",
-                                "group": "Properties",
-                                "name": "question",
-                                "index": 7
-                            }
-                        ],
                         "children": []
                     }
                 ]
@@ -19527,64 +18900,34 @@
             "graph": {
                 "connections": [
                     {
-                        "fromId": "176a8c52-5cb9-6985-b090-0f339527e966",
-                        "fromProperty": "index",
-                        "toId": "b0edc4ba-c6af-bde8-13e5-ad0b13728789",
-                        "toProperty": "index"
-                    },
-                    {
-                        "fromId": "b0edc4ba-c6af-bde8-13e5-ad0b13728789",
-                        "fromProperty": "result",
-                        "toId": "3f13c3dd-2470-70a5-8099-f971a94eb2f9",
-                        "toProperty": "start"
-                    },
-                    {
-                        "fromId": "3f13c3dd-2470-70a5-8099-f971a94eb2f9",
-                        "fromProperty": "timerFinished",
-                        "toId": "6514f4d0-dbce-9579-253b-4c39081df87a",
-                        "toProperty": "Finished"
-                    },
-                    {
-                        "fromId": "176a8c52-5cb9-6985-b090-0f339527e966",
-                        "fromProperty": "Num",
-                        "toId": "b0edc4ba-c6af-bde8-13e5-ad0b13728789",
-                        "toProperty": "sceneNum"
-                    },
-                    {
-                        "fromId": "176a8c52-5cb9-6985-b090-0f339527e966",
-                        "fromProperty": "bgPath",
-                        "toId": "b5851ab9-8409-7b27-7682-699dccc63fd3",
-                        "toProperty": "image"
-                    },
-                    {
-                        "fromId": "176a8c52-5cb9-6985-b090-0f339527e966",
-                        "fromProperty": "expression",
-                        "toId": "3a892177-ef26-a07b-aaff-d131a4a328a6",
-                        "toProperty": "exp"
-                    },
-                    {
                         "fromId": "3a892177-ef26-a07b-aaff-d131a4a328a6",
                         "fromProperty": "formatted",
                         "toId": "78d7bc8d-b70e-821d-b7af-edc03e488bf8",
                         "toProperty": "image"
                     },
                     {
-                        "fromId": "63e30fb1-5424-0c37-aff0-40fc3f7afc93",
-                        "fromProperty": "formatted",
-                        "toId": "5e5b01e9-58fc-c768-e0cb-c476f7364791",
-                        "toProperty": "modelId"
-                    },
-                    {
-                        "fromId": "176a8c52-5cb9-6985-b090-0f339527e966",
-                        "fromProperty": "Num",
-                        "toId": "63e30fb1-5424-0c37-aff0-40fc3f7afc93",
-                        "toProperty": "num"
-                    },
-                    {
                         "fromId": "5e5b01e9-58fc-c768-e0cb-c476f7364791",
                         "fromProperty": "text",
                         "toId": "c96d7290-c736-a049-5ef1-1327bd868bae",
                         "toProperty": "text"
+                    },
+                    {
+                        "fromId": "9b143e28-dff6-d81e-3bd7-4abd0059ee56",
+                        "fromProperty": "itemId",
+                        "toId": "5e5b01e9-58fc-c768-e0cb-c476f7364791",
+                        "toProperty": "modelId"
+                    },
+                    {
+                        "fromId": "5e5b01e9-58fc-c768-e0cb-c476f7364791",
+                        "fromProperty": "expression",
+                        "toId": "3a892177-ef26-a07b-aaff-d131a4a328a6",
+                        "toProperty": "exp"
+                    },
+                    {
+                        "fromId": "9dc72228-4e28-3634-aa6d-1540da1c7476",
+                        "fromProperty": "formatted",
+                        "toId": "b5851ab9-8409-7b27-7682-699dccc63fd3",
+                        "toProperty": "image"
                     }
                 ],
                 "roots": [
@@ -19638,127 +18981,14 @@
                                 "ports": [],
                                 "dynamicports": [],
                                 "children": []
-                            },
-                            {
-                                "id": "440f4f15-df07-0a3e-b09b-0e79f6ccc051",
-                                "type": "Image",
-                                "version": 2,
-                                "x": 110.92024716153583,
-                                "y": 494.45537912220414,
-                                "parameters": {
-                                    "image": "moji.png",
-                                    "alignY": "bottom"
-                                },
-                                "ports": [],
-                                "dynamicports": [],
-                                "children": []
                             }
                         ]
                     },
                     {
-                        "id": "6514f4d0-dbce-9579-253b-4c39081df87a",
-                        "type": "Component Outputs",
-                        "x": -106.19799853413897,
-                        "y": 876.9220441040317,
-                        "parameters": {},
-                        "ports": [
-                            {
-                                "name": "Finished",
-                                "plug": "input",
-                                "type": {
-                                    "name": "*"
-                                },
-                                "index": 1
-                            }
-                        ],
-                        "dynamicports": [],
-                        "children": []
-                    },
-                    {
-                        "id": "3f13c3dd-2470-70a5-8099-f971a94eb2f9",
-                        "type": "Timer",
-                        "x": -279.30826930424433,
-                        "y": 875.9438970669628,
-                        "parameters": {
-                            "duration": 3000
-                        },
-                        "ports": [],
-                        "dynamicports": [],
-                        "children": []
-                    },
-                    {
-                        "id": "176a8c52-5cb9-6985-b090-0f339527e966",
-                        "type": "Component Inputs",
-                        "x": -308.068982949998,
-                        "y": 382.23305555570363,
-                        "parameters": {},
-                        "ports": [
-                            {
-                                "name": "index",
-                                "plug": "output",
-                                "type": {
-                                    "name": "*"
-                                },
-                                "index": 1
-                            },
-                            {
-                                "name": "Num",
-                                "plug": "output",
-                                "type": {
-                                    "name": "*"
-                                },
-                                "index": 2
-                            },
-                            {
-                                "name": "bgPath",
-                                "plug": "output",
-                                "type": {
-                                    "name": "*"
-                                },
-                                "index": 4
-                            },
-                            {
-                                "name": "expression",
-                                "plug": "output",
-                                "type": {
-                                    "name": "*"
-                                },
-                                "index": 5
-                            }
-                        ],
-                        "dynamicports": [],
-                        "children": []
-                    },
-                    {
-                        "id": "b0edc4ba-c6af-bde8-13e5-ad0b13728789",
-                        "type": "Expression",
-                        "x": -450.87443843138954,
-                        "y": 843.8617756722037,
-                        "parameters": {
-                            "expression": "index == sceneNum-1"
-                        },
-                        "ports": [],
-                        "dynamicports": [
-                            {
-                                "name": "index",
-                                "type": "number",
-                                "plug": "input",
-                                "index": 2
-                            },
-                            {
-                                "name": "sceneNum",
-                                "type": "number",
-                                "plug": "input",
-                                "index": 3
-                            }
-                        ],
-                        "children": []
-                    },
-                    {
                         "id": "3a892177-ef26-a07b-aaff-d131a4a328a6",
                         "type": "String Format",
-                        "x": -198.22699537193552,
-                        "y": 745.4593693438557,
+                        "x": -144.09787580783126,
+                        "y": 691.6342879831341,
                         "parameters": {
                             "format": "exp/{exp}.png"
                         },
@@ -19766,25 +18996,6 @@
                         "dynamicports": [
                             {
                                 "name": "exp",
-                                "type": "*",
-                                "plug": "input",
-                                "index": 2
-                            }
-                        ],
-                        "children": []
-                    },
-                    {
-                        "id": "63e30fb1-5424-0c37-aff0-40fc3f7afc93",
-                        "type": "String Format",
-                        "x": -336.2343773164376,
-                        "y": 609.0269473497278,
-                        "parameters": {
-                            "format": "st_{num}"
-                        },
-                        "ports": [],
-                        "dynamicports": [
-                            {
-                                "name": "num",
                                 "type": "*",
                                 "plug": "input",
                                 "index": 2
@@ -19796,10 +19007,10 @@
                         "id": "5e5b01e9-58fc-c768-e0cb-c476f7364791",
                         "type": "Model",
                         "label": "Story text",
-                        "x": -137.24718025278918,
-                        "y": 584.988225556804,
+                        "x": -365.494739485424,
+                        "y": 620.2913576486334,
                         "parameters": {
-                            "properties": "text"
+                            "properties": "text,expression,id"
                         },
                         "ports": [],
                         "dynamicports": [
@@ -19812,288 +19023,55 @@
                                 "group": "Properties",
                                 "name": "text",
                                 "index": 7
+                            },
+                            {
+                                "type": {
+                                    "name": "*",
+                                    "allowConnectionsOnly": true
+                                },
+                                "plug": "input/output",
+                                "group": "Properties",
+                                "name": "expression",
+                                "index": 8
+                            },
+                            {
+                                "type": {
+                                    "name": "*",
+                                    "allowConnectionsOnly": true
+                                },
+                                "plug": "input/output",
+                                "group": "Properties",
+                                "name": "id",
+                                "index": 9
                             }
                         ],
                         "children": []
-                    }
-                ]
-            }
-        },
-        {
-            "name": "/Story/Scene/Qestion",
-            "graph": {
-                "connections": [
-                    {
-                        "fromId": "7bdd3d0a-faca-094b-2143-1eefacccde29",
-                        "fromProperty": "goToNext",
-                        "toId": "c32fb195-93a4-e5bc-e98b-35e00a2a29e6",
-                        "toProperty": "on"
                     },
                     {
-                        "fromId": "c32fb195-93a4-e5bc-e98b-35e00a2a29e6",
-                        "fromProperty": "switchedToOn",
-                        "toId": "008e0288-c71d-0bd9-b4af-d30e5466ee8c",
-                        "toProperty": "Finished"
+                        "id": "9b143e28-dff6-d81e-3bd7-4abd0059ee56",
+                        "type": "For Each Actions",
+                        "x": -560.6292256006643,
+                        "y": 636.3572190648276,
+                        "parameters": {},
+                        "ports": [],
+                        "dynamicports": [],
+                        "children": []
                     },
                     {
-                        "fromId": "8f10c747-9236-6dfc-8f16-3b4a8737fc0d",
-                        "fromProperty": "bgPath",
-                        "toId": "c864f02d-6c20-3c46-c5b7-255a649e0715",
-                        "toProperty": "image"
-                    },
-                    {
-                        "fromId": "8f10c747-9236-6dfc-8f16-3b4a8737fc0d",
-                        "fromProperty": "expression",
-                        "toId": "d52f1ab0-ff2c-890f-7466-56068f681431",
-                        "toProperty": "exp"
-                    },
-                    {
-                        "fromId": "d52f1ab0-ff2c-890f-7466-56068f681431",
-                        "fromProperty": "formatted",
-                        "toId": "f1d56a59-e391-b217-79f3-8372352f7a5c",
-                        "toProperty": "image"
-                    },
-                    {
-                        "fromId": "8f10c747-9236-6dfc-8f16-3b4a8737fc0d",
-                        "fromProperty": "qNum",
-                        "toId": "7bdd3d0a-faca-094b-2143-1eefacccde29",
-                        "toProperty": "SceneId"
-                    },
-                    {
-                        "fromId": "b74d3abd-4219-3283-d7a4-4c34931fb7bf",
-                        "fromProperty": "formatted",
-                        "toId": "0a71f5ef-0efb-a0fb-bcb9-478cf610eff7",
-                        "toProperty": "modelId"
-                    },
-                    {
-                        "fromId": "8f10c747-9236-6dfc-8f16-3b4a8737fc0d",
-                        "fromProperty": "Num",
-                        "toId": "b74d3abd-4219-3283-d7a4-4c34931fb7bf",
-                        "toProperty": "num"
-                    },
-                    {
-                        "fromId": "0a71f5ef-0efb-a0fb-bcb9-478cf610eff7",
-                        "fromProperty": "text",
-                        "toId": "496da542-66c8-f75c-c23d-f91a38efe4ae",
-                        "toProperty": "text"
-                    }
-                ],
-                "roots": [
-                    {
-                        "id": "562e1a0b-4f29-1dcb-5c40-b8d783200219",
-                        "type": "Group",
-                        "version": 2,
-                        "label": "Root",
-                        "x": 59.957238336908574,
-                        "y": 205.07703867819072,
+                        "id": "9dc72228-4e28-3634-aa6d-1540da1c7476",
+                        "type": "String Format",
+                        "x": -182.99282911219814,
+                        "y": 508.7211360359023,
                         "parameters": {
-                            "padding": 40
+                            "format": "bg/{bgPath}.png"
                         },
                         "ports": [],
-                        "dynamicports": [],
-                        "children": [
-                            {
-                                "id": "c864f02d-6c20-3c46-c5b7-255a649e0715",
-                                "type": "Image",
-                                "version": 2,
-                                "label": "BG",
-                                "x": 20,
-                                "y": 61,
-                                "parameters": {},
-                                "ports": [],
-                                "dynamicports": [],
-                                "children": []
-                            },
-                            {
-                                "id": "496da542-66c8-f75c-c23d-f91a38efe4ae",
-                                "type": "Text",
-                                "version": 2,
-                                "x": 194.0828271473456,
-                                "y": 345.7050214025868,
-                                "parameters": {
-                                    "text": "一緒にいかない？",
-                                    "color": "#000000",
-                                    "fontSize": 64,
-                                    "alignX": "center"
-                                },
-                                "ports": [],
-                                "dynamicports": [],
-                                "children": []
-                            },
-                            {
-                                "id": "7bdd3d0a-faca-094b-2143-1eefacccde29",
-                                "type": "/Story/Judge",
-                                "x": 20,
-                                "y": 255,
-                                "parameters": {},
-                                "ports": [],
-                                "dynamicports": [],
-                                "children": []
-                            },
-                            {
-                                "id": "f1d56a59-e391-b217-79f3-8372352f7a5c",
-                                "type": "Image",
-                                "version": 2,
-                                "x": 168.4474470491841,
-                                "y": 320.46853203597686,
-                                "parameters": {},
-                                "ports": [],
-                                "dynamicports": [],
-                                "children": []
-                            }
-                        ]
-                    },
-                    {
-                        "id": "008e0288-c71d-0bd9-b4af-d30e5466ee8c",
-                        "type": "Component Outputs",
-                        "x": 463.58000865668333,
-                        "y": 399.62725858985385,
-                        "parameters": {},
-                        "ports": [
-                            {
-                                "name": "Finished",
-                                "plug": "input",
-                                "type": {
-                                    "name": "*"
-                                },
-                                "index": 1
-                            }
-                        ],
-                        "dynamicports": [],
-                        "children": []
-                    },
-                    {
-                        "id": "c32fb195-93a4-e5bc-e98b-35e00a2a29e6",
-                        "type": "Switch",
-                        "x": 282.1984506594522,
-                        "y": 386.07576287741693,
-                        "parameters": {},
-                        "ports": [],
-                        "dynamicports": [],
-                        "children": []
-                    },
-                    {
-                        "id": "8f10c747-9236-6dfc-8f16-3b4a8737fc0d",
-                        "type": "Component Inputs",
-                        "x": -390.6164341023702,
-                        "y": 50.6954827020777,
-                        "parameters": {},
-                        "ports": [
-                            {
-                                "name": "index",
-                                "plug": "output",
-                                "type": {
-                                    "name": "*"
-                                },
-                                "index": 1
-                            },
-                            {
-                                "name": "qNum",
-                                "plug": "output",
-                                "type": {
-                                    "name": "*"
-                                },
-                                "index": 2
-                            },
+                        "dynamicports": [
                             {
                                 "name": "bgPath",
-                                "plug": "output",
-                                "type": {
-                                    "name": "*"
-                                },
-                                "index": 4
-                            },
-                            {
-                                "name": "expression",
-                                "plug": "output",
-                                "type": {
-                                    "name": "*"
-                                },
-                                "index": 5
-                            },
-                            {
-                                "name": "Num",
-                                "plug": "output",
-                                "type": {
-                                    "name": "*"
-                                },
-                                "index": 6
-                            }
-                        ],
-                        "dynamicports": [],
-                        "children": []
-                    },
-                    {
-                        "id": "d52f1ab0-ff2c-890f-7466-56068f681431",
-                        "type": "String Format",
-                        "x": -306.66884345691705,
-                        "y": 710.5933524795914,
-                        "parameters": {
-                            "format": "exp/{exp}.png"
-                        },
-                        "ports": [],
-                        "dynamicports": [
-                            {
-                                "name": "exp",
                                 "type": "*",
                                 "plug": "input",
                                 "index": 2
-                            }
-                        ],
-                        "children": []
-                    },
-                    {
-                        "id": "3ee136cf-a200-53a3-b523-6648192d7688",
-                        "type": "Static Data",
-                        "label": "question text",
-                        "x": -601.4488892808712,
-                        "y": 516.641539863531,
-                        "parameters": {
-                            "csv": "id,text\nt_q0,あいう\nt_q1,かきく"
-                        },
-                        "ports": [],
-                        "dynamicports": [],
-                        "children": []
-                    },
-                    {
-                        "id": "b74d3abd-4219-3283-d7a4-4c34931fb7bf",
-                        "type": "String Format",
-                        "x": -393.67375458459156,
-                        "y": 344.74891091593173,
-                        "parameters": {
-                            "format": "st_{num}"
-                        },
-                        "ports": [],
-                        "dynamicports": [
-                            {
-                                "name": "num",
-                                "type": "*",
-                                "plug": "input",
-                                "index": 2
-                            }
-                        ],
-                        "children": []
-                    },
-                    {
-                        "id": "0a71f5ef-0efb-a0fb-bcb9-478cf610eff7",
-                        "type": "Model",
-                        "label": "Story text",
-                        "x": -317.11806070629154,
-                        "y": 465.24738038348875,
-                        "parameters": {
-                            "properties": "text"
-                        },
-                        "ports": [],
-                        "dynamicports": [
-                            {
-                                "type": {
-                                    "name": "*",
-                                    "allowConnectionsOnly": true
-                                },
-                                "plug": "input/output",
-                                "group": "Properties",
-                                "name": "text",
-                                "index": 7
                             }
                         ],
                         "children": []
@@ -20112,238 +19090,136 @@
                         "toProperty": "opacity"
                     },
                     {
-                        "fromId": "2e05d447-f8b3-c932-0757-1c392988fed4",
-                        "fromProperty": "index",
-                        "toId": "f3a9ecbd-f3cd-8936-d6c1-6007c7446c60",
-                        "toProperty": "scrollToIndex.value"
+                        "fromId": "94ca5bec-d6e5-626d-88ee-93e11cf5844a",
+                        "fromProperty": "items",
+                        "toId": "b750a9c2-bd19-ad7b-e290-3c8408d4a874",
+                        "toProperty": "items"
+                    },
+                    {
+                        "fromId": "b750a9c2-bd19-ad7b-e290-3c8408d4a874",
+                        "fromProperty": "items",
+                        "toId": "f2ec3c3b-c6c4-8437-2fc4-242903a3c0bb",
+                        "toProperty": "items"
                     },
                     {
                         "fromId": "2e05d447-f8b3-c932-0757-1c392988fed4",
                         "fromProperty": "goto",
-                        "toId": "f3a9ecbd-f3cd-8936-d6c1-6007c7446c60",
+                        "toId": "eb458871-e0a8-bfdc-0b23-50f78ad0168b",
                         "toProperty": "scrollToIndex.do"
                     },
                     {
-                        "fromId": "102b5c17-dae9-2691-a6d3-38418546114d",
-                        "fromProperty": "Finished",
-                        "toId": "2e05d447-f8b3-c932-0757-1c392988fed4",
-                        "toProperty": "goToNext"
-                    },
-                    {
-                        "fromId": "efa5642a-129e-369e-1aaa-2c088974daf8",
-                        "fromProperty": "Finished",
-                        "toId": "2e05d447-f8b3-c932-0757-1c392988fed4",
-                        "toProperty": "goToNext"
-                    },
-                    {
-                        "fromId": "90d77c52-9528-af9a-08d5-f1e619d9d509",
-                        "fromProperty": "Finished",
-                        "toId": "2e05d447-f8b3-c932-0757-1c392988fed4",
-                        "toProperty": "goToNext"
-                    },
-                    {
                         "fromId": "2e05d447-f8b3-c932-0757-1c392988fed4",
                         "fromProperty": "index",
-                        "toId": "90d77c52-9528-af9a-08d5-f1e619d9d509",
+                        "toId": "eb458871-e0a8-bfdc-0b23-50f78ad0168b",
+                        "toProperty": "scrollToIndex.value"
+                    },
+                    {
+                        "fromId": "188193d7-2c52-7b79-a2da-70dd8465f754",
+                        "fromProperty": "timerFinished",
+                        "toId": "2e05d447-f8b3-c932-0757-1c392988fed4",
+                        "toProperty": "goToNext"
+                    },
+                    {
+                        "fromId": "188193d7-2c52-7b79-a2da-70dd8465f754",
+                        "fromProperty": "timerFinished",
+                        "toId": "ecbb8955-86ec-4391-a3cb-764045fc67df",
+                        "toProperty": "finished"
+                    },
+                    {
+                        "fromId": "d6e03676-0e95-4654-bd4e-8b3c0efa4495",
+                        "fromProperty": "result",
+                        "toId": "ecbb8955-86ec-4391-a3cb-764045fc67df",
                         "toProperty": "index"
                     },
                     {
                         "fromId": "2e05d447-f8b3-c932-0757-1c392988fed4",
                         "fromProperty": "index",
-                        "toId": "365048fc-37dd-2ee6-8a46-e3ffee379bce",
+                        "toId": "d6e03676-0e95-4654-bd4e-8b3c0efa4495",
                         "toProperty": "index"
                     },
                     {
-                        "fromId": "365048fc-37dd-2ee6-8a46-e3ffee379bce",
-                        "fromProperty": "Finished",
+                        "fromId": "ecbb8955-86ec-4391-a3cb-764045fc67df",
+                        "fromProperty": "startTimer",
+                        "toId": "188193d7-2c52-7b79-a2da-70dd8465f754",
+                        "toProperty": "start"
+                    },
+                    {
+                        "fromId": "eb458871-e0a8-bfdc-0b23-50f78ad0168b",
+                        "fromProperty": "indexChanged",
+                        "toId": "ecbb8955-86ec-4391-a3cb-764045fc67df",
+                        "toProperty": "changed"
+                    },
+                    {
+                        "fromId": "06357783-322b-2481-67c3-557133c6f689",
+                        "fromProperty": "start",
+                        "toId": "ecbb8955-86ec-4391-a3cb-764045fc67df",
+                        "toProperty": "started"
+                    },
+                    {
+                        "fromId": "1ab4dd5f-a1a3-a301-5f18-1657e5bee52d",
+                        "fromProperty": "text",
+                        "toId": "cd991fcc-1e5d-57d7-6d44-0eb0eef10f9f",
+                        "toProperty": "text"
+                    },
+                    {
+                        "fromId": "1ab4dd5f-a1a3-a301-5f18-1657e5bee52d",
+                        "fromProperty": "text",
+                        "toId": "203e5884-23aa-e51b-32de-ccfd32ad08e7",
+                        "toProperty": "quest"
+                    },
+                    {
+                        "fromId": "877a98ab-19bf-7bf5-2116-8e9cd251103c",
+                        "fromProperty": "question",
+                        "toId": "1ab4dd5f-a1a3-a301-5f18-1657e5bee52d",
+                        "toProperty": "text"
+                    },
+                    {
+                        "fromId": "631d9bba-9795-24df-a3fc-5db13a2a0854",
+                        "fromProperty": "word",
+                        "toId": "c3f470f9-745b-42ea-fd9e-2c4d176a8e82",
+                        "toProperty": "modelId"
+                    },
+                    {
+                        "fromId": "67cea911-a050-5c06-70e7-b3918a18a570",
+                        "fromProperty": "touch.tap",
+                        "toId": "203e5884-23aa-e51b-32de-ccfd32ad08e7",
+                        "toProperty": "deleteChara"
+                    },
+                    {
+                        "fromId": "203e5884-23aa-e51b-32de-ccfd32ad08e7",
+                        "fromProperty": "word",
+                        "toId": "d57d5146-f5a4-d760-985f-85064355f025",
+                        "toProperty": "text"
+                    },
+                    {
+                        "fromId": "c3f470f9-745b-42ea-fd9e-2c4d176a8e82",
+                        "fromProperty": "chara",
+                        "toId": "203e5884-23aa-e51b-32de-ccfd32ad08e7",
+                        "toProperty": "chara"
+                    },
+                    {
+                        "fromId": "8dfd62cc-c25e-9d17-c794-498efeadf178",
+                        "fromProperty": "formatted",
+                        "toId": "877a98ab-19bf-7bf5-2116-8e9cd251103c",
+                        "toProperty": "modelId"
+                    },
+                    {
+                        "fromId": "203e5884-23aa-e51b-32de-ccfd32ad08e7",
+                        "fromProperty": "goToNext",
                         "toId": "2e05d447-f8b3-c932-0757-1c392988fed4",
                         "toProperty": "goToNext"
                     },
                     {
-                        "fromId": "c8d68177-32e3-2020-305a-bd25079e02bb",
-                        "fromProperty": "Finished",
-                        "toId": "2e05d447-f8b3-c932-0757-1c392988fed4",
-                        "toProperty": "goToNext"
+                        "fromId": "ecbb8955-86ec-4391-a3cb-764045fc67df",
+                        "fromProperty": "visible",
+                        "toId": "a9b7acd7-38b2-8721-1905-a97eb6ee79eb",
+                        "toProperty": "visible"
                     },
                     {
-                        "fromId": "0ef7ddbd-44f5-d297-19d0-0cadcb5dd0b0",
-                        "fromProperty": "Finished",
-                        "toId": "2e05d447-f8b3-c932-0757-1c392988fed4",
-                        "toProperty": "goToNext"
-                    },
-                    {
-                        "fromId": "49c1983b-b4a7-ca32-7877-59b00e7a362d",
-                        "fromProperty": "Finished",
-                        "toId": "2e05d447-f8b3-c932-0757-1c392988fed4",
-                        "toProperty": "goToNext"
-                    },
-                    {
-                        "fromId": "2e05d447-f8b3-c932-0757-1c392988fed4",
-                        "fromProperty": "index",
-                        "toId": "49c1983b-b4a7-ca32-7877-59b00e7a362d",
-                        "toProperty": "index"
-                    },
-                    {
-                        "fromId": "f993e0b2-128e-2117-b6ae-1fc1546781b2",
-                        "fromProperty": "Finished",
-                        "toId": "2e05d447-f8b3-c932-0757-1c392988fed4",
-                        "toProperty": "goToNext"
-                    },
-                    {
-                        "fromId": "f6228e44-b2c2-e522-322a-b3bbc5ac3db9",
-                        "fromProperty": "Finished",
-                        "toId": "2e05d447-f8b3-c932-0757-1c392988fed4",
-                        "toProperty": "goToNext"
-                    },
-                    {
-                        "fromId": "1c32f5e9-128d-4d72-5aa7-c83484714394",
-                        "fromProperty": "Finished",
-                        "toId": "2e05d447-f8b3-c932-0757-1c392988fed4",
-                        "toProperty": "goToNext"
-                    },
-                    {
-                        "fromId": "f7ab90ee-0936-9d4a-e130-ab445977b257",
-                        "fromProperty": "Finished",
-                        "toId": "2e05d447-f8b3-c932-0757-1c392988fed4",
-                        "toProperty": "goToNext"
-                    },
-                    {
-                        "fromId": "f4bb739a-3794-2ebd-3eea-6a82b6cdde0b",
-                        "fromProperty": "Finished",
-                        "toId": "2e05d447-f8b3-c932-0757-1c392988fed4",
-                        "toProperty": "goToNext"
-                    },
-                    {
-                        "fromId": "82cb20ef-0b3a-dd6d-72cd-baa6d19a193e",
-                        "fromProperty": "Finished",
-                        "toId": "2e05d447-f8b3-c932-0757-1c392988fed4",
-                        "toProperty": "goToNext"
-                    },
-                    {
-                        "fromId": "33ef1f28-2035-a6ed-5c6e-3adf99620c27",
-                        "fromProperty": "Finished",
-                        "toId": "2e05d447-f8b3-c932-0757-1c392988fed4",
-                        "toProperty": "goToNext"
-                    },
-                    {
-                        "fromId": "62b6297b-cda2-9caa-b71e-0809244f88f7",
-                        "fromProperty": "Finished",
-                        "toId": "2e05d447-f8b3-c932-0757-1c392988fed4",
-                        "toProperty": "goToNext"
-                    },
-                    {
-                        "fromId": "bbf5da0f-2ae2-e3b4-0a7e-de7cb2b2d03c",
-                        "fromProperty": "Finished",
-                        "toId": "2e05d447-f8b3-c932-0757-1c392988fed4",
-                        "toProperty": "goToNext"
-                    },
-                    {
-                        "fromId": "7225dddb-739e-82e3-7add-77375b0cf625",
-                        "fromProperty": "Finished",
-                        "toId": "2e05d447-f8b3-c932-0757-1c392988fed4",
-                        "toProperty": "goToNext"
-                    },
-                    {
-                        "fromId": "41d74b4c-cff0-82a1-da62-793f8be4b94f",
-                        "fromProperty": "Finished",
-                        "toId": "2e05d447-f8b3-c932-0757-1c392988fed4",
-                        "toProperty": "goToNext"
-                    },
-                    {
-                        "fromId": "9820dd42-36e2-2bc5-a64a-3dd34aa90002",
-                        "fromProperty": "Finished",
-                        "toId": "2e05d447-f8b3-c932-0757-1c392988fed4",
-                        "toProperty": "goToNext"
-                    },
-                    {
-                        "fromId": "ff5a4532-7a72-6249-65ac-68cfef86280f",
-                        "fromProperty": "Finished",
-                        "toId": "2e05d447-f8b3-c932-0757-1c392988fed4",
-                        "toProperty": "goToNext"
-                    },
-                    {
-                        "fromId": "10847c53-dce3-90eb-0c23-10a57e5df235",
-                        "fromProperty": "Finished",
-                        "toId": "2e05d447-f8b3-c932-0757-1c392988fed4",
-                        "toProperty": "goToNext"
-                    },
-                    {
-                        "fromId": "1d4d9886-92d6-8a2a-84d6-e2be27ed8a94",
-                        "fromProperty": "Finished",
-                        "toId": "2e05d447-f8b3-c932-0757-1c392988fed4",
-                        "toProperty": "goToNext"
-                    },
-                    {
-                        "fromId": "74c7b1fe-73cb-341f-8868-c6ff337d76e1",
-                        "fromProperty": "Finished",
-                        "toId": "2e05d447-f8b3-c932-0757-1c392988fed4",
-                        "toProperty": "goToNext"
-                    },
-                    {
-                        "fromId": "98e7e4bf-690c-088f-d45e-8265076e0f46",
-                        "fromProperty": "Finished",
-                        "toId": "2e05d447-f8b3-c932-0757-1c392988fed4",
-                        "toProperty": "goToNext"
-                    },
-                    {
-                        "fromId": "2e05d447-f8b3-c932-0757-1c392988fed4",
-                        "fromProperty": "index",
-                        "toId": "62b6297b-cda2-9caa-b71e-0809244f88f7",
-                        "toProperty": "index"
-                    },
-                    {
-                        "fromId": "2e05d447-f8b3-c932-0757-1c392988fed4",
-                        "fromProperty": "index",
-                        "toId": "bbf5da0f-2ae2-e3b4-0a7e-de7cb2b2d03c",
-                        "toProperty": "index"
-                    },
-                    {
-                        "fromId": "2e05d447-f8b3-c932-0757-1c392988fed4",
-                        "fromProperty": "index",
-                        "toId": "7225dddb-739e-82e3-7add-77375b0cf625",
-                        "toProperty": "index"
-                    },
-                    {
-                        "fromId": "2e05d447-f8b3-c932-0757-1c392988fed4",
-                        "fromProperty": "index",
-                        "toId": "41d74b4c-cff0-82a1-da62-793f8be4b94f",
-                        "toProperty": "index"
-                    },
-                    {
-                        "fromId": "2e05d447-f8b3-c932-0757-1c392988fed4",
-                        "fromProperty": "index",
-                        "toId": "9820dd42-36e2-2bc5-a64a-3dd34aa90002",
-                        "toProperty": "index"
-                    },
-                    {
-                        "fromId": "2e05d447-f8b3-c932-0757-1c392988fed4",
-                        "fromProperty": "index",
-                        "toId": "ff5a4532-7a72-6249-65ac-68cfef86280f",
-                        "toProperty": "index"
-                    },
-                    {
-                        "fromId": "2e05d447-f8b3-c932-0757-1c392988fed4",
-                        "fromProperty": "index",
-                        "toId": "10847c53-dce3-90eb-0c23-10a57e5df235",
-                        "toProperty": "index"
-                    },
-                    {
-                        "fromId": "2e05d447-f8b3-c932-0757-1c392988fed4",
-                        "fromProperty": "index",
-                        "toId": "1d4d9886-92d6-8a2a-84d6-e2be27ed8a94",
-                        "toProperty": "index"
-                    },
-                    {
-                        "fromId": "2e05d447-f8b3-c932-0757-1c392988fed4",
-                        "fromProperty": "index",
-                        "toId": "74c7b1fe-73cb-341f-8868-c6ff337d76e1",
-                        "toProperty": "index"
-                    },
-                    {
-                        "fromId": "2e05d447-f8b3-c932-0757-1c392988fed4",
-                        "fromProperty": "index",
-                        "toId": "98e7e4bf-690c-088f-d45e-8265076e0f46",
-                        "toProperty": "index"
+                        "fromId": "d6e03676-0e95-4654-bd4e-8b3c0efa4495",
+                        "fromProperty": "result",
+                        "toId": "8dfd62cc-c25e-9d17-c794-498efeadf178",
+                        "toProperty": "id"
                     }
                 ],
                 "roots": [
@@ -20359,14 +19235,14 @@
                         "dynamicports": [],
                         "children": [
                             {
-                                "id": "f3a9ecbd-f3cd-8936-d6c1-6007c7446c60",
+                                "id": "eb458871-e0a8-bfdc-0b23-50f78ad0168b",
                                 "type": "Scroll View",
                                 "x": 20,
                                 "y": 97,
                                 "parameters": {
                                     "snap": "item",
                                     "scrollAxis": "0",
-                                    "touchPropagation": false,
+                                    "touchPropagation": true,
                                     "scrollDuration": 5000,
                                     "scrollToIndex.duration": 2000
                                 },
@@ -20374,292 +19250,104 @@
                                 "dynamicports": [],
                                 "children": [
                                     {
-                                        "id": "102b5c17-dae9-2691-a6d3-38418546114d",
-                                        "type": "/Story/Scene/scene01",
+                                        "id": "f2ec3c3b-c6c4-8437-2fc4-242903a3c0bb",
+                                        "type": "For Each",
                                         "x": 20,
-                                        "y": 102,
-                                        "parameters": {},
-                                        "ports": [],
-                                        "dynamicports": [],
-                                        "children": []
-                                    },
-                                    {
-                                        "id": "efa5642a-129e-369e-1aaa-2c088974daf8",
-                                        "type": "/Story/Scene/scene02",
-                                        "x": 20,
-                                        "y": 184,
-                                        "parameters": {},
-                                        "ports": [],
-                                        "dynamicports": [],
-                                        "children": []
-                                    },
-                                    {
-                                        "id": "90d77c52-9528-af9a-08d5-f1e619d9d509",
-                                        "type": "/Story/Scene/scene03",
-                                        "x": 20,
-                                        "y": 266,
+                                        "y": 122,
                                         "parameters": {
-                                            "Num": 3
+                                            "template": "/Story/Scene/Scene"
+                                        },
+                                        "ports": [],
+                                        "dynamicports": [],
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "id": "2da6321e-1d78-2486-4c60-a54aa50cc2ca",
+                                "type": "Image",
+                                "version": 2,
+                                "x": 167.88930832374317,
+                                "y": 221.49178418153397,
+                                "parameters": {
+                                    "image": "moji.png",
+                                    "alignY": "bottom"
+                                },
+                                "ports": [],
+                                "dynamicports": [],
+                                "children": []
+                            },
+                            {
+                                "id": "a9b7acd7-38b2-8721-1905-a97eb6ee79eb",
+                                "type": "Group",
+                                "version": 2,
+                                "label": "Judge",
+                                "x": 20,
+                                "y": 362,
+                                "parameters": {},
+                                "ports": [],
+                                "dynamicports": [],
+                                "children": [
+                                    {
+                                        "id": "cd991fcc-1e5d-57d7-6d44-0eb0eef10f9f",
+                                        "type": "Text",
+                                        "version": 2,
+                                        "label": "quest",
+                                        "x": 628.9971727218178,
+                                        "y": 578.1134891674737,
+                                        "parameters": {
+                                            "fontSize": 380,
+                                            "text": "りんご",
+                                            "alignX": "center",
+                                            "alignY": "center",
+                                            "color": "#ff504b",
+                                            "lineHeight": 0,
+                                            "y": 100,
+                                            "alignment": "center",
+                                            "verticalAlignment": "center",
+                                            "fontFamily": "A-OTF-FutoMinA101Pro-Bold.otf"
                                         },
                                         "ports": [],
                                         "dynamicports": [],
                                         "children": []
                                     },
                                     {
-                                        "id": "365048fc-37dd-2ee6-8a46-e3ffee379bce",
-                                        "type": "/Story/Scene/Scene",
-                                        "x": 20,
-                                        "y": 368,
+                                        "id": "d57d5146-f5a4-d760-985f-85064355f025",
+                                        "type": "Text",
+                                        "version": 2,
+                                        "label": "ReceiveText",
+                                        "x": 628.9971727218178,
+                                        "y": 675.1134891674737,
                                         "parameters": {
-                                            "Num": 4
+                                            "fontSize": 160,
+                                            "alignX": "center",
+                                            "alignY": "bottom",
+                                            "y": -100,
+                                            "fontFamily": "A-OTF-FutoMinA101Pro-Bold.otf",
+                                            "text": "-",
+                                            "color": "#888888"
                                         },
                                         "ports": [],
                                         "dynamicports": [],
                                         "children": []
                                     },
                                     {
-                                        "id": "c8d68177-32e3-2020-305a-bd25079e02bb",
-                                        "type": "/Story/Scene/Qestion",
-                                        "x": 20,
-                                        "y": 470,
+                                        "id": "67cea911-a050-5c06-70e7-b3918a18a570",
+                                        "type": "Rectangle",
+                                        "label": "Rectangle",
+                                        "x": 628.9971727218178,
+                                        "y": 772.1134891674737,
                                         "parameters": {
-                                            "Num": "5"
-                                        },
-                                        "ports": [],
-                                        "dynamicports": [],
-                                        "children": []
-                                    },
-                                    {
-                                        "id": "0ef7ddbd-44f5-d297-19d0-0cadcb5dd0b0",
-                                        "type": "/Story/Scene/Qestion",
-                                        "x": 20,
-                                        "y": 552,
-                                        "parameters": {
-                                            "qNum": "q1",
-                                            "Num": "6"
-                                        },
-                                        "ports": [],
-                                        "dynamicports": [],
-                                        "children": []
-                                    },
-                                    {
-                                        "id": "49c1983b-b4a7-ca32-7877-59b00e7a362d",
-                                        "type": "/Story/Scene/Scene",
-                                        "x": 20,
-                                        "y": 634,
-                                        "parameters": {
-                                            "Num": 7
-                                        },
-                                        "ports": [],
-                                        "dynamicports": [],
-                                        "children": []
-                                    },
-                                    {
-                                        "id": "f993e0b2-128e-2117-b6ae-1fc1546781b2",
-                                        "type": "/Story/Scene/Qestion",
-                                        "x": 20,
-                                        "y": 736,
-                                        "parameters": {
-                                            "qNum": "q2",
-                                            "Num": "8"
-                                        },
-                                        "ports": [],
-                                        "dynamicports": [],
-                                        "children": []
-                                    },
-                                    {
-                                        "id": "62b6297b-cda2-9caa-b71e-0809244f88f7",
-                                        "type": "/Story/Scene/Scene",
-                                        "x": 20,
-                                        "y": 818,
-                                        "parameters": {
-                                            "Num": 9
-                                        },
-                                        "ports": [],
-                                        "dynamicports": [],
-                                        "children": []
-                                    },
-                                    {
-                                        "id": "f6228e44-b2c2-e522-322a-b3bbc5ac3db9",
-                                        "type": "/Story/Scene/Qestion",
-                                        "x": 20,
-                                        "y": 920,
-                                        "parameters": {
-                                            "qNum": "q3",
-                                            "Num": "10"
-                                        },
-                                        "ports": [],
-                                        "dynamicports": [],
-                                        "children": []
-                                    },
-                                    {
-                                        "id": "bbf5da0f-2ae2-e3b4-0a7e-de7cb2b2d03c",
-                                        "type": "/Story/Scene/Scene",
-                                        "x": 20,
-                                        "y": 1002,
-                                        "parameters": {
-                                            "Num": 11
-                                        },
-                                        "ports": [],
-                                        "dynamicports": [],
-                                        "children": []
-                                    },
-                                    {
-                                        "id": "7225dddb-739e-82e3-7add-77375b0cf625",
-                                        "type": "/Story/Scene/Scene",
-                                        "x": 20,
-                                        "y": 1104,
-                                        "parameters": {
-                                            "Num": 12
-                                        },
-                                        "ports": [],
-                                        "dynamicports": [],
-                                        "children": []
-                                    },
-                                    {
-                                        "id": "1c32f5e9-128d-4d72-5aa7-c83484714394",
-                                        "type": "/Story/Scene/Qestion",
-                                        "x": 20,
-                                        "y": 1206,
-                                        "parameters": {
-                                            "qNum": "q4",
-                                            "Num": "13"
-                                        },
-                                        "ports": [],
-                                        "dynamicports": [],
-                                        "children": []
-                                    },
-                                    {
-                                        "id": "41d74b4c-cff0-82a1-da62-793f8be4b94f",
-                                        "type": "/Story/Scene/Scene",
-                                        "x": 20,
-                                        "y": 1288,
-                                        "parameters": {
-                                            "Num": 14
-                                        },
-                                        "ports": [],
-                                        "dynamicports": [],
-                                        "children": []
-                                    },
-                                    {
-                                        "id": "f7ab90ee-0936-9d4a-e130-ab445977b257",
-                                        "type": "/Story/Scene/Qestion",
-                                        "x": 20,
-                                        "y": 1390,
-                                        "parameters": {
-                                            "qNum": "q5",
-                                            "Num": "15"
-                                        },
-                                        "ports": [],
-                                        "dynamicports": [],
-                                        "children": []
-                                    },
-                                    {
-                                        "id": "f4bb739a-3794-2ebd-3eea-6a82b6cdde0b",
-                                        "type": "/Story/Scene/Qestion",
-                                        "x": 20,
-                                        "y": 1472,
-                                        "parameters": {
-                                            "qNum": "q6",
-                                            "Num": "16"
-                                        },
-                                        "ports": [],
-                                        "dynamicports": [],
-                                        "children": []
-                                    },
-                                    {
-                                        "id": "9820dd42-36e2-2bc5-a64a-3dd34aa90002",
-                                        "type": "/Story/Scene/Scene",
-                                        "x": 20,
-                                        "y": 1554,
-                                        "parameters": {
-                                            "Num": 17
-                                        },
-                                        "ports": [],
-                                        "dynamicports": [],
-                                        "children": []
-                                    },
-                                    {
-                                        "id": "82cb20ef-0b3a-dd6d-72cd-baa6d19a193e",
-                                        "type": "/Story/Scene/Qestion",
-                                        "x": 20,
-                                        "y": 1656,
-                                        "parameters": {
-                                            "qNum": "q7",
-                                            "Num": "18"
-                                        },
-                                        "ports": [],
-                                        "dynamicports": [],
-                                        "children": []
-                                    },
-                                    {
-                                        "id": "33ef1f28-2035-a6ed-5c6e-3adf99620c27",
-                                        "type": "/Story/Scene/Qestion",
-                                        "x": 20,
-                                        "y": 1738,
-                                        "parameters": {
-                                            "qNum": "q8",
-                                            "Num": "19"
-                                        },
-                                        "ports": [],
-                                        "dynamicports": [],
-                                        "children": []
-                                    },
-                                    {
-                                        "id": "ff5a4532-7a72-6249-65ac-68cfef86280f",
-                                        "type": "/Story/Scene/Scene",
-                                        "x": 20,
-                                        "y": 1820,
-                                        "parameters": {
-                                            "Num": 20
-                                        },
-                                        "ports": [],
-                                        "dynamicports": [],
-                                        "children": []
-                                    },
-                                    {
-                                        "id": "10847c53-dce3-90eb-0c23-10a57e5df235",
-                                        "type": "/Story/Scene/Scene",
-                                        "x": 20,
-                                        "y": 1406,
-                                        "parameters": {
-                                            "Num": 21
-                                        },
-                                        "ports": [],
-                                        "dynamicports": [],
-                                        "children": []
-                                    },
-                                    {
-                                        "id": "1d4d9886-92d6-8a2a-84d6-e2be27ed8a94",
-                                        "type": "/Story/Scene/Scene",
-                                        "x": 20,
-                                        "y": 1452,
-                                        "parameters": {
-                                            "Num": 22
-                                        },
-                                        "ports": [],
-                                        "dynamicports": [],
-                                        "children": []
-                                    },
-                                    {
-                                        "id": "74c7b1fe-73cb-341f-8868-c6ff337d76e1",
-                                        "type": "/Story/Scene/Scene",
-                                        "x": 189.86086679949437,
-                                        "y": 1757.8144890659926,
-                                        "parameters": {
-                                            "Num": 23
-                                        },
-                                        "ports": [],
-                                        "dynamicports": [],
-                                        "children": []
-                                    },
-                                    {
-                                        "id": "98e7e4bf-690c-088f-d45e-8265076e0f46",
-                                        "type": "/Story/Scene/Scene",
-                                        "x": 214.4911513659343,
-                                        "y": 334.16565545866126,
-                                        "parameters": {
-                                            "Num": 24
+                                            "width": {
+                                                "value": 300,
+                                                "unit": "px"
+                                            },
+                                            "height": {
+                                                "value": 200,
+                                                "unit": "px"
+                                            },
+                                            "alignY": "bottom",
+                                            "y": -200
                                         },
                                         "ports": [],
                                         "dynamicports": [],
@@ -20672,8 +19360,8 @@
                     {
                         "id": "06357783-322b-2481-67c3-557133c6f689",
                         "type": "Component Inputs",
-                        "x": 395.88057552014953,
-                        "y": 146.59669672550552,
+                        "x": -231.90342572916092,
+                        "y": 137.14586844128044,
                         "parameters": {},
                         "ports": [
                             {
@@ -20691,6 +19379,14 @@
                                     "name": "*"
                                 },
                                 "index": 2
+                            },
+                            {
+                                "name": "start",
+                                "plug": "output",
+                                "type": {
+                                    "name": "*"
+                                },
+                                "index": 3
                             }
                         ],
                         "dynamicports": [],
@@ -20699,10 +19395,10 @@
                     {
                         "id": "2e05d447-f8b3-c932-0757-1c392988fed4",
                         "type": "Javascript2",
-                        "x": 751.0500171997303,
-                        "y": 1269.739949855568,
+                        "x": 744.2015323391207,
+                        "y": 650.1924978341385,
                         "parameters": {
-                            "code": "define({\n    inputs: {\n        goToNext: \"boolean\",\n        indexChanged:\"boolean\",\n        init:\"boolean\"\n    },\n    outputs: {\n        goto: \"boolean\",\n        index:'number'\n    },\n    destroy: function(inputs, outputs) {\n\n    },\n    setup: function(inputs, outputs) {\n        this.index = 0;\n    },\n    run: function(inputs, outputs, changedInputs) {\n        \n        if(inputs.goToNext){\n            this.index ++;\n        }\n        outputs.index = this.index;\n        this.sendSignalOnOutput('goto');\n        \n        if(inputs.init){\n            outputs.index=0;\n            this.sendSignalOnOutput('goto');\n        }\n        \n        \n       \n    }\n});"
+                            "code": "define({\n    inputs: {\n        goToNext: \"boolean\",\n        indexChanged:\"boolean\",\n        init:\"boolean\"\n    },\n    outputs: {\n        goto: \"boolean\",\n        index:'number'\n    },\n    destroy: function(inputs, outputs) {\n\n    },\n    setup: function(inputs, outputs) {\n        this.index = 0;\n    },\n    run: function(inputs, outputs, changedInputs) {\n        \n        if(inputs.goToNext){\n            this.index ++;\n        }\n        outputs.index = this.index;\n        this.sendSignalOnOutput('goto');\n        \n        if(inputs.init){\n            outputs.index=0;\n            this.sendSignalOnOutput('goto');\n        }\n        \n    }\n});"
                         },
                         "ports": [],
                         "dynamicports": [
@@ -20757,14 +19453,356 @@
                     {
                         "id": "94ca5bec-d6e5-626d-88ee-93e11cf5844a",
                         "type": "Static Data",
-                        "label": "Story text",
-                        "x": -151.19540735688383,
-                        "y": 1827.978960207878,
+                        "label": "Story Data",
+                        "x": -162.88870522524257,
+                        "y": 342.99547204383646,
                         "parameters": {
                             "csv": "id,text\nst_1,\"僕は「タロムシ」。キミの名前は？ボビンを転がして教えてね\"\nst_2,だね？\nst_3,こんにちは！\nst_4,これからお花畑に行くんだけど一緒に行かない？\nst_5,この「みち」をまっすぐだよ\nst_6,あっ！「もり」が見えてきたね\nst_7,あの森の中でひとやすみしよう\nst_8,\"お腹が空いたなあ、「りんご」を探そうよ\"\nst_9,\"おなかもいっぱいになったことだし先に進もう！\"\nst_10,「かわ」が見えてきたね\nst_11,渡れそうにないね、だれか道を知らないかな\nst_12,\"あ、あそこに「しっぽ」が見えているよ。誰のだろう？\"\nst_13,あ！「りす」さんだ！話しかけてみようよ！\nst_14,\"りすさん！りすさん！川を渡りたいんだけど、道を知らないかい？\"\nst_15,おいら、知ってるぜ！あっちの方向に「はし」があるよ！そこからきっと渡れるさ！\nst_16,「ありがとう」りすさん！行ってみるよ！\nst_17,橋はこっちだね、行こう\nst_18,あ、「とり」さんだ！\nst_19,とりさん、素敵な「はな」を持ってるね\nst_20,そうでしょ？この先にそれは美しいお花畑あってね。そこから分けてもらったのさ\nst_21,僕たちもお花畑に向かっているところさ！\nst_22,\"それなら、もうすぐそこさ！楽しんでおいで！\"\nst_23,\"わあ！！みてごらん！とても素敵なお花畑だね！\"\nst_24,今日はとても楽しかった！また、来ようね！"
                         },
                         "ports": [],
                         "dynamicports": [],
+                        "children": []
+                    },
+                    {
+                        "id": "b20b6244-aad5-2d1c-0b98-e675b6d93fa9",
+                        "type": "Static Data",
+                        "label": "question",
+                        "x": -387.9294592155614,
+                        "y": 996.1862108937056,
+                        "parameters": {
+                            "type": "json",
+                            "csv": "りんご,みかん,くま,うみ",
+                            "json": "[\n    {\n        \"id\" :\"q5\",\n        \"question\" :\"みち\"\n    },\n    {\n        \"id\" :\"q6\",\n        \"question\" :\"もり\"\n    },\n    {\n        \"id\" :\"q8\",\n        \"question\" :\"りんご\"\n    },\n    {\n        \"id\" :\"q10\",\n        \"question\" :\"かわ\"\n    },\n    {\n        \"id\" :\"q13\",\n        \"question\" :\"りす\"\n    },\n    {\n        \"id\" :\"q15\",\n        \"question\" :\"はし\"\n    },{\n        \"id\" :\"q16\",\n        \"question\" :\"ありがとう\"\n    },\n    {\n        \"id\" :\"q18\",\n        \"question\" :\"とり\"\n    },\n    {\n        \"id\" :\"q19\",\n        \"question\" :\"はな\"\n    }\n]"
+                        },
+                        "ports": [],
+                        "dynamicports": [],
+                        "children": []
+                    },
+                    {
+                        "id": "4d66a913-462a-8f93-9108-b95b14ca0601",
+                        "type": "Static Data",
+                        "label": "charactor",
+                        "x": -393.82423133857964,
+                        "y": 931.5405798612718,
+                        "parameters": {
+                            "type": "csv",
+                            "csv": "chara,id,imgPath\nあ,04 ad 71 ca 4c 58 80,chara/1.png\nい,04 e9 71 ca 4c 58 80,chara/2.png\nう,04 cc 71 ca 4c 58 80,chara/3.png\nえ,04 08 71 ca 4c 58 81,chara/4.png\nお,04 ea 71 ca 4c 58 80,chara/5.png\nか,04 26 71 ca 4c 58 81,chara/6.png\nき,04 09 71 ca 4c 58 81,chara/7.png\nく,04 44 71 ca 4c 58 81,chara/8.png\nけ,04 27 71 ca 4c 58 81,chara/9.png\nこ,04 62 71 ca 4c 58 81,chara/10.png\nさ,04 f4 05 c2 4c 58 84,chara/11.png\nし,04 b7 05 c2 4c 58 84,chara/12.png\nす,04 d6 05 c2 4c 58 84,chara/13.png\nせ,04 97 05 c2 4c 58 84,chara/14.png\nそ,04 b6 05 c2 4c 58 84,chara/15.png\nた,04 01 0a ca 4c 58 81,chara/16.png\nち,04 c6 0a ca 4c 58 80,chara/17.png\nつ,04 e3 0a ca 4c 58 80,chara/18.png\nて,04 a6 0a ca 4c 58 80,chara/19.png\nと,04 c5 0a ca 4c 58 80,chara/20.png\nな,04 d8 0a c2 4c 58 84,chara/21.png\nに,04 f5 0a c2 4c 58 84,chara/22.png\nぬ,04 b7 0a c2 4c 58 84,chara/23.png\nね,04 d7 0a c2 4c 58 84,chara/24.png\nの,04 97 0a c2 4c 58 84,chara/25.png\nは,04 2b 07 c2 4c 58 85,chara/26.png\nひ,04 f6 06 c2 4c 58 84,chara/27.png\nふ,04 15 06 c2 4c 58 85,chara/28.png\nへ,04 d8 06 c2 4c 58 84,chara/29.png\nほ,04 f5 06 c2 4c 58 84,chara/30.png\nま,04 0b 07 c2 4c 58 85,chara/31.png\nみ,04 ec 07 c2 4c 58 84,chara/32.png\nむ,04 2a 07 c2 4c 58 85,chara/33.png\nめ,04 0c 07 c2 4c 58 85,chara/34.png\nも,04 16 06 c2 4c 58 85,chara/35.png\nや,04 8e 07 c2 4c 58 84,chara/36.png\nゆ,04 cb 07 c2 4c 58 84,chara/37.png\nよ,04 ae 07 c2 4c 58 84,chara/38.png\nら,04 eb 07 c2 4c 58 84,chara/39.png\nり,04 ce 07 c2 4c 58 84,chara/40.png\nる,04 79 05 c2 4c 58 84,chara/41.png\nれ,04 96 05 c2 4c 58 84,chara/42.png\nろ,04 79 06 c2 4c 58 84,chara/43.png\nわ,04 78 05 c2 4c 58 84,chara/44.png\nを,04 97 06 c2 4c 58 84,chara/45.png\nん,04 bc 0c c2 4c 58 84,chara/46.png\nゃ,04 db 0c c2 4c 58 84,chara/47.png\nゅ,04 9e 0c c2 4c 58 84,chara/48.png\nょ,04 bb 0c c2 4c 58 84,chara/49.png\nっ,04 7e 0c c2 4c 58 84,chara/50.png\n゛,04 ad 07 c2 4c 58 84,chara/51.png\n゜,04 6f 07 c2 4c 58 84,chara/52.png\nー,04 8d 07 c2 4c 58 84,chara/53.png",
+                            "json": "[\n    {\n        \"id\" :\"q0\",\n        \"question\" :\"みち\"\n    }\n]"
+                        },
+                        "ports": [],
+                        "dynamicports": [],
+                        "children": []
+                    },
+                    {
+                        "id": "6faa55ba-cb8c-603b-4922-410604eaa257",
+                        "type": "For Each",
+                        "x": -389.97304568354974,
+                        "y": 1068.9160700350203,
+                        "parameters": {},
+                        "ports": [],
+                        "dynamicports": [],
+                        "children": []
+                    },
+                    {
+                        "id": "f3a9ecbd-f3cd-8936-d6c1-6007c7446c60",
+                        "type": "Scroll View",
+                        "x": 694.1032910419186,
+                        "y": 287.0872163387199,
+                        "parameters": {
+                            "snap": "item",
+                            "scrollAxis": "0",
+                            "touchPropagation": false,
+                            "scrollDuration": 5000,
+                            "scrollToIndex.duration": 2000
+                        },
+                        "ports": [],
+                        "dynamicports": [],
+                        "children": []
+                    },
+                    {
+                        "id": "b750a9c2-bd19-ad7b-e290-3c8408d4a874",
+                        "type": "Collection",
+                        "x": 17.84509637936614,
+                        "y": 372.4901635604604,
+                        "parameters": {
+                            "collectionId": "Scene"
+                        },
+                        "ports": [],
+                        "dynamicports": [],
+                        "children": []
+                    },
+                    {
+                        "id": "188193d7-2c52-7b79-a2da-70dd8465f754",
+                        "type": "Timer",
+                        "x": -155.54385399713013,
+                        "y": 804.3180963258405,
+                        "parameters": {
+                            "duration": 3000,
+                            "startDelay": 0
+                        },
+                        "ports": [],
+                        "dynamicports": [],
+                        "children": []
+                    },
+                    {
+                        "id": "ecbb8955-86ec-4391-a3cb-764045fc67df",
+                        "type": "Javascript2",
+                        "label": "If",
+                        "x": -188.9258563583741,
+                        "y": 478.0962484272776,
+                        "parameters": {
+                            "code": "define({\n    inputs: {\n        index: \"number\",\n        finished:\"boolean\",\n        started:\"boolean\",\n        changed:\"boolean\"\n    },\n    outputs: {\n        startTimer: \"boolean\",\n        visible:\"boolean\"\n    },\n    destroy: function(inputs, outputs) {\n\n    },\n    setup: function(inputs, outputs) {\n        outputs.startTimer = false;\n        outputs.visible= false;\n    },\n    run: function(inputs, outputs, changedInputs) {\n        if( inputs.index === 1 ||\n            inputs.index === 2 ||\n            inputs.index === 3 ||\n            inputs.index === 4 ||\n            inputs.index === 7 ||\n            inputs.index === 9 ||\n            inputs.index === 11 ||\n            inputs.index === 12 ||\n            inputs.index === 14 ||\n            inputs.index === 17 ||\n            inputs.index === 20 ||\n            inputs.index >= 20\n            ){\n            if(inputs.changed || inputs.started){\n                outputs.startTimer = true;  \n            }\n            outputs.visible = false;\n        }else{\n            outputs.startTimer = false;\n            outputs.visible = true;\n        }\n        \n        if(inputs.finished){\n            outputs.startTimer = false;\n        }\n    }\n});",
+                            "changed": false
+                        },
+                        "ports": [],
+                        "dynamicports": [
+                            {
+                                "name": "index",
+                                "plug": "input",
+                                "type": {
+                                    "name": "number"
+                                },
+                                "group": "Inputs",
+                                "index": 2
+                            },
+                            {
+                                "name": "finished",
+                                "plug": "input",
+                                "type": {
+                                    "name": "boolean"
+                                },
+                                "group": "Inputs",
+                                "index": 3
+                            },
+                            {
+                                "name": "started",
+                                "plug": "input",
+                                "type": {
+                                    "name": "boolean"
+                                },
+                                "group": "Inputs",
+                                "index": 4
+                            },
+                            {
+                                "name": "changed",
+                                "plug": "input",
+                                "type": {
+                                    "name": "boolean"
+                                },
+                                "group": "Inputs",
+                                "index": 5
+                            },
+                            {
+                                "name": "startTimer",
+                                "type": {
+                                    "name": "boolean"
+                                },
+                                "plug": "output",
+                                "group": "Outputs",
+                                "index": 6
+                            },
+                            {
+                                "name": "visible",
+                                "type": {
+                                    "name": "boolean"
+                                },
+                                "plug": "output",
+                                "group": "Outputs",
+                                "index": 7
+                            }
+                        ],
+                        "children": []
+                    },
+                    {
+                        "id": "d6e03676-0e95-4654-bd4e-8b3c0efa4495",
+                        "type": "Expression",
+                        "x": 769.7108076966865,
+                        "y": 816.7755178746957,
+                        "parameters": {
+                            "expression": "index +1"
+                        },
+                        "ports": [],
+                        "dynamicports": [
+                            {
+                                "name": "index",
+                                "type": "number",
+                                "plug": "input",
+                                "index": 2
+                            }
+                        ],
+                        "children": []
+                    },
+                    {
+                        "id": "203e5884-23aa-e51b-32de-ccfd32ad08e7",
+                        "type": "Javascript2",
+                        "label": "Jadgement",
+                        "x": 214.0775025886324,
+                        "y": 1050.7029632754775,
+                        "parameters": {
+                            "code": "var str = \"\";\ndefine({\n    inputs: {\n        quest:\"string\",\n        qNum:\"string\",\n        deleteChara:\"boolean\",\n        chara: \"string\"\n    },\n    outputs: {\n        goToNext:\"boolean\",\n        word:\"string\"\n    },\n    destroy: function(inputs, outputs) {\n\n    },\n    setup: function(inputs, outputs) {\n    },\n    run: function(inputs, outputs, changedInputs) {\n        \n        if(inputs.chara){\n            str = str + inputs.chara;\n            outputs.word = str;\n        }\n        \n        if(inputs.quest === outputs.word){\n          outputs.goToNext = true;\n          str= \"\";\n          inputs.chara = \"\";\n          outputs.word = \"\";\n        }else{\n        }\n        \n        if(inputs.deleteChara){\n            console.log(str.length);\n            inputs.chara = \"\";\n            str = str.slice(0,-1);\n            outputs.word = str;\n        }\n    }\n});",
+                            "useExternalFile": "no"
+                        },
+                        "ports": [],
+                        "dynamicports": [
+                            {
+                                "name": "quest",
+                                "plug": "input",
+                                "type": {
+                                    "name": "string"
+                                },
+                                "group": "Inputs",
+                                "index": 2
+                            },
+                            {
+                                "name": "qNum",
+                                "plug": "input",
+                                "type": {
+                                    "name": "string"
+                                },
+                                "group": "Inputs",
+                                "index": 3
+                            },
+                            {
+                                "name": "deleteChara",
+                                "plug": "input",
+                                "type": {
+                                    "name": "boolean"
+                                },
+                                "group": "Inputs",
+                                "index": 4
+                            },
+                            {
+                                "name": "chara",
+                                "plug": "input",
+                                "type": {
+                                    "name": "string"
+                                },
+                                "group": "Inputs",
+                                "index": 5
+                            },
+                            {
+                                "name": "goToNext",
+                                "type": {
+                                    "name": "boolean"
+                                },
+                                "plug": "output",
+                                "group": "Outputs",
+                                "index": 6
+                            },
+                            {
+                                "name": "word",
+                                "type": {
+                                    "name": "string"
+                                },
+                                "plug": "output",
+                                "group": "Outputs",
+                                "index": 7
+                            }
+                        ],
+                        "children": []
+                    },
+                    {
+                        "id": "1ab4dd5f-a1a3-a301-5f18-1657e5bee52d",
+                        "type": "Text Input",
+                        "x": 285.80004752870093,
+                        "y": 943.5150162488324,
+                        "parameters": {
+                            "text": "",
+                            "fontFamily": "YuGothic"
+                        },
+                        "ports": [],
+                        "dynamicports": [],
+                        "children": []
+                    },
+                    {
+                        "id": "877a98ab-19bf-7bf5-2116-8e9cd251103c",
+                        "type": "Model",
+                        "x": 521.8374891146899,
+                        "y": 950.4003659836496,
+                        "parameters": {
+                            "properties": "question",
+                            "modelId": ""
+                        },
+                        "ports": [],
+                        "dynamicports": [
+                            {
+                                "type": {
+                                    "name": "*",
+                                    "allowConnectionsOnly": true
+                                },
+                                "plug": "input/output",
+                                "group": "Properties",
+                                "name": "question",
+                                "index": 7
+                            }
+                        ],
+                        "children": []
+                    },
+                    {
+                        "id": "631d9bba-9795-24df-a3fc-5db13a2a0854",
+                        "type": "Receive Message",
+                        "x": -117.2011874486389,
+                        "y": 1025.018031766709,
+                        "parameters": {
+                            "enabled": true,
+                            "topic": "/word"
+                        },
+                        "ports": [
+                            {
+                                "name": "word",
+                                "plug": "outputs",
+                                "type": {
+                                    "name": "*",
+                                    "allowConnectionOnly": true
+                                },
+                                "group": "Payload",
+                                "index": 1
+                            }
+                        ],
+                        "dynamicports": [],
+                        "children": []
+                    },
+                    {
+                        "id": "c3f470f9-745b-42ea-fd9e-2c4d176a8e82",
+                        "type": "Model",
+                        "x": -40.549293282661495,
+                        "y": 1210.3435994930242,
+                        "parameters": {
+                            "properties": "chara",
+                            "modelId": ""
+                        },
+                        "ports": [],
+                        "dynamicports": [
+                            {
+                                "type": {
+                                    "name": "*",
+                                    "allowConnectionsOnly": true
+                                },
+                                "plug": "input/output",
+                                "group": "Properties",
+                                "name": "chara",
+                                "index": 7
+                            }
+                        ],
+                        "children": []
+                    },
+                    {
+                        "id": "8dfd62cc-c25e-9d17-c794-498efeadf178",
+                        "type": "String Format",
+                        "x": 777.7870555796549,
+                        "y": 939.0128709159392,
+                        "parameters": {
+                            "format": "q{id}"
+                        },
+                        "ports": [],
+                        "dynamicports": [
+                            {
+                                "name": "id",
+                                "type": "*",
+                                "plug": "input",
+                                "index": 2
+                            }
+                        ],
                         "children": []
                     }
                 ]
