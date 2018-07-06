@@ -19204,12 +19204,6 @@
                         "toProperty": "modelId"
                     },
                     {
-                        "fromId": "203e5884-23aa-e51b-32de-ccfd32ad08e7",
-                        "fromProperty": "goToNext",
-                        "toId": "2e05d447-f8b3-c932-0757-1c392988fed4",
-                        "toProperty": "goToNext"
-                    },
-                    {
                         "fromId": "ecbb8955-86ec-4391-a3cb-764045fc67df",
                         "fromProperty": "visible",
                         "toId": "a9b7acd7-38b2-8721-1905-a97eb6ee79eb",
@@ -19220,6 +19214,24 @@
                         "fromProperty": "result",
                         "toId": "8dfd62cc-c25e-9d17-c794-498efeadf178",
                         "toProperty": "id"
+                    },
+                    {
+                        "fromId": "203e5884-23aa-e51b-32de-ccfd32ad08e7",
+                        "fromProperty": "goToNext",
+                        "toId": "42b07b30-4630-5728-d6bb-9fe1b1eb910c",
+                        "toProperty": "start"
+                    },
+                    {
+                        "fromId": "42b07b30-4630-5728-d6bb-9fe1b1eb910c",
+                        "fromProperty": "timerFinished",
+                        "toId": "2e05d447-f8b3-c932-0757-1c392988fed4",
+                        "toProperty": "goToNext"
+                    },
+                    {
+                        "fromId": "42b07b30-4630-5728-d6bb-9fe1b1eb910c",
+                        "fromProperty": "timerFinished",
+                        "toId": "203e5884-23aa-e51b-32de-ccfd32ad08e7",
+                        "toProperty": "finished"
                     }
                 ],
                 "roots": [
@@ -19636,10 +19648,10 @@
                         "id": "203e5884-23aa-e51b-32de-ccfd32ad08e7",
                         "type": "Javascript2",
                         "label": "Jadgement",
-                        "x": 214.0775025886324,
-                        "y": 1050.7029632754775,
+                        "x": 202.97255558930834,
+                        "y": 1049.124410310028,
                         "parameters": {
-                            "code": "var str = \"\";\ndefine({\n    inputs: {\n        quest:\"string\",\n        qNum:\"string\",\n        deleteChara:\"boolean\",\n        chara: \"string\"\n    },\n    outputs: {\n        goToNext:\"boolean\",\n        word:\"string\"\n    },\n    destroy: function(inputs, outputs) {\n\n    },\n    setup: function(inputs, outputs) {\n    },\n    run: function(inputs, outputs, changedInputs) {\n        \n        if(inputs.chara){\n            str = str + inputs.chara;\n            outputs.word = str;\n        }\n        \n        if(inputs.quest === outputs.word){\n          outputs.goToNext = true;\n          str= \"\";\n          inputs.chara = \"\";\n          outputs.word = \"\";\n        }else{\n        }\n        \n        if(inputs.deleteChara){\n            console.log(str.length);\n            inputs.chara = \"\";\n            str = str.slice(0,-1);\n            outputs.word = str;\n        }\n    }\n});",
+                            "code": "var str = \"\";\ndefine({\n    inputs: {\n        quest:\"string\",\n        qNum:\"string\",\n        deleteChara:\"boolean\",\n        chara: \"string\",\n        finished:\"boolean\"\n    },\n    outputs: {\n        goToNext:\"boolean\",\n        word:\"string\"\n    },\n    destroy: function(inputs, outputs) {\n\n    },\n    setup: function(inputs, outputs) {\n    },\n    run: function(inputs, outputs, changedInputs) {\n        \n        if(inputs.chara){\n            str = str + inputs.chara;\n            outputs.word = str;\n        }\n        \n        if(inputs.quest === outputs.word){\n            outputs.goToNext = true;\n        }else{\n            outputs.goToNext = false;\n        }\n        \n        if(inputs.finished){\n          str= \"\";\n          inputs.chara = \"\";\n          outputs.word = \"\";\n        }\n        \n        if(inputs.deleteChara){\n            console.log(str.length);\n            inputs.chara = \"\";\n            str = str.slice(0,-1);\n            outputs.word = str;\n        }\n    }\n});",
                             "useExternalFile": "no"
                         },
                         "ports": [],
@@ -19681,13 +19693,22 @@
                                 "index": 5
                             },
                             {
+                                "name": "finished",
+                                "plug": "input",
+                                "type": {
+                                    "name": "boolean"
+                                },
+                                "group": "Inputs",
+                                "index": 6
+                            },
+                            {
                                 "name": "goToNext",
                                 "type": {
                                     "name": "boolean"
                                 },
                                 "plug": "output",
                                 "group": "Outputs",
-                                "index": 6
+                                "index": 7
                             },
                             {
                                 "name": "word",
@@ -19696,7 +19717,7 @@
                                 },
                                 "plug": "output",
                                 "group": "Outputs",
-                                "index": 7
+                                "index": 8
                             }
                         ],
                         "children": []
@@ -19803,6 +19824,18 @@
                                 "index": 2
                             }
                         ],
+                        "children": []
+                    },
+                    {
+                        "id": "42b07b30-4630-5728-d6bb-9fe1b1eb910c",
+                        "type": "Timer",
+                        "x": 434.96473117081655,
+                        "y": 1097.438963392969,
+                        "parameters": {
+                            "duration": 1000
+                        },
+                        "ports": [],
+                        "dynamicports": [],
                         "children": []
                     }
                 ]
