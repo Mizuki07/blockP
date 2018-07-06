@@ -84,7 +84,8 @@ void loop() {
     }
 
     String strUID = strBuf[0] + " " + strBuf[1] + " " + strBuf[2] + " " + strBuf[3] + " " + strBuf[4] + " " + strBuf[5] + " " + strBuf[6];
-
+    Serial.println(strUID);
+    
     if (readFlag == true ){
       if(!client.connect("arduino", "0cce1b17", "43365f8d45ed2a89")){
         connect();

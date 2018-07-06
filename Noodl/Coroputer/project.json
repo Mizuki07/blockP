@@ -18033,12 +18033,6 @@
             "graph": {
                 "connections": [
                     {
-                        "fromId": "b9902576-9867-b33c-6fb9-64f90576370d",
-                        "fromProperty": "string",
-                        "toId": "ffa9b21d-46ab-ee16-59b6-b04a54a07e3b",
-                        "toProperty": "text"
-                    },
-                    {
                         "fromId": "3c2acbdd-0a5f-7e67-4072-e336b7b7409e",
                         "fromProperty": "text",
                         "toId": "561af1f4-3b30-f4ce-11ab-fb50cbc393cc",
@@ -18049,12 +18043,6 @@
                         "fromProperty": "text",
                         "toId": "107a6df8-137f-eb96-00ed-b2a06c169743",
                         "toProperty": "quest"
-                    },
-                    {
-                        "fromId": "b9902576-9867-b33c-6fb9-64f90576370d",
-                        "fromProperty": "string",
-                        "toId": "107a6df8-137f-eb96-00ed-b2a06c169743",
-                        "toProperty": "word"
                     },
                     {
                         "fromId": "217f7a41-09b6-ba46-f05b-db5f87ede2bd",
@@ -18085,6 +18073,30 @@
                         "fromProperty": "goToNext",
                         "toId": "b8d0657b-f770-e9be-6f1a-a4cff9415dd7",
                         "toProperty": "goToNext"
+                    },
+                    {
+                        "fromId": "3aa21979-b57a-bf7a-cdb9-67bdb53d938b",
+                        "fromProperty": "word",
+                        "toId": "8e909c90-4111-7803-4712-4f774c3d3c85",
+                        "toProperty": "modelId"
+                    },
+                    {
+                        "fromId": "d9c574f5-5d2f-91cc-d63e-e237349615bc",
+                        "fromProperty": "touch.tap",
+                        "toId": "107a6df8-137f-eb96-00ed-b2a06c169743",
+                        "toProperty": "deleteChara"
+                    },
+                    {
+                        "fromId": "107a6df8-137f-eb96-00ed-b2a06c169743",
+                        "fromProperty": "word",
+                        "toId": "ffa9b21d-46ab-ee16-59b6-b04a54a07e3b",
+                        "toProperty": "text"
+                    },
+                    {
+                        "fromId": "8e909c90-4111-7803-4712-4f774c3d3c85",
+                        "fromProperty": "chara",
+                        "toId": "107a6df8-137f-eb96-00ed-b2a06c169743",
+                        "toProperty": "chara"
                     }
                 ],
                 "roots": [
@@ -18141,6 +18153,27 @@
                                 "ports": [],
                                 "dynamicports": [],
                                 "children": []
+                            },
+                            {
+                                "id": "d9c574f5-5d2f-91cc-d63e-e237349615bc",
+                                "type": "Rectangle",
+                                "label": "Rectangle",
+                                "x": 20,
+                                "y": 255,
+                                "parameters": {
+                                    "width": {
+                                        "value": 300,
+                                        "unit": "px"
+                                    },
+                                    "height": {
+                                        "value": 200,
+                                        "unit": "px"
+                                    },
+                                    "alignY": "bottom"
+                                },
+                                "ports": [],
+                                "dynamicports": [],
+                                "children": []
                             }
                         ]
                     },
@@ -18172,41 +18205,18 @@
                         "children": []
                     },
                     {
-                        "id": "b9902576-9867-b33c-6fb9-64f90576370d",
-                        "type": "Receive Message",
-                        "x": 154.2410926619786,
-                        "y": 876.5491830337173,
-                        "parameters": {
-                            "enabled": true,
-                            "topic": "/string"
-                        },
-                        "ports": [
-                            {
-                                "name": "string",
-                                "plug": "outputs",
-                                "type": {
-                                    "name": "*",
-                                    "allowConnectionOnly": true
-                                },
-                                "group": "Payload",
-                                "index": 1
-                            }
-                        ],
-                        "dynamicports": [],
-                        "children": []
-                    },
-                    {
                         "id": "107a6df8-137f-eb96-00ed-b2a06c169743",
                         "type": "Javascript2",
-                        "x": 391.86624561637586,
-                        "y": 801.7668379455567,
+                        "label": "Jadgement",
+                        "x": 360.4704736800805,
+                        "y": 915.0625057338865,
                         "parameters": {
-                            "code": "define({\n    inputs: {\n        word: \"string\",\n        quest:\"string\",\n        qNum:\"string\"\n    },\n    outputs: {\n        judgment: \"string\",\n        goToNext:\"boolean\"\n    },\n    destroy: function(inputs, outputs) {\n\n    },\n    setup: function(inputs, outputs) {\n    },\n    run: function(inputs, outputs, changedInputs) {\n        \n        if(inputs.quest === inputs.word){\n          outputs.judgment = \"◯\";\n          outputs.goToNext = true;\n        }else{\n          outputs.judgment = \"✕\";\n        }\n    }\n});"
+                            "code": "var word = \"\";\ndefine({\n    inputs: {\n        quest:\"string\",\n        qNum:\"string\",\n        deleteChara:\"boolean\",\n        chara: \"string\"\n    },\n    outputs: {\n        goToNext:\"boolean\",\n        word:\"string\"\n    },\n    destroy: function(inputs, outputs) {\n\n    },\n    setup: function(inputs, outputs) {\n    },\n    run: function(inputs, outputs, changedInputs) {\n        \n        if(inputs.chara){\n            word = word + inputs.chara;\n            outputs.word = word;\n        }\n        \n        if(inputs.quest === inputs.word){\n          outputs.goToNext = true;\n        }else{\n        }\n        \n        if(inputs.deleteChara){\n            word = word.slice(0,word.length);\n            outputs.word = word;\n        }\n    }\n});"
                         },
                         "ports": [],
                         "dynamicports": [
                             {
-                                "name": "word",
+                                "name": "quest",
                                 "plug": "input",
                                 "type": {
                                     "name": "string"
@@ -18215,7 +18225,7 @@
                                 "index": 2
                             },
                             {
-                                "name": "quest",
+                                "name": "qNum",
                                 "plug": "input",
                                 "type": {
                                     "name": "string"
@@ -18224,21 +18234,21 @@
                                 "index": 3
                             },
                             {
-                                "name": "qNum",
+                                "name": "deleteChara",
                                 "plug": "input",
                                 "type": {
-                                    "name": "string"
+                                    "name": "boolean"
                                 },
                                 "group": "Inputs",
                                 "index": 4
                             },
                             {
-                                "name": "judgment",
+                                "name": "chara",
+                                "plug": "input",
                                 "type": {
                                     "name": "string"
                                 },
-                                "plug": "output",
-                                "group": "Outputs",
+                                "group": "Inputs",
                                 "index": 5
                             },
                             {
@@ -18249,6 +18259,15 @@
                                 "plug": "output",
                                 "group": "Outputs",
                                 "index": 6
+                            },
+                            {
+                                "name": "word",
+                                "type": {
+                                    "name": "string"
+                                },
+                                "plug": "output",
+                                "group": "Outputs",
+                                "index": 7
                             }
                         ],
                         "children": []
@@ -18269,8 +18288,8 @@
                     {
                         "id": "217f7a41-09b6-ba46-f05b-db5f87ede2bd",
                         "type": "Model",
-                        "x": 110.94213198988695,
-                        "y": 620.9837960686071,
+                        "x": 51.0444087735701,
+                        "y": 638.6007734851709,
                         "parameters": {
                             "properties": "question",
                             "modelId": "q0"
@@ -18293,8 +18312,8 @@
                     {
                         "id": "422b395a-49fb-60fc-c5ba-dbda12b760af",
                         "type": "Expression",
-                        "x": 95.29696076339741,
-                        "y": 757.0495298625825,
+                        "x": -26.260183410892665,
+                        "y": 772.9048095374898,
                         "parameters": {
                             "expression": "id.slice(1,2)"
                         },
@@ -18327,8 +18346,8 @@
                     {
                         "id": "b8d0657b-f770-e9be-6f1a-a4cff9415dd7",
                         "type": "Component Outputs",
-                        "x": 623.2887461311221,
-                        "y": 801.8956664814042,
+                        "x": 691.0364047236292,
+                        "y": 944.2376568849528,
                         "parameters": {},
                         "ports": [
                             {
@@ -18341,6 +18360,69 @@
                             }
                         ],
                         "dynamicports": [],
+                        "children": []
+                    },
+                    {
+                        "id": "d0d1174d-887d-04bf-0b6a-53d153b90ec2",
+                        "type": "Static Data",
+                        "label": "charactor",
+                        "x": -110.78505973917896,
+                        "y": 551.8664144630538,
+                        "parameters": {
+                            "type": "csv",
+                            "csv": "chara,id,imgPath\nあ,04 ad 71 ca 4c 58 80,chara/1.png\nい,04 e9 71 ca 4c 58 80,chara/2.png\nう,04 cc 71 ca 4c 58 80,chara/3.png\nえ,04 08 71 ca 4c 58 81,chara/4.png\nお,04 ea 71 ca 4c 58 80,chara/5.png\nか,04 26 71 ca 4c 58 81,chara/6.png\nき,04 09 71 ca 4c 58 81,chara/7.png\nく,04 44 71 ca 4c 58 81,chara/8.png\nけ,04 27 71 ca 4c 58 81,chara/9.png\nこ,04 62 71 ca 4c 58 81,chara/10.png\nさ,04 f4 05 c2 4c 58 84,chara/11.png\nし,04 b7 05 c2 4c 58 84,chara/12.png\nす,04 d6 05 c2 4c 58 84,chara/13.png\nせ,04 97 05 c2 4c 58 84,chara/14.png\nそ,04 b6 05 c2 4c 58 84,chara/15.png\nた,04 01 0a ca 4c 58 81,chara/16.png\nち,04 c6 0a ca 4c 58 80,chara/17.png\nつ,04 e3 0a ca 4c 58 80,chara/18.png\nて,04 a6 0a ca 4c 58 80,chara/19.png\nと,04 c5 0a ca 4c 58 80,chara/20.png\nな,04 d8 0a c2 4c 58 84,chara/21.png\nに,04 f5 0a c2 4c 58 84,chara/22.png\nぬ,04 b7 0a c2 4c 58 84,chara/23.png\nね,04 d7 0a c2 4c 58 84,chara/24.png\nの,04 97 0a c2 4c 58 84,chara/25.png\nは,04 2b 07 c2 4c 58 85,chara/26.png\nひ,04 f6 06 c2 4c 58 84,chara/27.png\nふ,04 15 06 c2 4c 58 85,chara/28.png\nへ,04 d8 06 c2 4c 58 84,chara/29.png\nほ,04 f5 06 c2 4c 58 84,chara/30.png\nま,04 0b 07 c2 4c 58 85,chara/31.png\nみ,04 ec 07 c2 4c 58 84,chara/32.png\nむ,04 2a 07 c2 4c 58 85,chara/33.png\nめ,04 0c 07 c2 4c 58 85,chara/34.png\nも,04 16 06 c2 4c 58 85,chara/35.png\nや,04 8e 07 c2 4c 58 84,chara/36.png\nゆ,04 cb 07 c2 4c 58 84,chara/37.png\nよ,04 ae 07 c2 4c 58 84,chara/38.png\nら,04 eb 07 c2 4c 58 84,chara/39.png\nり,04 ce 07 c2 4c 58 84,chara/40.png\nる,04 79 05 c2 4c 58 84,chara/41.png\nれ,04 96 05 c2 4c 58 84,chara/42.png\nろ,04 79 06 c2 4c 58 84,chara/43.png\nわ,04 78 05 c2 4c 58 84,chara/44.png\nを,04 97 06 c2 4c 58 84,chara/45.png\nん,04 bc 0c c2 4c 58 84,chara/46.png\nゃ,04 db 0c c2 4c 58 84,chara/47.png\nゅ,04 9e 0c c2 4c 58 84,chara/48.png\nょ,04 bb 0c c2 4c 58 84,chara/49.png\nっ,04 7e 0c c2 4c 58 84,chara/50.png\n゛,04 ad 07 c2 4c 58 84,chara/51.png\n゜,04 6f 07 c2 4c 58 84,chara/52.png\nー,04 8d 07 c2 4c 58 84,chara/53.png",
+                            "json": "[\n    {\n        \"id\" :\"q0\",\n        \"question\" :\"みち\"\n    }\n]"
+                        },
+                        "ports": [],
+                        "dynamicports": [],
+                        "children": []
+                    },
+                    {
+                        "id": "3aa21979-b57a-bf7a-cdb9-67bdb53d938b",
+                        "type": "Receive Message",
+                        "x": -234.18273156010662,
+                        "y": 946.3753241539727,
+                        "parameters": {
+                            "enabled": true,
+                            "topic": "/word"
+                        },
+                        "ports": [
+                            {
+                                "name": "word",
+                                "plug": "outputs",
+                                "type": {
+                                    "name": "*",
+                                    "allowConnectionOnly": true
+                                },
+                                "group": "Payload",
+                                "index": 1
+                            }
+                        ],
+                        "dynamicports": [],
+                        "children": []
+                    },
+                    {
+                        "id": "8e909c90-4111-7803-4712-4f774c3d3c85",
+                        "type": "Model",
+                        "x": 2.165934412937446,
+                        "y": 950.9381682993867,
+                        "parameters": {
+                            "properties": "chara",
+                            "modelId": ""
+                        },
+                        "ports": [],
+                        "dynamicports": [
+                            {
+                                "type": {
+                                    "name": "*",
+                                    "allowConnectionsOnly": true
+                                },
+                                "plug": "input/output",
+                                "group": "Properties",
+                                "name": "chara",
+                                "index": 7
+                            }
+                        ],
                         "children": []
                     }
                 ]
@@ -20683,151 +20765,6 @@
                         },
                         "ports": [],
                         "dynamicports": [],
-                        "children": []
-                    }
-                ]
-            }
-        },
-        {
-            "name": "/Story/Chara",
-            "graph": {
-                "connections": [
-                    {
-                        "fromId": "8e8e0fa2-57bc-6e2b-a5e9-f962a3999be3",
-                        "fromProperty": "word",
-                        "toId": "38cde5bc-3fe8-c6c2-f3b9-a76a46860a63",
-                        "toProperty": "modelId"
-                    },
-                    {
-                        "fromId": "ed18f178-62e5-a6e4-da23-6182d7f53fed",
-                        "fromProperty": "result",
-                        "toId": "26b24f5d-06ee-d8bd-6b23-b3f50e4b5a16",
-                        "toProperty": "string"
-                    },
-                    {
-                        "fromId": "38cde5bc-3fe8-c6c2-f3b9-a76a46860a63",
-                        "fromProperty": "chara",
-                        "toId": "ed18f178-62e5-a6e4-da23-6182d7f53fed",
-                        "toProperty": "chara"
-                    }
-                ],
-                "roots": [
-                    {
-                        "id": "ee65fb97-9758-29d5-3992-9a699d26dcc8",
-                        "type": "Static Data",
-                        "label": "charactor",
-                        "x": 216.68677804536912,
-                        "y": 291.6185164175367,
-                        "parameters": {
-                            "type": "csv",
-                            "csv": "chara,id,imgPath\nあ,04 ad 71 ca 4c 58 80,chara/1.png\nい,04 e9 71 ca 4c 58 80,chara/2.png\nう,04 cc 71 ca 4c 58 80,chara/3.png\nえ,04 08 71 ca 4c 58 81,chara/4.png\nお,04 ea 71 ca 4c 58 80,chara/5.png\nか,04 26 71 ca 4c 58 81,chara/6.png\nき,04 09 71 ca 4c 58 81,chara/7.png\nく,04 44 71 ca 4c 58 81,chara/8.png\nけ,04 27 71 ca 4c 58 81,chara/9.png\nこ,04 62 71 ca 4c 58 81,chara/10.png\nさ,04 f4 05 c2 4c 58 84,chara/11.png\nし,04 b7 05 c2 4c 58 84,chara/12.png\nす,04 d6 05 c2 4c 58 84,chara/13.png\nせ,04 97 05 c2 4c 58 84,chara/14.png\nそ,04 b6 05 c2 4c 58 84,chara/15.png\nた,04 01 0a ca 4c 58 81,chara/16.png\nち,04 c6 0a ca 4c 58 80,chara/17.png\nつ,04 e3 0a ca 4c 58 80,chara/18.png\nて,04 a6 0a ca 4c 58 80,chara/19.png\nと,04 c5 0a ca 4c 58 80,chara/20.png\nな,04 d8 0a c2 4c 58 84,chara/21.png\nに,04 f5 0a c2 4c 58 84,chara/22.png\nぬ,04 b7 0a c2 4c 58 84,chara/23.png\nね,04 d7 0a c2 4c 58 84,chara/24.png\nの,04 97 0a c2 4c 58 84,chara/25.png\nは,04 2b 07 c2 4c 58 85,chara/26.png\nひ,04 f6 06 c2 4c 58 84,chara/27.png\nふ,04 15 06 c2 4c 58 85,chara/28.png\nへ,04 d8 06 c2 4c 58 84,chara/29.png\nほ,04 f5 06 c2 4c 58 84,chara/30.png\nま,04 0b 07 c2 4c 58 85,chara/31.png\nみ,04 ec 07 c2 4c 58 84,chara/32.png\nむ,04 2a 07 c2 4c 58 85,chara/33.png\nめ,04 0c 07 c2 4c 58 85,chara/34.png\nも,04 16 06 c2 4c 58 85,chara/35.png\nや,04 8e 07 c2 4c 58 84,chara/36.png\nゆ,04 cb 07 c2 4c 58 84,chara/37.png\nよ,04 ae 07 c2 4c 58 84,chara/38.png\nら,04 eb 07 c2 4c 58 84,chara/39.png\nり,04 ce 07 c2 4c 58 84,chara/40.png\nる,04 79 05 c2 4c 58 84,chara/41.png\nれ,04 96 05 c2 4c 58 84,chara/42.png\nろ,04 79 06 c2 4c 58 84,chara/43.png\nわ,04 78 05 c2 4c 58 84,chara/44.png\nを,04 97 06 c2 4c 58 84,chara/45.png\nん,04 bc 0c c2 4c 58 84,chara/46.png\nゃ,04 db 0c c2 4c 58 84,chara/47.png\nゅ,04 9e 0c c2 4c 58 84,chara/48.png\nょ,04 bb 0c c2 4c 58 84,chara/49.png\nっ,04 7e 0c c2 4c 58 84,chara/50.png\n゛,04 ad 07 c2 4c 58 84,chara/51.png\n゜,04 6f 07 c2 4c 58 84,chara/52.png\nー,04 8d 07 c2 4c 58 84,chara/53.png",
-                            "json": "[\n    {\n        \"id\" :\"q0\",\n        \"question\" :\"みち\"\n    }\n]"
-                        },
-                        "ports": [],
-                        "dynamicports": [],
-                        "children": []
-                    },
-                    {
-                        "id": "8e8e0fa2-57bc-6e2b-a5e9-f962a3999be3",
-                        "type": "Receive Message",
-                        "x": 33.96815901255269,
-                        "y": 329.0032942025823,
-                        "parameters": {
-                            "enabled": true,
-                            "topic": "/word"
-                        },
-                        "ports": [
-                            {
-                                "name": "word",
-                                "plug": "outputs",
-                                "type": {
-                                    "name": "*",
-                                    "allowConnectionOnly": true
-                                },
-                                "group": "Payload",
-                                "index": 1
-                            }
-                        ],
-                        "dynamicports": [],
-                        "children": []
-                    },
-                    {
-                        "id": "38cde5bc-3fe8-c6c2-f3b9-a76a46860a63",
-                        "type": "Model",
-                        "x": 236.11656522847545,
-                        "y": 359.79709604347727,
-                        "parameters": {
-                            "properties": "chara",
-                            "modelId": ""
-                        },
-                        "ports": [],
-                        "dynamicports": [
-                            {
-                                "type": {
-                                    "name": "*",
-                                    "allowConnectionsOnly": true
-                                },
-                                "plug": "input/output",
-                                "group": "Properties",
-                                "name": "chara",
-                                "index": 7
-                            }
-                        ],
-                        "children": []
-                    },
-                    {
-                        "id": "26b24f5d-06ee-d8bd-6b23-b3f50e4b5a16",
-                        "type": "Send Message",
-                        "x": 460.88881655027615,
-                        "y": 339.50176449219373,
-                        "parameters": {
-                            "topic": "/string",
-                            "publishOnInputsChanged": true
-                        },
-                        "ports": [
-                            {
-                                "name": "string",
-                                "plug": "input",
-                                "type": {
-                                    "name": "*",
-                                    "allowConnectionOnly": true
-                                },
-                                "group": "Payload",
-                                "index": 1
-                            }
-                        ],
-                        "dynamicports": [],
-                        "children": []
-                    },
-                    {
-                        "id": "ed18f178-62e5-a6e4-da23-6182d7f53fed",
-                        "type": "Javascript2",
-                        "x": 233.95785717542554,
-                        "y": 472.3602970129306,
-                        "parameters": {
-                            "code": "var word = \"\";\n\ndefine({\n    inputs: {\n        chara: \"string\"\n    },\n    outputs: {\n        result: \"string\"\n    },\n    destroy: function(inputs, outputs) {\n\n    },\n    setup: function(inputs, outputs) {\n    \n    },\n    run: function(inputs, outputs, changedInputs) {\n        if(inputs.chara){\n            word = word + inputs.chara;\n            outputs.result = word;\n        }\n        \n    }\n});"
-                        },
-                        "ports": [],
-                        "dynamicports": [
-                            {
-                                "name": "chara",
-                                "plug": "input",
-                                "type": {
-                                    "name": "string"
-                                },
-                                "group": "Inputs",
-                                "index": 2
-                            },
-                            {
-                                "name": "result",
-                                "type": {
-                                    "name": "string"
-                                },
-                                "plug": "output",
-                                "group": "Outputs",
-                                "index": 3
-                            }
-                        ],
                         "children": []
                     }
                 ]
