@@ -81,18 +81,21 @@ void loop() {
 
     String strUID = strBuf[0] + " " + strBuf[1] + " " + strBuf[2] + " " + strBuf[3] + " " + strBuf[4] + " " + strBuf[5] + " " + strBuf[6];
     Serial.println(strUID);
+    Serial.println(lastChar);
     
     if (!client.connected()) {
       connect();  
     }
-    
-    if(client.publish("/word", strUID) == true){
-        Serial.println("Published");
-        }
-        
+
+    if(lastChar != strUID){
+      if(client.publish("/word", strUID) == true){
+      Serial.println("Published");
+      lastChar = strUID;
+      }
+    }
+
     if (millis() - lastMillis > 1000) {
       lastMillis = millis();
       client.publish("/hello", "world");
     }
-  
 }
