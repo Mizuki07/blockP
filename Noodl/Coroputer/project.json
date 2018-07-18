@@ -19240,8 +19240,8 @@
                         "type": "Group",
                         "version": 2,
                         "label": "Root",
-                        "x": 149.86086679949437,
-                        "y": 162.81448906599252,
+                        "x": 195.09582148687014,
+                        "y": 100.34717068818804,
                         "parameters": {},
                         "ports": [],
                         "dynamicports": [],
@@ -19407,8 +19407,8 @@
                     {
                         "id": "2e05d447-f8b3-c932-0757-1c392988fed4",
                         "type": "Javascript2",
-                        "x": 744.2015323391207,
-                        "y": 650.1924978341385,
+                        "x": 667.4312800003303,
+                        "y": 492.61145355977897,
                         "parameters": {
                             "code": "define({\n    inputs: {\n        goToNext: \"boolean\",\n        indexChanged:\"boolean\",\n        init:\"boolean\"\n    },\n    outputs: {\n        goto: \"boolean\",\n        index:'number'\n    },\n    destroy: function(inputs, outputs) {\n\n    },\n    setup: function(inputs, outputs) {\n        this.index = 0;\n    },\n    run: function(inputs, outputs, changedInputs) {\n        \n        if(inputs.goToNext){\n            this.index ++;\n        }\n        outputs.index = this.index;\n        this.sendSignalOnOutput('goto');\n        \n        if(inputs.init){\n            outputs.index=0;\n            this.sendSignalOnOutput('goto');\n        }\n        \n    }\n});"
                         },
@@ -19628,8 +19628,8 @@
                     {
                         "id": "d6e03676-0e95-4654-bd4e-8b3c0efa4495",
                         "type": "Expression",
-                        "x": 769.7108076966865,
-                        "y": 816.7755178746957,
+                        "x": 800.6428284230763,
+                        "y": 659.1944736003361,
                         "parameters": {
                             "expression": "index +1"
                         },
@@ -19738,8 +19738,8 @@
                     {
                         "id": "877a98ab-19bf-7bf5-2116-8e9cd251103c",
                         "type": "Model",
-                        "x": 521.8374891146899,
-                        "y": 950.4003659836496,
+                        "x": 509.71587032435457,
+                        "y": 891.8125418303621,
                         "parameters": {
                             "properties": "question",
                             "modelId": ""
@@ -19810,8 +19810,8 @@
                     {
                         "id": "8dfd62cc-c25e-9d17-c794-498efeadf178",
                         "type": "String Format",
-                        "x": 777.7870555796549,
-                        "y": 939.0128709159392,
+                        "x": 761.3300761573653,
+                        "y": 787.8939630254904,
                         "parameters": {
                             "format": "q{id}"
                         },

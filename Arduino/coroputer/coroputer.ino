@@ -14,8 +14,11 @@ MFRC522 mfrc522(SS_PIN, RST_PIN); // MFRC522のインスタンスを作成
 bool cardset;     // MFRC522にカードが検知されているかどうか
 int timeoutcount; // MFRC522からカードが連続で離れた回数を記録
 
-const char* ssid = "SPWH_H32_D15FE1";
-const char* password = "5b2dhen4ag37q75";
+//const char* ssid = "SPWH_H32_D15FE1";
+//const char* password = "5b2dhen4ag37q75";
+
+const char* ssid = "SPWN_H36_809AD8";
+const char* password = "2aaj4eb805539tj";
 
 WiFiClient net;
 MQTTClient client;
@@ -32,7 +35,6 @@ void setup() {
   Serial.begin(9600); // UARTの通信速度を変更したい場合はこちらを変更
   delay(10);
 
-
   // MFRC522用変数初期化
   cardset = false;
   timeoutcount = 0;
@@ -43,28 +45,22 @@ void setup() {
 
   // Conect Wifi.
   Serial.println();
-  Serial.println();
   Serial.print("Connecting to ");
   Serial.println(ssid);
 
   WiFi.begin(ssid, password);
 
-  while (WiFi.status() != WL_CONNECTED) {
-    delay(500);
-    Serial.print(".");
-  }
-  Serial.println("");
-  Serial.println("WiFi connected");
-
-  // Print the IP address
-  Serial.println(WiFi.localIP());
-
   client.begin("broker.shiftr.io", net);
+  client.onMessage(messageReceived);
+  
   connect();
  
 }
 
 void loop() {
+  client.loop();
+  delay(10);
+  
   // Look for new cards
   if ( ! mfrc522.PICC_IsNewCardPresent()) {
     return;
@@ -85,38 +81,21 @@ void loop() {
 
     String strUID = strBuf[0] + " " + strBuf[1] + " " + strBuf[2] + " " + strBuf[3] + " " + strBuf[4] + " " + strBuf[5] + " " + strBuf[6];
     Serial.println(strUID);
+    Serial.println(lastChar);
     
-    if (readFlag == true ){
-      if(!client.connect("arduino", "0cce1b17", "43365f8d45ed2a89")){
-        connect();
-        }
-
-      if(client.publish("/word", strUID) == true){
-        Serial.println("Published");
-        }
-        
+    if (!client.connected()) {
+      connect();  
     }
-   
-  delay(100);
-  
+
+    if(lastChar != strUID){
+      if(client.publish("/word", strUID) == true){
+      Serial.println("Published");
+      lastChar = strUID;
+      }
+    }
+
+    if (millis() - lastMillis > 1000) {
+      lastMillis = millis();
+      client.publish("/hello", "world");
+    }
 }
-
-void ShowReaderDetails() {
-  // Get the MFRC522 software version
-  byte v = mfrc522.PCD_ReadRegister(mfrc522.VersionReg);
-  Serial.print(F("MFRC522 Software Version: 0x"));
-  Serial.print(v, HEX);
-  if (v == 0x91)
-    Serial.print(F(" = v1.0"));
-  else if (v == 0x92)
-    Serial.print(F(" = v2.0"));
-  else
-    Serial.print(F(" (unknown)"));
-  Serial.println("");
-  // When 0x00 or 0xFF is returned, communication probably failed
-  if ((v == 0x00) || (v == 0xFF)) {
-    Serial.println(F("WARNING: Communication failure, is the MFRC522 properly connected?"));
-  }
-}
-
-
