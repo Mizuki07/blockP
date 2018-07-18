@@ -18924,7 +18924,13 @@
                         "toProperty": "exp"
                     },
                     {
-                        "fromId": "9dc72228-4e28-3634-aa6d-1540da1c7476",
+                        "fromId": "5e5b01e9-58fc-c768-e0cb-c476f7364791",
+                        "fromProperty": "imgpath",
+                        "toId": "5f98c21e-9377-b277-e3cc-4dee537d3a9e",
+                        "toProperty": "imgpath"
+                    },
+                    {
+                        "fromId": "5f98c21e-9377-b277-e3cc-4dee537d3a9e",
                         "fromProperty": "formatted",
                         "toId": "b5851ab9-8409-7b27-7682-699dccc63fd3",
                         "toProperty": "image"
@@ -18938,9 +18944,7 @@
                         "label": "Root",
                         "x": 51.96874554708819,
                         "y": 486.0625089058236,
-                        "parameters": {
-                            "padding": 40
-                        },
+                        "parameters": {},
                         "ports": [],
                         "dynamicports": [],
                         "children": [
@@ -18948,39 +18952,55 @@
                                 "id": "b5851ab9-8409-7b27-7682-699dccc63fd3",
                                 "type": "Image",
                                 "version": 2,
-                                "x": 71.96874554708819,
-                                "y": 547.0625089058236,
-                                "parameters": {},
-                                "ports": [],
-                                "dynamicports": [],
-                                "children": []
-                            },
-                            {
-                                "id": "c96d7290-c736-a049-5ef1-1327bd868bae",
-                                "type": "Text",
-                                "version": 2,
-                                "x": 71.96874554708819,
-                                "y": 629.0625089058236,
+                                "x": 20,
+                                "y": 61,
                                 "parameters": {
-                                    "text": "一緒にいかない？",
-                                    "color": "#000000",
-                                    "fontSize": 64,
-                                    "alignX": "center"
+                                    "sizeMode": "explicit"
                                 },
                                 "ports": [],
                                 "dynamicports": [],
                                 "children": []
                             },
                             {
-                                "id": "78d7bc8d-b70e-821d-b7af-edc03e488bf8",
-                                "type": "Image",
+                                "id": "0733e981-cf23-52d9-38a9-62b68a80f86c",
+                                "type": "Group",
                                 "version": 2,
-                                "x": 71.96874554708819,
-                                "y": 726.0625089058236,
-                                "parameters": {},
+                                "x": 20,
+                                "y": 143,
+                                "parameters": {
+                                    "padding": 40
+                                },
                                 "ports": [],
                                 "dynamicports": [],
-                                "children": []
+                                "children": [
+                                    {
+                                        "id": "c96d7290-c736-a049-5ef1-1327bd868bae",
+                                        "type": "Text",
+                                        "version": 2,
+                                        "x": 20,
+                                        "y": 46,
+                                        "parameters": {
+                                            "text": "一緒にいかない？",
+                                            "color": "#000000",
+                                            "fontSize": 40,
+                                            "alignX": "center"
+                                        },
+                                        "ports": [],
+                                        "dynamicports": [],
+                                        "children": []
+                                    },
+                                    {
+                                        "id": "78d7bc8d-b70e-821d-b7af-edc03e488bf8",
+                                        "type": "Image",
+                                        "version": 2,
+                                        "x": 20,
+                                        "y": 143,
+                                        "parameters": {},
+                                        "ports": [],
+                                        "dynamicports": [],
+                                        "children": []
+                                    }
+                                ]
                             }
                         ]
                     },
@@ -19008,9 +19028,9 @@
                         "type": "Model",
                         "label": "Story text",
                         "x": -365.494739485424,
-                        "y": 620.2913576486334,
+                        "y": 621.6942495401967,
                         "parameters": {
-                            "properties": "text,expression,id"
+                            "properties": "text,expression,id,imgpath"
                         },
                         "ports": [],
                         "dynamicports": [
@@ -19043,6 +19063,16 @@
                                 "group": "Properties",
                                 "name": "id",
                                 "index": 9
+                            },
+                            {
+                                "type": {
+                                    "name": "*",
+                                    "allowConnectionsOnly": true
+                                },
+                                "plug": "input/output",
+                                "group": "Properties",
+                                "name": "imgpath",
+                                "index": 10
                             }
                         ],
                         "children": []
@@ -19058,17 +19088,17 @@
                         "children": []
                     },
                     {
-                        "id": "9dc72228-4e28-3634-aa6d-1540da1c7476",
+                        "id": "5f98c21e-9377-b277-e3cc-4dee537d3a9e",
                         "type": "String Format",
-                        "x": -182.99282911219814,
-                        "y": 508.7211360359023,
+                        "x": -164.35551465716645,
+                        "y": 527.4368821672091,
                         "parameters": {
-                            "format": "bg/{bgPath}.png"
+                            "format": "bg/{imgpath}"
                         },
                         "ports": [],
                         "dynamicports": [
                             {
-                                "name": "bgPath",
+                                "name": "imgpath",
                                 "type": "*",
                                 "plug": "input",
                                 "index": 2
@@ -19158,12 +19188,6 @@
                     {
                         "fromId": "1ab4dd5f-a1a3-a301-5f18-1657e5bee52d",
                         "fromProperty": "text",
-                        "toId": "cd991fcc-1e5d-57d7-6d44-0eb0eef10f9f",
-                        "toProperty": "text"
-                    },
-                    {
-                        "fromId": "1ab4dd5f-a1a3-a301-5f18-1657e5bee52d",
-                        "fromProperty": "text",
                         "toId": "203e5884-23aa-e51b-32de-ccfd32ad08e7",
                         "toProperty": "quest"
                     },
@@ -19232,6 +19256,36 @@
                         "fromProperty": "timerFinished",
                         "toId": "203e5884-23aa-e51b-32de-ccfd32ad08e7",
                         "toProperty": "finished"
+                    },
+                    {
+                        "fromId": "877a98ab-19bf-7bf5-2116-8e9cd251103c",
+                        "fromProperty": "id",
+                        "toId": "abdacab1-211e-0785-cd8d-55cd079e1e1a",
+                        "toProperty": "id"
+                    },
+                    {
+                        "fromId": "877a98ab-19bf-7bf5-2116-8e9cd251103c",
+                        "fromProperty": "question",
+                        "toId": "abdacab1-211e-0785-cd8d-55cd079e1e1a",
+                        "toProperty": "word"
+                    },
+                    {
+                        "fromId": "d6e03676-0e95-4654-bd4e-8b3c0efa4495",
+                        "fromProperty": "result",
+                        "toId": "abdacab1-211e-0785-cd8d-55cd079e1e1a",
+                        "toProperty": "index"
+                    },
+                    {
+                        "fromId": "ca0337f3-60eb-724e-67ad-57efb8e107d4",
+                        "fromProperty": "items",
+                        "toId": "c98f1e77-7098-090f-2cec-cfee8efd579b",
+                        "toProperty": "items"
+                    },
+                    {
+                        "fromId": "877a98ab-19bf-7bf5-2116-8e9cd251103c",
+                        "fromProperty": "id",
+                        "toId": "ca0337f3-60eb-724e-67ad-57efb8e107d4",
+                        "toProperty": "collectionId"
                     }
                 ],
                 "roots": [
@@ -19240,8 +19294,8 @@
                         "type": "Group",
                         "version": 2,
                         "label": "Root",
-                        "x": 195.09582148687014,
-                        "y": 100.34717068818804,
+                        "x": 149.86086679949437,
+                        "y": 162.81448906599252,
                         "parameters": {},
                         "ports": [],
                         "dynamicports": [],
@@ -19254,7 +19308,7 @@
                                 "parameters": {
                                     "snap": "item",
                                     "scrollAxis": "0",
-                                    "touchPropagation": true,
+                                    "touchPropagation": false,
                                     "scrollDuration": 5000,
                                     "scrollToIndex.duration": 2000
                                 },
@@ -19279,11 +19333,12 @@
                                 "id": "2da6321e-1d78-2486-4c60-a54aa50cc2ca",
                                 "type": "Image",
                                 "version": 2,
-                                "x": 167.88930832374317,
-                                "y": 221.49178418153397,
+                                "x": 20,
+                                "y": 301,
                                 "parameters": {
                                     "image": "moji.png",
-                                    "alignY": "bottom"
+                                    "alignY": "bottom",
+                                    "y": -50
                                 },
                                 "ports": [],
                                 "dynamicports": [],
@@ -19301,35 +19356,44 @@
                                 "dynamicports": [],
                                 "children": [
                                     {
-                                        "id": "cd991fcc-1e5d-57d7-6d44-0eb0eef10f9f",
-                                        "type": "Text",
-                                        "version": 2,
-                                        "label": "quest",
-                                        "x": 628.9971727218178,
-                                        "y": 578.1134891674737,
+                                        "id": "4e10ec41-6c46-8f65-52cf-a0b4499ebe96",
+                                        "type": "Stack Layout",
+                                        "x": 20,
+                                        "y": 97,
                                         "parameters": {
-                                            "fontSize": 380,
-                                            "text": "りんご",
+                                            "sizeMode": "childWidth",
                                             "alignX": "center",
+                                            "orientation": "horizontal",
                                             "alignY": "center",
-                                            "color": "#ff504b",
-                                            "lineHeight": 0,
-                                            "y": 100,
-                                            "alignment": "center",
-                                            "verticalAlignment": "center",
-                                            "fontFamily": "A-OTF-FutoMinA101Pro-Bold.otf"
+                                            "height": {
+                                                "value": 500,
+                                                "unit": "px"
+                                            }
                                         },
                                         "ports": [],
                                         "dynamicports": [],
-                                        "children": []
+                                        "children": [
+                                            {
+                                                "id": "c98f1e77-7098-090f-2cec-cfee8efd579b",
+                                                "type": "For Each",
+                                                "x": 20,
+                                                "y": 46,
+                                                "parameters": {
+                                                    "template": "/Story/char"
+                                                },
+                                                "ports": [],
+                                                "dynamicports": [],
+                                                "children": []
+                                            }
+                                        ]
                                     },
                                     {
                                         "id": "d57d5146-f5a4-d760-985f-85064355f025",
                                         "type": "Text",
                                         "version": 2,
                                         "label": "ReceiveText",
-                                        "x": 628.9971727218178,
-                                        "y": 675.1134891674737,
+                                        "x": 20,
+                                        "y": 97,
                                         "parameters": {
                                             "fontSize": 160,
                                             "alignX": "center",
@@ -19347,19 +19411,20 @@
                                         "id": "67cea911-a050-5c06-70e7-b3918a18a570",
                                         "type": "Rectangle",
                                         "label": "Rectangle",
-                                        "x": 628.9971727218178,
-                                        "y": 772.1134891674737,
+                                        "x": 20,
+                                        "y": 291,
                                         "parameters": {
                                             "width": {
                                                 "value": 300,
                                                 "unit": "px"
                                             },
                                             "height": {
-                                                "value": 200,
+                                                "value": 160,
                                                 "unit": "px"
                                             },
                                             "alignY": "bottom",
-                                            "y": -200
+                                            "y": 0,
+                                            "alignX": "center"
                                         },
                                         "ports": [],
                                         "dynamicports": [],
@@ -19407,8 +19472,8 @@
                     {
                         "id": "2e05d447-f8b3-c932-0757-1c392988fed4",
                         "type": "Javascript2",
-                        "x": 667.4312800003303,
-                        "y": 492.61145355977897,
+                        "x": 952.6156166465576,
+                        "y": 371.39624536020796,
                         "parameters": {
                             "code": "define({\n    inputs: {\n        goToNext: \"boolean\",\n        indexChanged:\"boolean\",\n        init:\"boolean\"\n    },\n    outputs: {\n        goto: \"boolean\",\n        index:'number'\n    },\n    destroy: function(inputs, outputs) {\n\n    },\n    setup: function(inputs, outputs) {\n        this.index = 0;\n    },\n    run: function(inputs, outputs, changedInputs) {\n        \n        if(inputs.goToNext){\n            this.index ++;\n        }\n        outputs.index = this.index;\n        this.sendSignalOnOutput('goto');\n        \n        if(inputs.init){\n            outputs.index=0;\n            this.sendSignalOnOutput('goto');\n        }\n        \n    }\n});"
                         },
@@ -19467,9 +19532,9 @@
                         "type": "Static Data",
                         "label": "Story Data",
                         "x": -162.88870522524257,
-                        "y": 342.99547204383646,
+                        "y": 344.50900983514975,
                         "parameters": {
-                            "csv": "id,text\nst_1,\"僕は「タロムシ」。キミの名前は？ボビンを転がして教えてね\"\nst_2,だね？\nst_3,こんにちは！\nst_4,これからお花畑に行くんだけど一緒に行かない？\nst_5,この「みち」をまっすぐだよ\nst_6,あっ！「もり」が見えてきたね\nst_7,あの森の中でひとやすみしよう\nst_8,\"お腹が空いたなあ、「りんご」を探そうよ\"\nst_9,\"おなかもいっぱいになったことだし先に進もう！\"\nst_10,「かわ」が見えてきたね\nst_11,渡れそうにないね、だれか道を知らないかな\nst_12,\"あ、あそこに「しっぽ」が見えているよ。誰のだろう？\"\nst_13,あ！「りす」さんだ！話しかけてみようよ！\nst_14,\"りすさん！りすさん！川を渡りたいんだけど、道を知らないかい？\"\nst_15,おいら、知ってるぜ！あっちの方向に「はし」があるよ！そこからきっと渡れるさ！\nst_16,「ありがとう」りすさん！行ってみるよ！\nst_17,橋はこっちだね、行こう\nst_18,あ、「とり」さんだ！\nst_19,とりさん、素敵な「はな」を持ってるね\nst_20,そうでしょ？この先にそれは美しいお花畑あってね。そこから分けてもらったのさ\nst_21,僕たちもお花畑に向かっているところさ！\nst_22,\"それなら、もうすぐそこさ！楽しんでおいで！\"\nst_23,\"わあ！！みてごらん！とても素敵なお花畑だね！\"\nst_24,今日はとても楽しかった！また、来ようね！"
+                            "csv": "id,text,imgpath\nst_1,\"僕は「タロムシ」。キミの名前は？ボビンを転がして教えてね\",story_togou01_01.png\nst_2,だね？,story_togou01_02.png\nst_3,こんにちは！,story_togou01_03.png\nst_4,これからお花畑に行くんだけど一緒に行かない？,story_togou01_04.png\nst_5,この「みち」をまっすぐだよ,story_togou02_01.png\nst_6,あっ！「もり」が見えてきたね,story_togou02_02.png\nst_7,あの森の中でひとやすみしよう,story_togou02_03.png\nst_8,\"お腹が空いたなあ、「りんご」を探そうよ\",story_togou02_04.png\nst_9,\"おなかもいっぱいになったことだし先に進もう！\",story_togou03_01.png\nst_10,「かわ」が見えてきたね,story_togou03_02.png\nst_11,渡れそうにないね、だれか道を知らないかな,story_togou03_03.png\nst_12,\"あ、あそこに「しっぽ」が見えているよ。誰のだろう？\",story_togou03_04.png\nst_13,あ！「りす」さんだ！話しかけてみようよ！,story_togou04_01.png\nst_14,\"りすさん！りすさん！川を渡りたいんだけど道を知らないかい？\",story_togou04_02.png\nst_15,おいら、知ってるぜ！あっちの方向に「はし」があるよ！そこからきっと渡れるさ！,story_togou04_03.png\nst_16,「ありがとう」りすさん！行ってみるよ！,story_togou04_04.png\nst_17,橋はこっちだね、行こう,story_togou05_01.png\nst_18,あ、「とり」さんだ！,story_togou05_02.png\nst_19,とりさん、素敵な「はな」を持ってるね,story_togou05_03.png\nst_20,そうでしょ？この先にそれは美しいお花畑あってね。そこから分けてもらったのさ,story_togou05_04.png\nst_21,僕たちもお花畑に向かっているところさ！,story_togou06_01.png\nst_22,\"それなら、もうすぐそこさ！楽しんでおいで！\",story_togou06_02.png\nst_23,\"わあ！！みてごらん！とても素敵なお花畑だね！\",story_togou06_03.png\nst_24,今日はとても楽しかった！また、来ようね！,story_togou06_04.png"
                         },
                         "ports": [],
                         "dynamicports": [],
@@ -19479,8 +19544,8 @@
                         "id": "b20b6244-aad5-2d1c-0b98-e675b6d93fa9",
                         "type": "Static Data",
                         "label": "question",
-                        "x": -387.9294592155614,
-                        "y": 996.1862108937056,
+                        "x": -407.73878189015466,
+                        "y": 1004.9906781543897,
                         "parameters": {
                             "type": "json",
                             "csv": "りんご,みかん,くま,うみ",
@@ -19494,38 +19559,12 @@
                         "id": "4d66a913-462a-8f93-9108-b95b14ca0601",
                         "type": "Static Data",
                         "label": "charactor",
-                        "x": -393.82423133857964,
+                        "x": -395.85801756969613,
                         "y": 931.5405798612718,
                         "parameters": {
                             "type": "csv",
                             "csv": "chara,id,imgPath\nあ,04 ad 71 ca 4c 58 80,chara/1.png\nい,04 e9 71 ca 4c 58 80,chara/2.png\nう,04 cc 71 ca 4c 58 80,chara/3.png\nえ,04 08 71 ca 4c 58 81,chara/4.png\nお,04 ea 71 ca 4c 58 80,chara/5.png\nか,04 26 71 ca 4c 58 81,chara/6.png\nき,04 09 71 ca 4c 58 81,chara/7.png\nく,04 44 71 ca 4c 58 81,chara/8.png\nけ,04 27 71 ca 4c 58 81,chara/9.png\nこ,04 62 71 ca 4c 58 81,chara/10.png\nさ,04 f4 05 c2 4c 58 84,chara/11.png\nし,04 b7 05 c2 4c 58 84,chara/12.png\nす,04 d6 05 c2 4c 58 84,chara/13.png\nせ,04 97 05 c2 4c 58 84,chara/14.png\nそ,04 b6 05 c2 4c 58 84,chara/15.png\nた,04 01 0a ca 4c 58 81,chara/16.png\nち,04 c6 0a ca 4c 58 80,chara/17.png\nつ,04 e3 0a ca 4c 58 80,chara/18.png\nて,04 a6 0a ca 4c 58 80,chara/19.png\nと,04 c5 0a ca 4c 58 80,chara/20.png\nな,04 d8 0a c2 4c 58 84,chara/21.png\nに,04 f5 0a c2 4c 58 84,chara/22.png\nぬ,04 b7 0a c2 4c 58 84,chara/23.png\nね,04 d7 0a c2 4c 58 84,chara/24.png\nの,04 97 0a c2 4c 58 84,chara/25.png\nは,04 2b 07 c2 4c 58 85,chara/26.png\nひ,04 f6 06 c2 4c 58 84,chara/27.png\nふ,04 15 06 c2 4c 58 85,chara/28.png\nへ,04 d8 06 c2 4c 58 84,chara/29.png\nほ,04 f5 06 c2 4c 58 84,chara/30.png\nま,04 0b 07 c2 4c 58 85,chara/31.png\nみ,04 ec 07 c2 4c 58 84,chara/32.png\nむ,04 2a 07 c2 4c 58 85,chara/33.png\nめ,04 0c 07 c2 4c 58 85,chara/34.png\nも,04 16 06 c2 4c 58 85,chara/35.png\nや,04 8e 07 c2 4c 58 84,chara/36.png\nゆ,04 cb 07 c2 4c 58 84,chara/37.png\nよ,04 ae 07 c2 4c 58 84,chara/38.png\nら,04 eb 07 c2 4c 58 84,chara/39.png\nり,04 ce 07 c2 4c 58 84,chara/40.png\nる,04 79 05 c2 4c 58 84,chara/41.png\nれ,04 96 05 c2 4c 58 84,chara/42.png\nろ,04 79 06 c2 4c 58 84,chara/43.png\nわ,04 78 05 c2 4c 58 84,chara/44.png\nを,04 97 06 c2 4c 58 84,chara/45.png\nん,04 bc 0c c2 4c 58 84,chara/46.png\nゃ,04 db 0c c2 4c 58 84,chara/47.png\nゅ,04 9e 0c c2 4c 58 84,chara/48.png\nょ,04 bb 0c c2 4c 58 84,chara/49.png\nっ,04 7e 0c c2 4c 58 84,chara/50.png\n゛,04 ad 07 c2 4c 58 84,chara/51.png\n゜,04 6f 07 c2 4c 58 84,chara/52.png\nー,04 8d 07 c2 4c 58 84,chara/53.png",
                             "json": "[\n    {\n        \"id\" :\"q0\",\n        \"question\" :\"みち\"\n    }\n]"
-                        },
-                        "ports": [],
-                        "dynamicports": [],
-                        "children": []
-                    },
-                    {
-                        "id": "6faa55ba-cb8c-603b-4922-410604eaa257",
-                        "type": "For Each",
-                        "x": -389.97304568354974,
-                        "y": 1068.9160700350203,
-                        "parameters": {},
-                        "ports": [],
-                        "dynamicports": [],
-                        "children": []
-                    },
-                    {
-                        "id": "f3a9ecbd-f3cd-8936-d6c1-6007c7446c60",
-                        "type": "Scroll View",
-                        "x": 694.1032910419186,
-                        "y": 287.0872163387199,
-                        "parameters": {
-                            "snap": "item",
-                            "scrollAxis": "0",
-                            "touchPropagation": false,
-                            "scrollDuration": 5000,
-                            "scrollToIndex.duration": 2000
                         },
                         "ports": [],
                         "dynamicports": [],
@@ -19546,8 +19585,8 @@
                     {
                         "id": "188193d7-2c52-7b79-a2da-70dd8465f754",
                         "type": "Timer",
-                        "x": -155.54385399713013,
-                        "y": 804.3180963258405,
+                        "x": -331.9311891727072,
+                        "y": 774.0293620027617,
                         "parameters": {
                             "duration": 3000,
                             "startDelay": 0
@@ -19628,8 +19667,8 @@
                     {
                         "id": "d6e03676-0e95-4654-bd4e-8b3c0efa4495",
                         "type": "Expression",
-                        "x": 800.6428284230763,
-                        "y": 659.1944736003361,
+                        "x": 978.1248920041234,
+                        "y": 537.9792654007653,
                         "parameters": {
                             "expression": "index +1"
                         },
@@ -19648,8 +19687,8 @@
                         "id": "203e5884-23aa-e51b-32de-ccfd32ad08e7",
                         "type": "Javascript2",
                         "label": "Jadgement",
-                        "x": 202.97255558930834,
-                        "y": 1049.124410310028,
+                        "x": 208.03736660078908,
+                        "y": 988.3466781722573,
                         "parameters": {
                             "code": "var str = \"\";\ndefine({\n    inputs: {\n        quest:\"string\",\n        qNum:\"string\",\n        deleteChara:\"boolean\",\n        chara: \"string\",\n        finished:\"boolean\"\n    },\n    outputs: {\n        goToNext:\"boolean\",\n        word:\"string\"\n    },\n    destroy: function(inputs, outputs) {\n\n    },\n    setup: function(inputs, outputs) {\n    },\n    run: function(inputs, outputs, changedInputs) {\n        \n        if(inputs.chara){\n            str = str + inputs.chara;\n            outputs.word = str;\n        }\n        \n        if(inputs.quest === outputs.word){\n            outputs.goToNext = true;\n        }else{\n            outputs.goToNext = false;\n        }\n        \n        if(inputs.finished){\n          str= \"\";\n          inputs.chara = \"\";\n          outputs.word = \"\";\n        }\n        \n        if(inputs.deleteChara){\n            console.log(str.length);\n            inputs.chara = \"\";\n            str = str.slice(0,-1);\n            outputs.word = str;\n        }\n    }\n});",
                             "useExternalFile": "no"
@@ -19723,23 +19762,10 @@
                         "children": []
                     },
                     {
-                        "id": "1ab4dd5f-a1a3-a301-5f18-1657e5bee52d",
-                        "type": "Text Input",
-                        "x": 285.80004752870093,
-                        "y": 943.5150162488324,
-                        "parameters": {
-                            "text": "",
-                            "fontFamily": "YuGothic"
-                        },
-                        "ports": [],
-                        "dynamicports": [],
-                        "children": []
-                    },
-                    {
                         "id": "877a98ab-19bf-7bf5-2116-8e9cd251103c",
                         "type": "Model",
-                        "x": 509.71587032435457,
-                        "y": 891.8125418303621,
+                        "x": 896.0720190293129,
+                        "y": 829.4892822761423,
                         "parameters": {
                             "properties": "question",
                             "modelId": ""
@@ -19810,8 +19836,8 @@
                     {
                         "id": "8dfd62cc-c25e-9d17-c794-498efeadf178",
                         "type": "String Format",
-                        "x": 761.3300761573653,
-                        "y": 787.8939630254904,
+                        "x": 995.268403200076,
+                        "y": 688.9296189331258,
                         "parameters": {
                             "format": "q{id}"
                         },
@@ -19829,13 +19855,194 @@
                     {
                         "id": "42b07b30-4630-5728-d6bb-9fe1b1eb910c",
                         "type": "Timer",
-                        "x": 434.96473117081655,
+                        "x": 529.5078700517931,
                         "y": 1097.438963392969,
                         "parameters": {
                             "duration": 1000
                         },
                         "ports": [],
                         "dynamicports": [],
+                        "children": []
+                    },
+                    {
+                        "id": "abdacab1-211e-0785-cd8d-55cd079e1e1a",
+                        "type": "Javascript2",
+                        "x": 567.9645804816405,
+                        "y": 539.994812101592,
+                        "parameters": {
+                            "code": "define({\n    inputs: {\n        word: \"string\",\n        id:\"string\",\n        index:\"number\",\n        charList:\"collection\"\n    },\n    outputs: {\n        charList: \"collection\",\n    },\n    destroy: function(inputs, outputs) {\n\n    },\n    setup: function(inputs, outputs) {\n        var myCollection;\n    },\n    run: function(inputs, outputs, changedInputs) {\n        var collection = Noodl.Collection.get(inputs.id);\n        var itemId;\n        if(inputs.index > 4){\n            var string = inputs.word.split(\"\");\n            for(var i=0; i<string.length; i++){\n              collection.add(Noodl.Model.create({\n              id: inputs.id + '_' + i,\n              char:string[i]\n              }));\n            } \n        }\n    }\n});"
+                        },
+                        "ports": [],
+                        "dynamicports": [
+                            {
+                                "name": "word",
+                                "plug": "input",
+                                "type": {
+                                    "name": "string"
+                                },
+                                "group": "Inputs",
+                                "index": 2
+                            },
+                            {
+                                "name": "id",
+                                "plug": "input",
+                                "type": {
+                                    "name": "string"
+                                },
+                                "group": "Inputs",
+                                "index": 3
+                            },
+                            {
+                                "name": "index",
+                                "plug": "input",
+                                "type": {
+                                    "name": "number"
+                                },
+                                "group": "Inputs",
+                                "index": 4
+                            },
+                            {
+                                "name": "charList",
+                                "plug": "input",
+                                "type": {
+                                    "name": "collection"
+                                },
+                                "group": "Inputs",
+                                "index": 5
+                            },
+                            {
+                                "name": "charList",
+                                "type": {
+                                    "name": "collection"
+                                },
+                                "plug": "output",
+                                "group": "Outputs",
+                                "index": 6
+                            }
+                        ],
+                        "children": []
+                    },
+                    {
+                        "id": "1ab4dd5f-a1a3-a301-5f18-1657e5bee52d",
+                        "type": "Text Input",
+                        "x": 469.4503693741983,
+                        "y": 956.6027052887196,
+                        "parameters": {
+                            "text": "",
+                            "fontFamily": "YuGothic"
+                        },
+                        "ports": [],
+                        "dynamicports": [],
+                        "children": []
+                    },
+                    {
+                        "id": "ca0337f3-60eb-724e-67ad-57efb8e107d4",
+                        "type": "Collection",
+                        "label": "文字",
+                        "x": 514.7017801665754,
+                        "y": 711.5947015802432,
+                        "parameters": {
+                            "collectionId": "q5"
+                        },
+                        "ports": [],
+                        "dynamicports": [],
+                        "children": []
+                    }
+                ]
+            }
+        },
+        {
+            "name": "/Story/char",
+            "graph": {
+                "connections": [
+                    {
+                        "fromId": "40a9ca66-a530-5af6-fb41-85eb36a080ee",
+                        "fromProperty": "itemId",
+                        "toId": "3e140215-e911-4452-e024-78d3ef2a9da8",
+                        "toProperty": "modelId"
+                    },
+                    {
+                        "fromId": "3e140215-e911-4452-e024-78d3ef2a9da8",
+                        "fromProperty": "char",
+                        "toId": "45d72aa8-67b5-6f91-e90b-00bcb1afe048",
+                        "toProperty": "text"
+                    }
+                ],
+                "roots": [
+                    {
+                        "id": "1646ef9f-10f0-16d9-68e0-b2c61551f36e",
+                        "type": "Group",
+                        "version": 2,
+                        "x": 318.96397386212567,
+                        "y": 436,
+                        "parameters": {
+                            "sizeMode": "explicit",
+                            "alignX": "center",
+                            "alignY": "center",
+                            "width": {
+                                "value": 500,
+                                "unit": "px"
+                            }
+                        },
+                        "ports": [],
+                        "dynamicports": [],
+                        "children": [
+                            {
+                                "id": "45d72aa8-67b5-6f91-e90b-00bcb1afe048",
+                                "type": "Text",
+                                "version": 2,
+                                "label": "quest",
+                                "x": 20,
+                                "y": 46,
+                                "parameters": {
+                                    "fontSize": 380,
+                                    "text": "",
+                                    "alignX": "center",
+                                    "alignY": "center",
+                                    "color": "#ff504b",
+                                    "lineHeight": 0,
+                                    "y": 100,
+                                    "alignment": "center",
+                                    "verticalAlignment": "center",
+                                    "fontFamily": "A-OTF-FutoMinA101Pro-Bold.otf"
+                                },
+                                "ports": [],
+                                "dynamicports": [],
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "id": "40a9ca66-a530-5af6-fb41-85eb36a080ee",
+                        "type": "For Each Actions",
+                        "x": -72.64051190924091,
+                        "y": 481.0185715010086,
+                        "parameters": {},
+                        "ports": [],
+                        "dynamicports": [],
+                        "children": []
+                    },
+                    {
+                        "id": "3e140215-e911-4452-e024-78d3ef2a9da8",
+                        "type": "Model",
+                        "x": 148.5412665327271,
+                        "y": 485.6107746558248,
+                        "parameters": {
+                            "properties": "char"
+                        },
+                        "ports": [],
+                        "dynamicports": [
+                            {
+                                "type": {
+                                    "name": "*",
+                                    "allowConnectionsOnly": true
+                                },
+                                "plug": "input/output",
+                                "group": "Properties",
+                                "name": "char",
+                                "index": 7
+                            }
+                        ],
                         "children": []
                     }
                 ]
