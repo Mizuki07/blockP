@@ -311,12 +311,11 @@
                                 "type": "Group",
                                 "version": 2,
                                 "x": 20,
-                                "y": 602,
+                                "y": 1001,
                                 "parameters": {
                                     "sizeMode": "childSize",
-                                    "alignX": "right",
-                                    "x": -40,
-                                    "y": 40,
+                                    "alignX": "left",
+                                    "x": 40,
                                     "visible": false
                                 },
                                 "ports": [],
@@ -340,7 +339,7 @@
                                         "type": "Text",
                                         "version": 2,
                                         "x": 20,
-                                        "y": 92,
+                                        "y": 148,
                                         "parameters": {
                                             "text": "TOP",
                                             "alignX": "center",
@@ -19368,7 +19367,8 @@
                                             "height": {
                                                 "value": 500,
                                                 "unit": "px"
-                                            }
+                                            },
+                                            "itemSpacing": 40
                                         },
                                         "ports": [],
                                         "dynamicports": [],
@@ -19976,7 +19976,7 @@
                         "x": 318.96397386212567,
                         "y": 436,
                         "parameters": {
-                            "sizeMode": "explicit",
+                            "sizeMode": "childSize",
                             "alignX": "center",
                             "alignY": "center",
                             "width": {
@@ -19988,20 +19988,58 @@
                         "dynamicports": [],
                         "children": [
                             {
+                                "id": "4896e041-2fed-ea49-d3eb-3c226db74bd7",
+                                "type": "Circle",
+                                "x": 338.96397386212567,
+                                "y": 482,
+                                "parameters": {
+                                    "alignX": "center",
+                                    "alignY": "center",
+                                    "width": {
+                                        "value": 320,
+                                        "unit": "px"
+                                    },
+                                    "color": "#ffffff"
+                                },
+                                "ports": [],
+                                "dynamicports": [],
+                                "children": []
+                            },
+                            {
+                                "id": "8d70ecee-cacb-029b-6c9a-8177a73f3b55",
+                                "type": "Circle",
+                                "x": 20,
+                                "y": 92,
+                                "parameters": {
+                                    "alignX": "center",
+                                    "alignY": "center",
+                                    "width": {
+                                        "value": 320,
+                                        "unit": "px"
+                                    },
+                                    "color": "#664828",
+                                    "solid": false,
+                                    "lineWidth": 10
+                                },
+                                "ports": [],
+                                "dynamicports": [],
+                                "children": []
+                            },
+                            {
                                 "id": "45d72aa8-67b5-6f91-e90b-00bcb1afe048",
                                 "type": "Text",
                                 "version": 2,
                                 "label": "quest",
                                 "x": 20,
-                                "y": 46,
+                                "y": 138,
                                 "parameters": {
-                                    "fontSize": 380,
+                                    "fontSize": 240,
                                     "text": "",
                                     "alignX": "center",
                                     "alignY": "center",
-                                    "color": "#ff504b",
+                                    "color": "#664828",
                                     "lineHeight": 0,
-                                    "y": 100,
+                                    "y": 60,
                                     "alignment": "center",
                                     "verticalAlignment": "center",
                                     "fontFamily": "A-OTF-FutoMinA101Pro-Bold.otf"
@@ -20015,8 +20053,8 @@
                     {
                         "id": "40a9ca66-a530-5af6-fb41-85eb36a080ee",
                         "type": "For Each Actions",
-                        "x": -72.64051190924091,
-                        "y": 481.0185715010086,
+                        "x": -73.6958466000675,
+                        "y": 563.3346773854823,
                         "parameters": {},
                         "ports": [],
                         "dynamicports": [],
@@ -20025,8 +20063,8 @@
                     {
                         "id": "3e140215-e911-4452-e024-78d3ef2a9da8",
                         "type": "Model",
-                        "x": 148.5412665327271,
-                        "y": 485.6107746558248,
+                        "x": 147.4859318419005,
+                        "y": 567.9268805402986,
                         "parameters": {
                             "properties": "char"
                         },
