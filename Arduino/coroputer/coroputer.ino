@@ -14,15 +14,16 @@ MFRC522 mfrc522(SS_PIN, RST_PIN); // MFRC522のインスタンスを作成
 bool cardset;     // MFRC522にカードが検知されているかどうか
 int timeoutcount; // MFRC522からカードが連続で離れた回数を記録
 
-//const char* ssid = "SPWH_H32_D15FE1";
-//const char* password = "5b2dhen4ag37q75";
+const char* ssid = "SPWH_H32_D15FE1";
+const char* password = "5b2dhen4ag37q75";
 
-const char* ssid = "SPWN_H36_809AD8";
-const char* password = "2aaj4eb805539tj";
+//const char* ssid = "SPWN_H36_809AD8";
+//const char* password = "2aaj4eb805539tj";
 
 WiFiClient net;
 MQTTClient client;
 unsigned long lastMillis = 0;
+unsigned long lastMillis2 = 0;
 void connect();  // <- predefine connect() for setup()
 
 String lastChar;
@@ -50,17 +51,24 @@ void setup() {
 
   WiFi.begin(ssid, password);
 
+  while (WiFi.status() != WL_CONNECTED) {
+    delay(500);
+    Serial.print(".");
+  }
+  Serial.println("");
+  Serial.println("WiFi connected");
+
+  // Print the IP address
+  Serial.println(WiFi.localIP());
+
   client.begin("broker.shiftr.io", net);
-  client.onMessage(messageReceived);
+  //client.onMessage(messageReceived);
   
   connect();
  
 }
 
 void loop() {
-  client.loop();
-  delay(10);
-  
   // Look for new cards
   if ( ! mfrc522.PICC_IsNewCardPresent()) {
     return;
@@ -87,15 +95,12 @@ void loop() {
       connect();  
     }
 
-    if(lastChar != strUID){
+    if(lastChar != strUID || millis()-lastMillis2 >5000){
       if(client.publish("/word", strUID) == true){
       Serial.println("Published");
+      lastMillis2 = millis();
       lastChar = strUID;
       }
     }
-
-    if (millis() - lastMillis > 1000) {
-      lastMillis = millis();
-      client.publish("/hello", "world");
-    }
+    delay(100);
 }

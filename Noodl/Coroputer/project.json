@@ -54,36 +54,6 @@
                         "toProperty": "visible"
                     },
                     {
-                        "fromId": "0dba4c3e-dd61-d53d-c74a-ff6c1ff7a5ed",
-                        "fromProperty": "this",
-                        "toId": "d7ac5488-b74f-cbd8-fc09-06e68de2b7f6",
-                        "toProperty": "target"
-                    },
-                    {
-                        "fromId": "d7ac5488-b74f-cbd8-fc09-06e68de2b7f6",
-                        "fromProperty": "currentIndex",
-                        "toId": "dd48ba02-75f5-97ff-4a04-d8ec391d81ea",
-                        "toProperty": "lever"
-                    },
-                    {
-                        "fromId": "d7ac5488-b74f-cbd8-fc09-06e68de2b7f6",
-                        "fromProperty": "currentIndex",
-                        "toId": "6701653d-5cf4-6ad8-7bee-80bf19383c7e",
-                        "toProperty": "lever"
-                    },
-                    {
-                        "fromId": "6701653d-5cf4-6ad8-7bee-80bf19383c7e",
-                        "fromProperty": "result",
-                        "toId": "bae39c45-ff81-9fb6-2ff3-521f74e937d4",
-                        "toProperty": "to-Off"
-                    },
-                    {
-                        "fromId": "35bb614d-8cc5-0f59-9589-a97155a54285",
-                        "fromProperty": "touch.tap",
-                        "toId": "d7ac5488-b74f-cbd8-fc09-06e68de2b7f6",
-                        "toProperty": "snapToIndex.do"
-                    },
-                    {
                         "fromId": "a68333e6-aec0-2ebb-98b0-8bd2546a0630",
                         "fromProperty": "Tap",
                         "toId": "bae39c45-ff81-9fb6-2ff3-521f74e937d4",
@@ -117,13 +87,19 @@
                         "fromId": "20914988-82ad-9516-65da-6734b6c1ed42",
                         "fromProperty": "Tap",
                         "toId": "0bbda452-3786-b6ce-9b97-8c1cd569d086",
+                        "toProperty": "start"
+                    },
+                    {
+                        "fromId": "35bb614d-8cc5-0f59-9589-a97155a54285",
+                        "fromProperty": "touch.tap",
+                        "toId": "0bbda452-3786-b6ce-9b97-8c1cd569d086",
                         "toProperty": "Initialize"
                     },
                     {
-                        "fromId": "20914988-82ad-9516-65da-6734b6c1ed42",
-                        "fromProperty": "Tap",
+                        "fromId": "dd48ba02-75f5-97ff-4a04-d8ec391d81ea",
+                        "fromProperty": "index0",
                         "toId": "0bbda452-3786-b6ce-9b97-8c1cd569d086",
-                        "toProperty": "start"
+                        "toProperty": "Show"
                     }
                 ],
                 "roots": [
@@ -163,7 +139,7 @@
                                     "alignY": "center",
                                     "alignX": "center",
                                     "orientation": "horizontal",
-                                    "itemSpacing": 40
+                                    "itemSpacing": 30
                                 },
                                 "ports": [],
                                 "dynamicports": [],
@@ -173,63 +149,46 @@
                                         "type": "/Parts/Button",
                                         "x": 20,
                                         "y": 97,
-                                        "parameters": {},
+                                        "parameters": {
+                                            "ImagePath": "btn1.png",
+                                            "Size": 650
+                                        },
                                         "ports": [],
                                         "dynamicports": [],
                                         "children": []
                                     },
                                     {
-                                        "id": "5d722c84-b687-fdd9-661c-74161a83d35f",
-                                        "type": "Group",
-                                        "version": 2,
+                                        "id": "72d3c9fa-93a1-3bfa-b221-71a532d1c4fa",
+                                        "type": "Stack Layout",
                                         "x": 20,
-                                        "y": 194,
+                                        "y": 179,
                                         "parameters": {
-                                            "width": {
-                                                "value": 330,
-                                                "unit": "px"
-                                            },
-                                            "height": {
-                                                "value": 650,
-                                                "unit": "px"
-                                            }
+                                            "sizeMode": "childSize"
                                         },
                                         "ports": [],
                                         "dynamicports": [],
                                         "children": [
                                             {
-                                                "id": "aa5e9200-ecba-b700-0e60-fdf157d0adc2",
-                                                "type": "Image",
-                                                "version": 2,
+                                                "id": "2e3ae7db-b105-52ad-225a-2cfc8301efa9",
+                                                "type": "/Parts/Button",
                                                 "x": 20,
                                                 "y": 46,
                                                 "parameters": {
-                                                    "image": "lever.png",
-                                                    "sizeMode": "explicit"
+                                                    "ImagePath": "btn3.png",
+                                                    "Size": 400
                                                 },
                                                 "ports": [],
                                                 "dynamicports": [],
                                                 "children": []
                                             },
                                             {
-                                                "id": "0dba4c3e-dd61-d53d-c74a-ff6c1ff7a5ed",
-                                                "type": "Rectangle",
+                                                "id": "1acf21a3-646f-bbe7-cdfe-ee7f05099b3b",
+                                                "type": "/Parts/Button",
                                                 "x": 20,
-                                                "y": 107,
+                                                "y": 92,
                                                 "parameters": {
-                                                    "width": {
-                                                        "value": 267,
-                                                        "unit": "px"
-                                                    },
-                                                    "height": {
-                                                        "value": 67,
-                                                        "unit": "px"
-                                                    },
-                                                    "cornerRadius": 40,
-                                                    "color": "#ea5709",
-                                                    "alignX": "center",
-                                                    "alignY": "top",
-                                                    "y": 40
+                                                    "ImagePath": "btn4.png",
+                                                    "Size": 400
                                                 },
                                                 "ports": [],
                                                 "dynamicports": [],
@@ -241,9 +200,10 @@
                                         "id": "a68333e6-aec0-2ebb-98b0-8bd2546a0630",
                                         "type": "/Parts/Button",
                                         "x": 20,
-                                        "y": 368,
+                                        "y": 317,
                                         "parameters": {
-                                            "ImagePath": "search.png"
+                                            "ImagePath": "btn2.png",
+                                            "Size": 650
                                         },
                                         "ports": [],
                                         "dynamicports": [],
@@ -256,10 +216,11 @@
                                 "type": "Group",
                                 "version": 2,
                                 "label": "Function",
-                                "x": 877.3681011130666,
-                                "y": 805.3543986154936,
+                                "x": 20,
+                                "y": 521,
                                 "parameters": {
-                                    "blockTouch": false
+                                    "blockTouch": false,
+                                    "visible": true
                                 },
                                 "ports": [],
                                 "dynamicports": [],
@@ -310,8 +271,9 @@
                                 "id": "35bb614d-8cc5-0f59-9589-a97155a54285",
                                 "type": "Group",
                                 "version": 2,
+                                "label": "Topへ",
                                 "x": 20,
-                                "y": 1001,
+                                "y": 950,
                                 "parameters": {
                                     "sizeMode": "childSize",
                                     "alignX": "left",
@@ -356,10 +318,10 @@
                     {
                         "id": "dd48ba02-75f5-97ff-4a04-d8ec391d81ea",
                         "type": "Javascript2",
-                        "x": 758.907342166082,
-                        "y": 676.2244584483566,
+                        "x": 559.5877523128877,
+                        "y": 554.6558716624095,
                         "parameters": {
-                            "code": "define({\n    inputs: {\n        index0: \"boolean\",\n        index1: \"boolean\",\n        top:\"boolean\",\n        lever:\"number\"\n    },\n    outputs: {\n        index0: \"boolean\",\n        index1: \"boolean\",\n        index2: \"boolean\",\n        index3: \"boolean\",\n        top:\"boolean\"\n    },\n    destroy: function(inputs, outputs) {\n\n    },\n    setup: function(inputs, outputs) {\n        outputs.index0 = 0;\n        outputs.index1 = 0;\n        outputs.index2 = 0;\n        outputs.index3 = 0;\n    },\n    run: function(inputs, outputs, changedInputs) {\n        if(inputs.index0){\n            outputs.index0 = 1;\n            outputs.index1 = 0;\n            outputs.index2 = 0;\n            outputs.index3 = 0;\n            outputs.top = 1;\n        }else if(inputs.index1){\n            outputs.index0 = 0;\n            outputs.index1 = 1;\n            outputs.index2 = 0;\n            outputs.index3 = 0;\n            outputs.top = 1;\n        }else if(inputs.lever === 0){\n            outputs.index0 = 0;\n            outputs.index1 = 0;\n            outputs.index2 = 1;\n            outputs.index3 = 0;\n            outputs.top = 1;\n        }else if(inputs.lever === 2){\n            outputs.index0 = 0;\n            outputs.index1 = 0;\n            outputs.index2 = 0;\n            outputs.index3 = 1;\n            outputs.top = 1;\n        }else if(inputs.top){\n            outputs.index0 = 0;\n            outputs.index1 = 0;\n            outputs.index2 = 0;\n            outputs.index3 = 0;\n            outputs.top = 0;\n           \n        }\n    }\n});"
+                            "code": "define({\n    inputs: {\n        index0: \"boolean\",\n        index1: \"boolean\",\n        top:\"boolean\",\n        lever:\"number\"\n    },\n    outputs: {\n        index0: \"boolean\",\n        index1: \"boolean\",\n        index2: \"boolean\",\n        index3: \"boolean\",\n        top:\"boolean\"\n    },\n    destroy: function(inputs, outputs) {\n\n    },\n    setup: function(inputs, outputs) {\n        outputs.index0 = 0;\n        outputs.index1 = 0;\n        outputs.index2 = 0;\n        outputs.index3 = 0;\n    },\n    run: function(inputs, outputs, changedInputs) {\n        if(inputs.index0){\n            outputs.index0 = 1;\n            outputs.index1 = 0;\n            outputs.index2 = 0;\n            outputs.index3 = 0;\n            outputs.top = 1;\n        }else if(inputs.index1){\n            outputs.index0 = 0;\n            outputs.index1 = 1;\n            outputs.index2 = 0;\n            outputs.index3 = 0;\n            outputs.top = 1;\n        }else if(inputs.lever === 0){\n            outputs.index0 = 0;\n            outputs.index1 = 0;\n            outputs.index2 = 1;\n            outputs.index3 = 0;\n            outputs.top = 1;\n        }else if(inputs.lever === 2){\n            outputs.index0 = 0;\n            outputs.index1 = 0;\n            outputs.index2 = 0;\n            outputs.index3 = 1;\n            outputs.top = 1;\n        }else if(inputs.top){\n            outputs.index0 = 0;\n            outputs.index1 = 0;\n            outputs.index2 = 0;\n            outputs.index3 = 0;\n            outputs.top = 0;\n        }\n    }\n});"
                         },
                         "ports": [],
                         "dynamicports": [
@@ -450,8 +412,8 @@
                     {
                         "id": "bae39c45-ff81-9fb6-2ff3-521f74e937d4",
                         "type": "States",
-                        "x": 788.4276265410253,
-                        "y": 292.6423278822605,
+                        "x": 510.63195958320364,
+                        "y": 193.05468623695774,
                         "parameters": {
                             "states": "On,Off",
                             "values": "Opacity",
@@ -642,46 +604,6 @@
                                 "name": "startState",
                                 "default": "On",
                                 "index": 19
-                            }
-                        ],
-                        "children": []
-                    },
-                    {
-                        "id": "d7ac5488-b74f-cbd8-fc09-06e68de2b7f6",
-                        "type": "Drag",
-                        "x": 755.4635016993552,
-                        "y": 496.32058253194225,
-                        "parameters": {
-                            "axis": "1",
-                            "clampDragPosition.max": 400,
-                            "snapBehavior": "closestPosition",
-                            "position 0": 40,
-                            "position 1": 288,
-                            "position 2": 530,
-                            "startAt": "position 1",
-                            "clampDragPosition.min": 40,
-                            "snapToIndex.duration": 200,
-                            "snapToIndex.index": 1
-                        },
-                        "ports": [],
-                        "dynamicports": [],
-                        "children": []
-                    },
-                    {
-                        "id": "6701653d-5cf4-6ad8-7bee-80bf19383c7e",
-                        "type": "Expression",
-                        "x": 462.9553386860333,
-                        "y": 379.43851791601566,
-                        "parameters": {
-                            "expression": "lever == 0 || lever ==2"
-                        },
-                        "ports": [],
-                        "dynamicports": [
-                            {
-                                "name": "lever",
-                                "type": "number",
-                                "plug": "input",
-                                "index": 2
                             }
                         ],
                         "children": []
@@ -17715,6 +17637,18 @@
                         "fromProperty": "touch.release",
                         "toId": "62e1d27e-3c92-8e4f-d766-5d9657e64b6b",
                         "toProperty": "Release"
+                    },
+                    {
+                        "fromId": "49c6c4a0-219d-e7b0-ac76-5303c132dd18",
+                        "fromProperty": "Size",
+                        "toId": "cba788f7-6e95-07d2-5389-71015229555c",
+                        "toProperty": "width"
+                    },
+                    {
+                        "fromId": "49c6c4a0-219d-e7b0-ac76-5303c132dd18",
+                        "fromProperty": "Size",
+                        "toId": "cba788f7-6e95-07d2-5389-71015229555c",
+                        "toProperty": "height"
                     }
                 ],
                 "roots": [
@@ -17726,18 +17660,18 @@
                         "x": 337.43565002455585,
                         "y": 106.38609985266493,
                         "parameters": {
+                            "alignX": "center",
+                            "alignY": "center",
+                            "x": 0,
+                            "sizeMode": "explicit",
                             "width": {
-                                "value": 650,
+                                "value": 620,
                                 "unit": "px"
                             },
                             "height": {
-                                "value": 650,
+                                "value": 620,
                                 "unit": "px"
-                            },
-                            "alignX": "center",
-                            "alignY": "top",
-                            "x": 0,
-                            "sizeMode": "explicit"
+                            }
                         },
                         "ports": [],
                         "dynamicports": [],
@@ -17747,7 +17681,7 @@
                                 "type": "Image",
                                 "version": 2,
                                 "x": 20,
-                                "y": 97,
+                                "y": 137,
                                 "parameters": {
                                     "image": "book.png",
                                     "y": 0,
@@ -17763,8 +17697,8 @@
                     {
                         "id": "49c6c4a0-219d-e7b0-ac76-5303c132dd18",
                         "type": "Component Inputs",
-                        "x": 133.57005239012656,
-                        "y": 339.42085516671995,
+                        "x": 40.60103129134967,
+                        "y": 86.37580693040815,
                         "parameters": {},
                         "ports": [
                             {
@@ -17798,6 +17732,14 @@
                                     "name": "*"
                                 },
                                 "index": 4
+                            },
+                            {
+                                "name": "Size",
+                                "plug": "output",
+                                "type": {
+                                    "name": "*"
+                                },
+                                "index": 5
                             }
                         ],
                         "dynamicports": [],
@@ -17806,8 +17748,8 @@
                     {
                         "id": "62e1d27e-3c92-8e4f-d766-5d9657e64b6b",
                         "type": "Component Outputs",
-                        "x": 566.7059784391481,
-                        "y": 72.01610221090249,
+                        "x": 602.3479931352407,
+                        "y": 79.4415219392551,
                         "parameters": {},
                         "ports": [
                             {
@@ -17833,8 +17775,8 @@
                     {
                         "id": "c437f48a-f407-62f0-23a8-3dc9e4f61146",
                         "type": "States",
-                        "x": 115.16694914167843,
-                        "y": 125.34428689668124,
+                        "x": 16.162259363315542,
+                        "y": 291.4900881339339,
                         "parameters": {
                             "states": "yes,no",
                             "values": "position",
@@ -19285,6 +19227,24 @@
                         "fromProperty": "id",
                         "toId": "ca0337f3-60eb-724e-67ad-57efb8e107d4",
                         "toProperty": "collectionId"
+                    },
+                    {
+                        "fromId": "06357783-322b-2481-67c3-557133c6f689",
+                        "fromProperty": "Initialize",
+                        "toId": "2e05d447-f8b3-c932-0757-1c392988fed4",
+                        "toProperty": "init"
+                    },
+                    {
+                        "fromId": "06357783-322b-2481-67c3-557133c6f689",
+                        "fromProperty": "Initialize",
+                        "toId": "188193d7-2c52-7b79-a2da-70dd8465f754",
+                        "toProperty": "stop"
+                    },
+                    {
+                        "fromId": "06357783-322b-2481-67c3-557133c6f689",
+                        "fromProperty": "Show",
+                        "toId": "ecbb8955-86ec-4391-a3cb-764045fc67df",
+                        "toProperty": "showed"
                     }
                 ],
                 "roots": [
@@ -19307,7 +19267,7 @@
                                 "parameters": {
                                     "snap": "item",
                                     "scrollAxis": "0",
-                                    "touchPropagation": false,
+                                    "touchPropagation": true,
                                     "scrollDuration": 5000,
                                     "scrollToIndex.duration": 2000
                                 },
@@ -19437,8 +19397,8 @@
                     {
                         "id": "06357783-322b-2481-67c3-557133c6f689",
                         "type": "Component Inputs",
-                        "x": -231.90342572916092,
-                        "y": 137.14586844128044,
+                        "x": 260.95626546621065,
+                        "y": -44.179366954172764,
                         "parameters": {},
                         "ports": [
                             {
@@ -19464,6 +19424,14 @@
                                     "name": "*"
                                 },
                                 "index": 3
+                            },
+                            {
+                                "name": "Show",
+                                "plug": "output",
+                                "type": {
+                                    "name": "*"
+                                },
+                                "index": 4
                             }
                         ],
                         "dynamicports": [],
@@ -19472,10 +19440,10 @@
                     {
                         "id": "2e05d447-f8b3-c932-0757-1c392988fed4",
                         "type": "Javascript2",
-                        "x": 952.6156166465576,
-                        "y": 371.39624536020796,
+                        "x": 725.6786688030909,
+                        "y": 150.1874596111744,
                         "parameters": {
-                            "code": "define({\n    inputs: {\n        goToNext: \"boolean\",\n        indexChanged:\"boolean\",\n        init:\"boolean\"\n    },\n    outputs: {\n        goto: \"boolean\",\n        index:'number'\n    },\n    destroy: function(inputs, outputs) {\n\n    },\n    setup: function(inputs, outputs) {\n        this.index = 0;\n    },\n    run: function(inputs, outputs, changedInputs) {\n        \n        if(inputs.goToNext){\n            this.index ++;\n        }\n        outputs.index = this.index;\n        this.sendSignalOnOutput('goto');\n        \n        if(inputs.init){\n            outputs.index=0;\n            this.sendSignalOnOutput('goto');\n        }\n        \n    }\n});"
+                            "code": "define({\n    inputs: {\n        goToNext: \"boolean\",\n        indexChanged:\"boolean\",\n        init:\"boolean\"\n    },\n    outputs: {\n        goto: \"boolean\",\n        index:'number'\n    },\n    destroy: function(inputs, outputs) {\n\n    },\n    setup: function(inputs, outputs) {\n        this.index = 0;\n    },\n    run: function(inputs, outputs, changedInputs) {\n        \n        if(inputs.init){\n            this.index = 0;\n            outputs.index=0;\n            this.sendSignalOnOutput('goto');\n        }\n        \n        if(inputs.goToNext){\n            this.index ++;\n        }\n        outputs.index = this.index;\n        this.sendSignalOnOutput('goto');\n        \n    }\n});"
                         },
                         "ports": [],
                         "dynamicports": [
@@ -19531,8 +19499,8 @@
                         "id": "94ca5bec-d6e5-626d-88ee-93e11cf5844a",
                         "type": "Static Data",
                         "label": "Story Data",
-                        "x": -162.88870522524257,
-                        "y": 344.50900983514975,
+                        "x": -232.90370795252915,
+                        "y": 405.76895997520296,
                         "parameters": {
                             "csv": "id,text,imgpath\nst_1,\"僕は「タロムシ」。キミの名前は？ボビンを転がして教えてね\",story_togou01_01.png\nst_2,だね？,story_togou01_02.png\nst_3,こんにちは！,story_togou01_03.png\nst_4,これからお花畑に行くんだけど一緒に行かない？,story_togou01_04.png\nst_5,この「みち」をまっすぐだよ,story_togou02_01.png\nst_6,あっ！「もり」が見えてきたね,story_togou02_02.png\nst_7,あの森の中でひとやすみしよう,story_togou02_03.png\nst_8,\"お腹が空いたなあ、「りんご」を探そうよ\",story_togou02_04.png\nst_9,\"おなかもいっぱいになったことだし先に進もう！\",story_togou03_01.png\nst_10,「かわ」が見えてきたね,story_togou03_02.png\nst_11,渡れそうにないね、だれか道を知らないかな,story_togou03_03.png\nst_12,\"あ、あそこに「しっぽ」が見えているよ。誰のだろう？\",story_togou03_04.png\nst_13,あ！「りす」さんだ！話しかけてみようよ！,story_togou04_01.png\nst_14,\"りすさん！りすさん！川を渡りたいんだけど道を知らないかい？\",story_togou04_02.png\nst_15,おいら、知ってるぜ！あっちの方向に「はし」があるよ！そこからきっと渡れるさ！,story_togou04_03.png\nst_16,「ありがとう」りすさん！行ってみるよ！,story_togou04_04.png\nst_17,橋はこっちだね、行こう,story_togou05_01.png\nst_18,あ、「とり」さんだ！,story_togou05_02.png\nst_19,とりさん、素敵な「はな」を持ってるね,story_togou05_03.png\nst_20,そうでしょ？この先にそれは美しいお花畑あってね。そこから分けてもらったのさ,story_togou05_04.png\nst_21,僕たちもお花畑に向かっているところさ！,story_togou06_01.png\nst_22,\"それなら、もうすぐそこさ！楽しんでおいで！\",story_togou06_02.png\nst_23,\"わあ！！みてごらん！とても素敵なお花畑だね！\",story_togou06_03.png\nst_24,今日はとても楽しかった！また、来ようね！,story_togou06_04.png"
                         },
@@ -19544,12 +19512,12 @@
                         "id": "b20b6244-aad5-2d1c-0b98-e675b6d93fa9",
                         "type": "Static Data",
                         "label": "question",
-                        "x": -407.73878189015466,
-                        "y": 1004.9906781543897,
+                        "x": -349.73878189015466,
+                        "y": 1020.9104694156232,
                         "parameters": {
                             "type": "json",
                             "csv": "りんご,みかん,くま,うみ",
-                            "json": "[\n    {\n        \"id\" :\"q5\",\n        \"question\" :\"みち\"\n    },\n    {\n        \"id\" :\"q6\",\n        \"question\" :\"もり\"\n    },\n    {\n        \"id\" :\"q8\",\n        \"question\" :\"りんご\"\n    },\n    {\n        \"id\" :\"q10\",\n        \"question\" :\"かわ\"\n    },\n    {\n        \"id\" :\"q13\",\n        \"question\" :\"りす\"\n    },\n    {\n        \"id\" :\"q15\",\n        \"question\" :\"はし\"\n    },{\n        \"id\" :\"q16\",\n        \"question\" :\"ありがとう\"\n    },\n    {\n        \"id\" :\"q18\",\n        \"question\" :\"とり\"\n    },\n    {\n        \"id\" :\"q19\",\n        \"question\" :\"はな\"\n    }\n]"
+                            "json": "[\n    {\n        \"id\" :\"q5\",\n        \"question\" :\"みち\"\n    },\n    {\n        \"id\" :\"q6\",\n        \"question\" :\"もり\"\n    },\n    {\n        \"id\" :\"q8\",\n        \"question\" :\"りんこ゛\"\n    },\n    {\n        \"id\" :\"q10\",\n        \"question\" :\"かわ\"\n    },\n    {\n        \"id\" :\"q13\",\n        \"question\" :\"りす\"\n    },\n    {\n        \"id\" :\"q15\",\n        \"question\" :\"はし\"\n    },{\n        \"id\" :\"q16\",\n        \"question\" :\"ありか゛とう\"\n    },\n    {\n        \"id\" :\"q18\",\n        \"question\" :\"とり\"\n    },\n    {\n        \"id\" :\"q19\",\n        \"question\" :\"はな\"\n    }\n]"
                         },
                         "ports": [],
                         "dynamicports": [],
@@ -19559,11 +19527,11 @@
                         "id": "4d66a913-462a-8f93-9108-b95b14ca0601",
                         "type": "Static Data",
                         "label": "charactor",
-                        "x": -395.85801756969613,
-                        "y": 931.5405798612718,
+                        "x": -431.22156612872794,
+                        "y": 937.7812060775715,
                         "parameters": {
                             "type": "csv",
-                            "csv": "chara,id,imgPath\nあ,04 ad 71 ca 4c 58 80,chara/1.png\nい,04 e9 71 ca 4c 58 80,chara/2.png\nう,04 cc 71 ca 4c 58 80,chara/3.png\nえ,04 08 71 ca 4c 58 81,chara/4.png\nお,04 ea 71 ca 4c 58 80,chara/5.png\nか,04 26 71 ca 4c 58 81,chara/6.png\nき,04 09 71 ca 4c 58 81,chara/7.png\nく,04 44 71 ca 4c 58 81,chara/8.png\nけ,04 27 71 ca 4c 58 81,chara/9.png\nこ,04 62 71 ca 4c 58 81,chara/10.png\nさ,04 f4 05 c2 4c 58 84,chara/11.png\nし,04 b7 05 c2 4c 58 84,chara/12.png\nす,04 d6 05 c2 4c 58 84,chara/13.png\nせ,04 97 05 c2 4c 58 84,chara/14.png\nそ,04 b6 05 c2 4c 58 84,chara/15.png\nた,04 01 0a ca 4c 58 81,chara/16.png\nち,04 c6 0a ca 4c 58 80,chara/17.png\nつ,04 e3 0a ca 4c 58 80,chara/18.png\nて,04 a6 0a ca 4c 58 80,chara/19.png\nと,04 c5 0a ca 4c 58 80,chara/20.png\nな,04 d8 0a c2 4c 58 84,chara/21.png\nに,04 f5 0a c2 4c 58 84,chara/22.png\nぬ,04 b7 0a c2 4c 58 84,chara/23.png\nね,04 d7 0a c2 4c 58 84,chara/24.png\nの,04 97 0a c2 4c 58 84,chara/25.png\nは,04 2b 07 c2 4c 58 85,chara/26.png\nひ,04 f6 06 c2 4c 58 84,chara/27.png\nふ,04 15 06 c2 4c 58 85,chara/28.png\nへ,04 d8 06 c2 4c 58 84,chara/29.png\nほ,04 f5 06 c2 4c 58 84,chara/30.png\nま,04 0b 07 c2 4c 58 85,chara/31.png\nみ,04 ec 07 c2 4c 58 84,chara/32.png\nむ,04 2a 07 c2 4c 58 85,chara/33.png\nめ,04 0c 07 c2 4c 58 85,chara/34.png\nも,04 16 06 c2 4c 58 85,chara/35.png\nや,04 8e 07 c2 4c 58 84,chara/36.png\nゆ,04 cb 07 c2 4c 58 84,chara/37.png\nよ,04 ae 07 c2 4c 58 84,chara/38.png\nら,04 eb 07 c2 4c 58 84,chara/39.png\nり,04 ce 07 c2 4c 58 84,chara/40.png\nる,04 79 05 c2 4c 58 84,chara/41.png\nれ,04 96 05 c2 4c 58 84,chara/42.png\nろ,04 79 06 c2 4c 58 84,chara/43.png\nわ,04 78 05 c2 4c 58 84,chara/44.png\nを,04 97 06 c2 4c 58 84,chara/45.png\nん,04 bc 0c c2 4c 58 84,chara/46.png\nゃ,04 db 0c c2 4c 58 84,chara/47.png\nゅ,04 9e 0c c2 4c 58 84,chara/48.png\nょ,04 bb 0c c2 4c 58 84,chara/49.png\nっ,04 7e 0c c2 4c 58 84,chara/50.png\n゛,04 ad 07 c2 4c 58 84,chara/51.png\n゜,04 6f 07 c2 4c 58 84,chara/52.png\nー,04 8d 07 c2 4c 58 84,chara/53.png",
+                            "csv": "chara,id,imgPath\nあ,04 63 cc ca 4c 58 81,chara/1.png\nい,04 45 cc ca 4c 58 81,chara/2.png\nう,04 79 cd ca 4c 58 81,chara/3.png\nえ,04 64 cc ca 4c 58 81,chara/4.png\nお,04 5b cd ca 4c 58 81,chara/5.png\nか,04 78 cd ca 4c 58 81,chara/6.png\nき,04 3d cd ca 4c 58 81,chara/7.png\nく,04 5a cd ca 4c 58 81,chara/8.png\nけ,04 1f cd ca 4c 58 81,chara/9.png\nこ,04 3c cd ca 4c 58 81,chara/10.png\nさ,04 7f 77 d2 c7 55 81,chara/11.png\nし,04 70 77 d2 c7 55 81,chara/12.png\nす,04 61 77 d2 c7 55 81,chara/13.png\nせ,04 52 77 d2 c7 55 81,chara/14.png\nそ,04 43 77 d2 c7 55 81,chara/15.png\nた,04 69 76 d2 c7 55 80,chara/16.png\nち,04 78 76 d2 c7 55 80,chara/17.png\nつ,04 89 76 d2 c7 55 80,chara/18.png\nて,04 9a 76 d2 c7 55 80,chara/19.png\nと,04 a9 76 d2 c7 55 80,chara/20.png\nな,04 5c 77 d2 c7 55 80,chara/21.png\nに,04 6c 77 d2 c7 55 80,chara/22.png\nぬ,04 7b 77 d2 c7 55 80,chara/23.png\nね,04 8a 77 d2 c7 55 80,chara/24.png\nの,04 99 77 d2 c7 55 80,chara/25.png\nは,04 11 77 d2 c7 55 80,chara/26.png\nひ,04 20 77 d2 c7 55 80,chara/27.png\nふ,04 2f 77 d2 c7 55 80,chara/28.png\nへ,04 3e 77 d2 c7 55 80,chara/29.png\nほ,04 4d 77 d2 c7 55 80,chara/30.png\nま,04 c5 cd ca 4c 58 80,chara/31.png\nみ,04 00 cd ca 4c 58 81,chara/32.png\nむ,04 e3 cd ca 4c 58 80,chara/33.png\nめ,04 1e cd ca 4c 58 81,chara/34.png\nも,04 01 cd ca 4c 58 81,chara/35.png\nや,04 a6 cd ca 4c 58 80,chara/36.png\nゆ,04 89 cd ca 4c 58 80,chara/37.png\nよ,04 c4 cd ca 4c 58 80,chara/38.png\nら,04 a7 cd ca 4c 58 80,chara/39.png\nり,04 e2 cd ca 4c 58 80,chara/40.png\nる,04 0b 0f c2 4c 58 85,chara/41.png\nれ,04 cb 0f c2 4c 58 84,chara/42.png\nろ,04 eb 0f c2 4c 58 84,chara/43.png\nわ,04 ad 0f c2 4c 58 84,chara/44.png\nを,04 ca 0f c2 4c 58 84,chara/45.png\nん,04 05 0e c2 4c 58 85,chara/46.png\nゃ,04 e5 0e c2 4c 58 84,chara/47.png\nゅ,04 0c 0f c2 4c 58 85,chara/48.png\nょ,04 06 0e c2 4c 58 85,chara/49.png\nっ,04 ec 0f c2 4c 58 84,chara/50.png\n゛,04 fa f9 c2 4c 58 80,chara/51.png\n゜,04 dd f9 c2 4c 58 80,chara/52.png\nー,04 18 f9 c2 4c 58 81,chara/53.png",
                             "json": "[\n    {\n        \"id\" :\"q0\",\n        \"question\" :\"みち\"\n    }\n]"
                         },
                         "ports": [],
@@ -19573,8 +19541,8 @@
                     {
                         "id": "b750a9c2-bd19-ad7b-e290-3c8408d4a874",
                         "type": "Collection",
-                        "x": 17.84509637936614,
-                        "y": 372.4901635604604,
+                        "x": -12.045162984636619,
+                        "y": 409.03133484126784,
                         "parameters": {
                             "collectionId": "Scene"
                         },
@@ -19585,8 +19553,8 @@
                     {
                         "id": "188193d7-2c52-7b79-a2da-70dd8465f754",
                         "type": "Timer",
-                        "x": -331.9311891727072,
-                        "y": 774.0293620027617,
+                        "x": -176.03093842012063,
+                        "y": 603.8456246180823,
                         "parameters": {
                             "duration": 3000,
                             "startDelay": 0
@@ -19599,10 +19567,10 @@
                         "id": "ecbb8955-86ec-4391-a3cb-764045fc67df",
                         "type": "Javascript2",
                         "label": "If",
-                        "x": -188.9258563583741,
-                        "y": 478.0962484272776,
+                        "x": -294.8469029272194,
+                        "y": 17.8644838916143,
                         "parameters": {
-                            "code": "define({\n    inputs: {\n        index: \"number\",\n        finished:\"boolean\",\n        started:\"boolean\",\n        changed:\"boolean\"\n    },\n    outputs: {\n        startTimer: \"boolean\",\n        visible:\"boolean\"\n    },\n    destroy: function(inputs, outputs) {\n\n    },\n    setup: function(inputs, outputs) {\n        outputs.startTimer = false;\n        outputs.visible= false;\n    },\n    run: function(inputs, outputs, changedInputs) {\n        if( inputs.index === 1 ||\n            inputs.index === 2 ||\n            inputs.index === 3 ||\n            inputs.index === 4 ||\n            inputs.index === 7 ||\n            inputs.index === 9 ||\n            inputs.index === 11 ||\n            inputs.index === 12 ||\n            inputs.index === 14 ||\n            inputs.index === 17 ||\n            inputs.index === 20 ||\n            inputs.index >= 20\n            ){\n            if(inputs.changed || inputs.started){\n                outputs.startTimer = true;  \n            }\n            outputs.visible = false;\n        }else{\n            outputs.startTimer = false;\n            outputs.visible = true;\n        }\n        \n        if(inputs.finished){\n            outputs.startTimer = false;\n        }\n    }\n});",
+                            "code": "define({\n    inputs: {\n        index: \"number\",\n        finished:\"boolean\",\n        started:\"boolean\",\n        changed:\"boolean\",\n        showed:\"boolean\"\n    },\n    outputs: {\n        startTimer: \"boolean\",\n        visible:\"boolean\"\n    },\n    destroy: function(inputs, outputs) {\n\n    },\n    setup: function(inputs, outputs) {\n        outputs.startTimer = false;\n        outputs.visible= false;\n    },\n    run: function(inputs, outputs, changedInputs) {\n        if( inputs.index === 1 && inputs.showed ||\n            inputs.index === 2 ||\n            inputs.index === 3 ||\n            inputs.index === 4 ||\n            inputs.index === 7 ||\n            inputs.index === 9 ||\n            inputs.index === 11 ||\n            inputs.index === 12 ||\n            inputs.index === 14 ||\n            inputs.index === 17 ||\n            inputs.index === 20 ||\n            inputs.index >= 20\n            ){\n            if(inputs.changed || inputs.started){\n                outputs.startTimer = true;  \n            }\n            outputs.visible = false;\n        }else{\n            outputs.startTimer = false;\n            outputs.visible = true;\n        }\n        \n        if(inputs.finished){\n            outputs.startTimer = false;\n        }\n    }\n});",
                             "changed": false
                         },
                         "ports": [],
@@ -19644,13 +19612,22 @@
                                 "index": 5
                             },
                             {
+                                "name": "showed",
+                                "plug": "input",
+                                "type": {
+                                    "name": "boolean"
+                                },
+                                "group": "Inputs",
+                                "index": 6
+                            },
+                            {
                                 "name": "startTimer",
                                 "type": {
                                     "name": "boolean"
                                 },
                                 "plug": "output",
                                 "group": "Outputs",
-                                "index": 6
+                                "index": 7
                             },
                             {
                                 "name": "visible",
@@ -19659,7 +19636,7 @@
                                 },
                                 "plug": "output",
                                 "group": "Outputs",
-                                "index": 7
+                                "index": 8
                             }
                         ],
                         "children": []
@@ -19667,8 +19644,8 @@
                     {
                         "id": "d6e03676-0e95-4654-bd4e-8b3c0efa4495",
                         "type": "Expression",
-                        "x": 978.1248920041234,
-                        "y": 537.9792654007653,
+                        "x": 782.4664120341264,
+                        "y": 390.21467076048225,
                         "parameters": {
                             "expression": "index +1"
                         },
@@ -19687,8 +19664,8 @@
                         "id": "203e5884-23aa-e51b-32de-ccfd32ad08e7",
                         "type": "Javascript2",
                         "label": "Jadgement",
-                        "x": 208.03736660078908,
-                        "y": 988.3466781722573,
+                        "x": 241.396635534817,
+                        "y": 976.6311973812527,
                         "parameters": {
                             "code": "var str = \"\";\ndefine({\n    inputs: {\n        quest:\"string\",\n        qNum:\"string\",\n        deleteChara:\"boolean\",\n        chara: \"string\",\n        finished:\"boolean\"\n    },\n    outputs: {\n        goToNext:\"boolean\",\n        word:\"string\"\n    },\n    destroy: function(inputs, outputs) {\n\n    },\n    setup: function(inputs, outputs) {\n    },\n    run: function(inputs, outputs, changedInputs) {\n        \n        if(inputs.chara){\n            str = str + inputs.chara;\n            outputs.word = str;\n        }\n        \n        if(inputs.quest === outputs.word){\n            outputs.goToNext = true;\n        }else{\n            outputs.goToNext = false;\n        }\n        \n        if(inputs.finished){\n          str= \"\";\n          inputs.chara = \"\";\n          outputs.word = \"\";\n        }\n        \n        if(inputs.deleteChara){\n            console.log(str.length);\n            inputs.chara = \"\";\n            str = str.slice(0,-1);\n            outputs.word = str;\n        }\n    }\n});",
                             "useExternalFile": "no"
@@ -19764,8 +19741,8 @@
                     {
                         "id": "877a98ab-19bf-7bf5-2116-8e9cd251103c",
                         "type": "Model",
-                        "x": 896.0720190293129,
-                        "y": 829.4892822761423,
+                        "x": 744.6228485269602,
+                        "y": 711.6954829965349,
                         "parameters": {
                             "properties": "question",
                             "modelId": ""
@@ -19788,8 +19765,8 @@
                     {
                         "id": "631d9bba-9795-24df-a3fc-5db13a2a0854",
                         "type": "Receive Message",
-                        "x": -117.2011874486389,
-                        "y": 1025.018031766709,
+                        "x": -353.5637014440109,
+                        "y": 787.2726194037774,
                         "parameters": {
                             "enabled": true,
                             "topic": "/word"
@@ -19812,8 +19789,8 @@
                     {
                         "id": "c3f470f9-745b-42ea-fd9e-2c4d176a8e82",
                         "type": "Model",
-                        "x": -40.549293282661495,
-                        "y": 1210.3435994930242,
+                        "x": -18.72865172102688,
+                        "y": 863.2743406874082,
                         "parameters": {
                             "properties": "chara",
                             "modelId": ""
@@ -19836,8 +19813,8 @@
                     {
                         "id": "8dfd62cc-c25e-9d17-c794-498efeadf178",
                         "type": "String Format",
-                        "x": 995.268403200076,
-                        "y": 688.9296189331258,
+                        "x": 778.7704818771391,
+                        "y": 566.5975347125475,
                         "parameters": {
                             "format": "q{id}"
                         },
@@ -19855,8 +19832,8 @@
                     {
                         "id": "42b07b30-4630-5728-d6bb-9fe1b1eb910c",
                         "type": "Timer",
-                        "x": 529.5078700517931,
-                        "y": 1097.438963392969,
+                        "x": 490.4924007677522,
+                        "y": 867.8757558698857,
                         "parameters": {
                             "duration": 1000
                         },
@@ -19867,8 +19844,8 @@
                     {
                         "id": "abdacab1-211e-0785-cd8d-55cd079e1e1a",
                         "type": "Javascript2",
-                        "x": 567.9645804816405,
-                        "y": 539.994812101592,
+                        "x": 394.63042461678,
+                        "y": 471.8248414305274,
                         "parameters": {
                             "code": "define({\n    inputs: {\n        word: \"string\",\n        id:\"string\",\n        index:\"number\",\n        charList:\"collection\"\n    },\n    outputs: {\n        charList: \"collection\",\n    },\n    destroy: function(inputs, outputs) {\n\n    },\n    setup: function(inputs, outputs) {\n        var myCollection;\n    },\n    run: function(inputs, outputs, changedInputs) {\n        var collection = Noodl.Collection.get(inputs.id);\n        var itemId;\n        if(inputs.index > 4){\n            var string = inputs.word.split(\"\");\n            for(var i=0; i<string.length; i++){\n              collection.add(Noodl.Model.create({\n              id: inputs.id + '_' + i,\n              char:string[i]\n              }));\n            } \n        }\n    }\n});"
                         },
@@ -19925,8 +19902,8 @@
                     {
                         "id": "1ab4dd5f-a1a3-a301-5f18-1657e5bee52d",
                         "type": "Text Input",
-                        "x": 469.4503693741983,
-                        "y": 956.6027052887196,
+                        "x": 540.550166782744,
+                        "y": 1041.3173575201783,
                         "parameters": {
                             "text": "",
                             "fontFamily": "YuGothic"
@@ -19939,8 +19916,8 @@
                         "id": "ca0337f3-60eb-724e-67ad-57efb8e107d4",
                         "type": "Collection",
                         "label": "文字",
-                        "x": 514.7017801665754,
-                        "y": 711.5947015802432,
+                        "x": 483.53268177039723,
+                        "y": 672.9214406723186,
                         "parameters": {
                             "collectionId": "q5"
                         },
