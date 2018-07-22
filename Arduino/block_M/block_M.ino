@@ -101,7 +101,7 @@ void loop() {
     
     if ( strUID.equalsIgnoreCase(END_R) && readFlag == true ){
         for(int i; i<strNum; i++){
-            if(client.publish("/word/char"+ String(i), subString[i])){
+            if(client.publish("/word", subString[i])){
             Serial.println("Published");
             }
           }

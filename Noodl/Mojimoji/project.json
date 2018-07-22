@@ -19171,22 +19171,10 @@
                         "toProperty": "text"
                     },
                     {
-                        "fromId": "631d9bba-9795-24df-a3fc-5db13a2a0854",
-                        "fromProperty": "word",
-                        "toId": "c3f470f9-745b-42ea-fd9e-2c4d176a8e82",
-                        "toProperty": "modelId"
-                    },
-                    {
                         "fromId": "203e5884-23aa-e51b-32de-ccfd32ad08e7",
                         "fromProperty": "word",
                         "toId": "d57d5146-f5a4-d760-985f-85064355f025",
                         "toProperty": "text"
-                    },
-                    {
-                        "fromId": "c3f470f9-745b-42ea-fd9e-2c4d176a8e82",
-                        "fromProperty": "chara",
-                        "toId": "203e5884-23aa-e51b-32de-ccfd32ad08e7",
-                        "toProperty": "chara"
                     },
                     {
                         "fromId": "8dfd62cc-c25e-9d17-c794-498efeadf178",
@@ -19217,12 +19205,6 @@
                         "fromProperty": "timerFinished",
                         "toId": "2e05d447-f8b3-c932-0757-1c392988fed4",
                         "toProperty": "goToNext"
-                    },
-                    {
-                        "fromId": "42b07b30-4630-5728-d6bb-9fe1b1eb910c",
-                        "fromProperty": "timerFinished",
-                        "toId": "203e5884-23aa-e51b-32de-ccfd32ad08e7",
-                        "toProperty": "finished"
                     },
                     {
                         "fromId": "877a98ab-19bf-7bf5-2116-8e9cd251103c",
@@ -19291,22 +19273,10 @@
                         "toProperty": "image"
                     },
                     {
-                        "fromId": "c815ea54-8f16-303b-59a4-fc8b92f5b863",
-                        "fromProperty": "touch.tap",
-                        "toId": "203e5884-23aa-e51b-32de-ccfd32ad08e7",
-                        "toProperty": "deleteChara"
-                    },
-                    {
                         "fromId": "203e5884-23aa-e51b-32de-ccfd32ad08e7",
                         "fromProperty": "word",
                         "toId": "6290ca18-4f12-28e9-55e9-2581041bd293",
                         "toProperty": "text"
-                    },
-                    {
-                        "fromId": "d8708e98-6d87-0e7f-ab8c-38c86f8cca56",
-                        "fromProperty": "touch.tap",
-                        "toId": "203e5884-23aa-e51b-32de-ccfd32ad08e7",
-                        "toProperty": "sendName"
                     },
                     {
                         "fromId": "203e5884-23aa-e51b-32de-ccfd32ad08e7",
@@ -19339,16 +19309,40 @@
                         "toProperty": "visible"
                     },
                     {
-                        "fromId": "06357783-322b-2481-67c3-557133c6f689",
-                        "fromProperty": "Initialize",
+                        "fromId": "d8708e98-6d87-0e7f-ab8c-38c86f8cca56",
+                        "fromProperty": "touch.tap",
+                        "toId": "203e5884-23aa-e51b-32de-ccfd32ad08e7",
+                        "toProperty": "sendName"
+                    },
+                    {
+                        "fromId": "6d211cce-168d-f7d5-0acc-d5b5fb5abf01",
+                        "fromProperty": "messageReceived",
+                        "toId": "203e5884-23aa-e51b-32de-ccfd32ad08e7",
+                        "toProperty": "receivedChar"
+                    },
+                    {
+                        "fromId": "6d211cce-168d-f7d5-0acc-d5b5fb5abf01",
+                        "fromProperty": "word",
+                        "toId": "5ebb7549-6a4b-9dfd-46f1-779cc89691f1",
+                        "toProperty": "modelId"
+                    },
+                    {
+                        "fromId": "5ebb7549-6a4b-9dfd-46f1-779cc89691f1",
+                        "fromProperty": "chara",
+                        "toId": "203e5884-23aa-e51b-32de-ccfd32ad08e7",
+                        "toProperty": "chara"
+                    },
+                    {
+                        "fromId": "42b07b30-4630-5728-d6bb-9fe1b1eb910c",
+                        "fromProperty": "timerFinished",
                         "toId": "203e5884-23aa-e51b-32de-ccfd32ad08e7",
                         "toProperty": "finished"
                     },
                     {
-                        "fromId": "631d9bba-9795-24df-a3fc-5db13a2a0854",
-                        "fromProperty": "messageReceived",
+                        "fromId": "a8bc6b5d-9977-1146-04ef-4eba7b3cfb8d",
+                        "fromProperty": "touch.tap",
                         "toId": "203e5884-23aa-e51b-32de-ccfd32ad08e7",
-                        "toProperty": "receivedChar"
+                        "toProperty": "deleteChara"
                     }
                 ],
                 "roots": [
@@ -19482,25 +19476,25 @@
                                         "children": []
                                     },
                                     {
-                                        "id": "c815ea54-8f16-303b-59a4-fc8b92f5b863",
+                                        "id": "a8bc6b5d-9977-1146-04ef-4eba7b3cfb8d",
                                         "type": "Image",
                                         "version": 2,
                                         "x": 20,
                                         "y": 322,
                                         "parameters": {
                                             "image": "delete.png.png",
+                                            "alignY": "bottom",
+                                            "alignX": "center",
                                             "sizeMode": "explicit",
                                             "width": {
                                                 "value": 400,
                                                 "unit": "px"
                                             },
                                             "height": {
-                                                "value": 100,
+                                                "value": 120,
                                                 "unit": "px"
                                             },
-                                            "alignX": "center",
-                                            "alignY": "bottom",
-                                            "y": -40
+                                            "y": -20
                                         },
                                         "ports": [],
                                         "dynamicports": [],
@@ -19710,8 +19704,8 @@
                         "id": "b20b6244-aad5-2d1c-0b98-e675b6d93fa9",
                         "type": "Static Data",
                         "label": "question",
-                        "x": -636.1799607264935,
-                        "y": 56.3765926719438,
+                        "x": -702.7905806577847,
+                        "y": 266.5500698718369,
                         "parameters": {
                             "type": "json",
                             "csv": "りんご,みかん,くま,うみ",
@@ -19725,11 +19719,11 @@
                         "id": "4d66a913-462a-8f93-9108-b95b14ca0601",
                         "type": "Static Data",
                         "label": "charactor",
-                        "x": -635.7578222659546,
-                        "y": -23.88861123291764,
+                        "x": -699.9195553509606,
+                        "y": 200.54518967899057,
                         "parameters": {
                             "type": "csv",
-                            "csv": "chara,id,imgPath\nあ,04 63 cc ca 4c 58 81,chara/1.png\nい,04 45 cc ca 4c 58 81,chara/2.png\nう,04 79 cd ca 4c 58 81,chara/3.png\nえ,04 64 cc ca 4c 58 81,chara/4.png\nお,04 5b cd ca 4c 58 81,chara/5.png\nか,04 78 cd ca 4c 58 81,chara/6.png\nき,04 3d cd ca 4c 58 81,chara/7.png\nく,04 5a cd ca 4c 58 81,chara/8.png\nけ,04 1f cd ca 4c 58 81,chara/9.png\nこ,04 3c cd ca 4c 58 81,chara/10.png\nさ,04 7f 77 d2 c7 55 81,chara/11.png\nし,04 70 77 d2 c7 55 81,chara/12.png\nす,04 61 77 d2 c7 55 81,chara/13.png\nせ,04 52 77 d2 c7 55 81,chara/14.png\nそ,04 43 77 d2 c7 55 81,chara/15.png\nた,04 69 76 d2 c7 55 80,chara/16.png\nち,04 78 76 d2 c7 55 80,chara/17.png\nつ,04 89 76 d2 c7 55 80,chara/18.png\nて,04 9a 76 d2 c7 55 80,chara/19.png\nと,04 a9 76 d2 c7 55 80,chara/20.png\nな,04 5c 77 d2 c7 55 80,chara/21.png\nに,04 6c 77 d2 c7 55 80,chara/22.png\nぬ,04 7b 77 d2 c7 55 80,chara/23.png\nね,04 8a 77 d2 c7 55 80,chara/24.png\nの,04 99 77 d2 c7 55 80,chara/25.png\nは,04 11 77 d2 c7 55 80,chara/26.png\nひ,04 20 77 d2 c7 55 80,chara/27.png\nふ,04 2f 77 d2 c7 55 80,chara/28.png\nへ,04 3e 77 d2 c7 55 80,chara/29.png\nほ,04 4d 77 d2 c7 55 80,chara/30.png\nま,04 c5 cd ca 4c 58 80,chara/31.png\nみ,04 00 cd ca 4c 58 81,chara/32.png\nむ,04 e3 cd ca 4c 58 80,chara/33.png\nめ,04 1e cd ca 4c 58 81,chara/34.png\nも,04 01 cd ca 4c 58 81,chara/35.png\nや,04 a6 cd ca 4c 58 80,chara/36.png\nゆ,04 89 cd ca 4c 58 80,chara/37.png\nよ,04 c4 cd ca 4c 58 80,chara/38.png\nら,04 a7 cd ca 4c 58 80,chara/39.png\nり,04 e2 cd ca 4c 58 80,chara/40.png\nる,04 0b 0f c2 4c 58 85,chara/41.png\nれ,04 cb 0f c2 4c 58 84,chara/42.png\nろ,04 eb 0f c2 4c 58 84,chara/43.png\nわ,04 ad 0f c2 4c 58 84,chara/44.png\nを,04 ca 0f c2 4c 58 84,chara/45.png\nん,04 05 0e c2 4c 58 85,chara/46.png\nゃ,04 e5 0e c2 4c 58 84,chara/47.png\nゅ,04 0c 0f c2 4c 58 85,chara/48.png\nょ,04 06 0e c2 4c 58 85,chara/49.png\nっ,04 ec 0f c2 4c 58 84,chara/50.png\n゛,04 fa f9 c2 4c 58 80,chara/51.png\n゜,04 dd f9 c2 4c 58 80,chara/52.png\nー,04 18 f9 c2 4c 58 81,chara/53.png",
+                            "csv": "chara,id,imgPath\r\nあ,04 63 cc ca 4c 58 81,chara/1.png\r\nい,04 45 cc ca 4c 58 81,chara/2.png\r\nう,04 79 cd ca 4c 58 81,chara/3.png\r\nえ,04 64 cc ca 4c 58 81,chara/4.png\r\nお,04 5b cd ca 4c 58 81,chara/5.png\r\nか,04 78 cd ca 4c 58 81,chara/6.png\r\nき,04 3d cd ca 4c 58 81,chara/7.png\r\nく,04 5a cd ca 4c 58 81,chara/8.png\r\nけ,04 1f cd ca 4c 58 81,chara/9.png\r\nこ,04 3c cd ca 4c 58 81,chara/10.png\r\nさ,04 7f 77 d2 c7 55 81,chara/11.png\r\nし,04 70 77 d2 c7 55 81,chara/12.png\r\nす,04 61 77 d2 c7 55 81,chara/13.png\r\nせ,04 52 77 d2 c7 55 81,chara/14.png\r\nそ,04 43 77 d2 c7 55 81,chara/15.png\r\nた,04 69 76 d2 c7 55 80,chara/16.png\r\nち,04 78 76 d2 c7 55 80,chara/17.png\r\nつ,04 89 76 d2 c7 55 80,chara/18.png\r\nて,04 9a 76 d2 c7 55 80,chara/19.png\r\nと,04 a9 76 d2 c7 55 80,chara/20.png\r\nな,04 5c 77 d2 c7 55 80,chara/21.png\r\nに,04 6c 77 d2 c7 55 80,chara/22.png\r\nぬ,04 7b 77 d2 c7 55 80,chara/23.png\r\nね,04 8a 77 d2 c7 55 80,chara/24.png\r\nの,04 99 77 d2 c7 55 80,chara/25.png\r\nは,04 11 77 d2 c7 55 80,chara/26.png\r\nひ,04 20 77 d2 c7 55 80,chara/27.png\r\nふ,04 2f 77 d2 c7 55 80,chara/28.png\r\nへ,04 3e 77 d2 c7 55 80,chara/29.png\r\nほ,04 4d 77 d2 c7 55 80,chara/30.png\r\nま,04 c5 cd ca 4c 58 80,chara/31.png\r\nみ,04 00 cd ca 4c 58 81,chara/32.png\r\nむ,04 e3 cd ca 4c 58 80,chara/33.png\r\nめ,04 1e cd ca 4c 58 81,chara/34.png\r\nも,04 01 cd ca 4c 58 81,chara/35.png\r\nや,04 a6 cd ca 4c 58 80,chara/36.png\r\nゆ,04 89 cd ca 4c 58 80,chara/37.png\r\nよ,04 c4 cd ca 4c 58 80,chara/38.png\r\nら,04 a7 cd ca 4c 58 80,chara/39.png\r\nり,04 e2 cd ca 4c 58 80,chara/40.png\r\nる,04 0b 0f c2 4c 58 85,chara/41.png\r\nれ,04 cb 0f c2 4c 58 84,chara/42.png\r\nろ,04 eb 0f c2 4c 58 84,chara/43.png\r\nわ,04 ad 0f c2 4c 58 84,chara/44.png\r\nを,04 ca 0f c2 4c 58 84,chara/45.png\r\nん,04 05 0e c2 4c 58 85,chara/46.png\r\nゃ,04 e5 0e c2 4c 58 84,chara/47.png\r\nゅ,04 0c 0f c2 4c 58 85,chara/48.png\r\nょ,04 06 0e c2 4c 58 85,chara/49.png\r\nっ,04 ec 0f c2 4c 58 84,chara/50.png\r\n゛,04 fa f9 c2 4c 58 80,chara/51.png\r\n゜,04 dd f9 c2 4c 58 80,chara/52.png\r\nー,04 18 f9 c2 4c 58 81,chara/53.png",
                             "json": "[\n    {\n        \"id\" :\"q0\",\n        \"question\" :\"みち\"\n    }\n]"
                         },
                         "ports": [],
@@ -19872,10 +19866,10 @@
                         "id": "203e5884-23aa-e51b-32de-ccfd32ad08e7",
                         "type": "Javascript2",
                         "label": "Jadgement",
-                        "x": -182.4918675331552,
-                        "y": 736.5181876620999,
+                        "x": -193.68147777340573,
+                        "y": 799.780586322685,
                         "parameters": {
-                            "code": "var str = \"\";\ndefine({\n    inputs: {\n        quest:\"string\",\n        qNum:\"string\",\n        deleteChara:\"boolean\",\n        chara: \"string\",\n        finished:\"boolean\",\n        sendName:\"boolean\",\n        receivedChar:\"boolean\"\n    },\n    outputs: {\n        goToNext:\"boolean\",\n        word:\"string\",\n        name:\"string\"\n    },\n    destroy: function(inputs, outputs) {\n\n    },\n    setup: function(inputs, outputs) {\n    },\n    run: function(inputs, outputs, changedInputs) {\n\n        if(inputs.quest === outputs.word || inputs.sendName){\n            outputs.goToNext = true;\n        }else{\n            outputs.goToNext = false;\n        }\n        \n        if(inputs.chara && inputs.receivedChar){\n            str = str + inputs.chara;\n            outputs.word = str;\n            console.log(outputs.word);\n        }\n        \n        if(inputs.finished){\n          str= \"\";\n          inputs.chara = \"\";\n          outputs.word = \"\";\n        }\n        \n        if(inputs.deleteChara){\n            console.log(str.length);\n            inputs.chara = \"\";\n            str = str.slice(0,-1);\n            outputs.word = str;\n        }\n    }\n});",
+                            "code": "var str = \"\";\nvar lastChar = \"\";\ndefine({\n    inputs: {\n        quest:\"string\",\n        qNum:\"string\",\n        deleteChara:\"boolean\",\n        chara: \"string\",\n        finished:\"boolean\",\n        sendName:\"boolean\",\n        receivedChar:\"boolean\"\n    },\n    outputs: {\n        goToNext:\"boolean\",\n        word:\"string\",\n        name:\"string\",\n        count:\"number\"\n    },\n    destroy: function(inputs, outputs) {\n\n    },\n    setup: function(inputs, outputs) {\n        outputs.count= 0;\n    },\n    run: function(inputs, outputs, changedInputs) {\n\n        if(inputs.quest === outputs.word || inputs.sendName){\n            outputs.goToNext = true;\n        }else{\n            outputs.goToNext = false;\n        }\n        \n        if(inputs.chara && inputs.chara !== lastChar && inputs.receivedChar){\n            str = str + inputs.chara;\n            outputs.word = str;\n            lastChar = inputs.chara;\n            console.log(outputs.word);\n        }\n        \n        if(inputs.finished || inputs.deleteChara){\n          str= \"\";\n          inputs.chara = \"\";\n          outputs.word = \"\";\n        }\n    }\n});",
                             "useExternalFile": "no"
                         },
                         "ports": [],
@@ -19969,6 +19963,15 @@
                                 "plug": "output",
                                 "group": "Outputs",
                                 "index": 11
+                            },
+                            {
+                                "name": "count",
+                                "type": {
+                                    "name": "number"
+                                },
+                                "plug": "output",
+                                "group": "Outputs",
+                                "index": 12
                             }
                         ],
                         "children": []
@@ -19998,54 +20001,6 @@
                         "children": []
                     },
                     {
-                        "id": "631d9bba-9795-24df-a3fc-5db13a2a0854",
-                        "type": "Receive Message",
-                        "x": -721.4902055080345,
-                        "y": 717.0570839896823,
-                        "parameters": {
-                            "enabled": true,
-                            "topic": "/word"
-                        },
-                        "ports": [
-                            {
-                                "name": "word",
-                                "plug": "outputs",
-                                "type": {
-                                    "name": "*",
-                                    "allowConnectionOnly": true
-                                },
-                                "group": "Payload",
-                                "index": 1
-                            }
-                        ],
-                        "dynamicports": [],
-                        "children": []
-                    },
-                    {
-                        "id": "c3f470f9-745b-42ea-fd9e-2c4d176a8e82",
-                        "type": "Model",
-                        "x": -440.36429996416797,
-                        "y": 719.2955803213483,
-                        "parameters": {
-                            "properties": "chara",
-                            "modelId": ""
-                        },
-                        "ports": [],
-                        "dynamicports": [
-                            {
-                                "type": {
-                                    "name": "*",
-                                    "allowConnectionsOnly": true
-                                },
-                                "plug": "input/output",
-                                "group": "Properties",
-                                "name": "chara",
-                                "index": 7
-                            }
-                        ],
-                        "children": []
-                    },
-                    {
                         "id": "8dfd62cc-c25e-9d17-c794-498efeadf178",
                         "type": "String Format",
                         "x": 866.8710614948177,
@@ -20068,8 +20023,8 @@
                         "id": "42b07b30-4630-5728-d6bb-9fe1b1eb910c",
                         "type": "Timer",
                         "label": "1sec",
-                        "x": -600.873308979266,
-                        "y": 978.0566853767227,
+                        "x": -652.5879140982005,
+                        "y": 1139.5409210359805,
                         "parameters": {
                             "duration": 1000
                         },
@@ -20208,8 +20163,8 @@
                         "id": "7bf9ab7a-0c68-0e00-b52e-7140f6c95157",
                         "type": "Globals",
                         "label": "Name",
-                        "x": -716.2513791088863,
-                        "y": 915.3081835179238,
+                        "x": -522.525991981495,
+                        "y": 947.160774604221,
                         "parameters": {},
                         "ports": [
                             {
@@ -20227,8 +20182,8 @@
                     {
                         "id": "8d997148-a169-c177-9a72-633e0fa861cb",
                         "type": "States",
-                        "x": -259.91629689153507,
-                        "y": 1076.2405167856266,
+                        "x": -338.2524249081326,
+                        "y": 1189.3584186690305,
                         "parameters": {
                             "states": "On,Off",
                             "values": "Opacity",
@@ -20420,6 +20375,52 @@
                                 "name": "startState",
                                 "default": "On",
                                 "index": 19
+                            }
+                        ],
+                        "children": []
+                    },
+                    {
+                        "id": "6d211cce-168d-f7d5-0acc-d5b5fb5abf01",
+                        "type": "Receive Message",
+                        "x": -778.2662594409246,
+                        "y": 842.4624202470883,
+                        "parameters": {
+                            "topic": "/word"
+                        },
+                        "ports": [
+                            {
+                                "name": "word",
+                                "plug": "outputs",
+                                "type": {
+                                    "name": "*",
+                                    "allowConnectionOnly": true
+                                },
+                                "group": "Payload",
+                                "index": 1
+                            }
+                        ],
+                        "dynamicports": [],
+                        "children": []
+                    },
+                    {
+                        "id": "5ebb7549-6a4b-9dfd-46f1-779cc89691f1",
+                        "type": "Model",
+                        "x": -491.6664914362095,
+                        "y": 781.2955437032048,
+                        "parameters": {
+                            "properties": "chara"
+                        },
+                        "ports": [],
+                        "dynamicports": [
+                            {
+                                "type": {
+                                    "name": "*",
+                                    "allowConnectionsOnly": true
+                                },
+                                "plug": "input/output",
+                                "group": "Properties",
+                                "name": "chara",
+                                "index": 7
                             }
                         ],
                         "children": []
@@ -21554,7 +21555,7 @@
         "Default Device.canvasWidth": 1920,
         "Default Device.canvasHeight": 1080,
         "mqttUseExternalBroker": true,
-        "mqttBrokerUrl": "mqtts://0cce1b17:43365f8d45ed2a89@broker.shiftr.io",
+        "mqttBrokerUrl": "mqtts://2c199500:3cab4c7a8b08193c@broker.shiftr.io",
         "Default Device.rootComponent": "/Main"
     },
     "rootNodeId": "ea22cb85-10ff-95bc-d730-436860b85b1a",
