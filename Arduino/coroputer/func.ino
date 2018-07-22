@@ -28,12 +28,11 @@ void connect() {
   }
 
   Serial.print("\nconnecting...");
-  while (!client.connect("arduino", "0cce1b17", "43365f8d45ed2a89")) {
+  while (!client.connect("coroputer", "56b690e4", "a310c42b42978afd")) {
     Serial.print(".");
     delay(1000);
   }
 
   Serial.println("\nconnected!");
-
   client.publish("/hello","world");
 }
