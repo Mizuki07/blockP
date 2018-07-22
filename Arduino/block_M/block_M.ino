@@ -10,42 +10,33 @@
 
 MFRC522 mfrc522(SS_PIN, RST_PIN); // MFRC522のインスタンスを作成
 
-#define CARD_PRESENT_PIN 4 // MFRC522にカードが検知されたら光らせるGPIO NO
 bool cardset;     // MFRC522にカードが検知されているかどうか
 int timeoutcount; // MFRC522からカードが連続で離れた回数を記録
 
-const char* ssid = "SPWH_H32_D15FE1";
-const char* password = "5b2dhen4ag37q75";
-//const char* ssid = "W01_B8BC1BEED935";
-//const char* password = "6hd63qer60qen4h";
+//const char* ssid = "SPWH_H32_D15FE1";
+//const char* password = "5b2dhen4ag37q75";
+
+const char* ssid = "SPWN_H36_809AD8";
+const char* password = "2aaj4eb805539tj";
 
 WiFiClient net;
 MQTTClient client;
 unsigned long lastMillis = 0;
 void connect();  // <- predefine connect() for setup()
 
-#define START_R "04 29 9C D2 C7 55 80"
-#define END_R "04 88 94 D2 C7 55 81"
-#define UDID0 "04 79 94 D2 C7 55 81"
-#define UDID1 "04 6A 94 D2 C7 55 81"
-#define UDID2 "04 4C 94 D2 C7 55 81"
-#define UDID3 "04 5B 94 D2 C7 55 81"
+#define START_R "04 8b 08 c2 4c 58 84"
+#define END_R "04 70 07 c2 4c 58 84"
 
-String udid[4] = {UDID0,UDID1,UDID2,UDID3};
 String lastChar;
-String moji[] = {"り","ん","ご","に"};
 int countChar= 0;
 bool readFlag;
-String subString;
+String subString[] = {"","","","","","","","","",""};
+int strNum = 10;
 
 void setup() {
   // UART接続初期化
   Serial.begin(9600); // UARTの通信速度を変更したい場合はこちらを変更
   delay(10);
-
-  // カード検出用のGPIO初期化
-  pinMode(CARD_PRESENT_PIN, OUTPUT);
-  digitalWrite(CARD_PRESENT_PIN, LOW);
 
   // MFRC522用変数初期化
   cardset = false;
@@ -104,56 +95,33 @@ void loop() {
       readFlag = true;
     }
     
+    if (!client.connected()) {
+      connect();  
+    }
     
     if ( strUID.equalsIgnoreCase(END_R) && readFlag == true ){
-      Serial.println(subString);
-      if(!client.connect("arduino", "0cce1b17", "43365f8d45ed2a89")){
-        connect();
-        }
-      
-      if(client.publish("/word", subString) == true){
-        Serial.println("Published");
-        }
-      
+        for(int i; i<strNum; i++){
+            if(client.publish("/word/char"+ String(i), subString[i])){
+            Serial.println("Published");
+            }
+          }
       Serial.println("End");
-      countChar = 0;
-      subString = "";
+      
+      for(int i; i<strNum; i++){
+        subString[i] = "";
+      }
       lastChar = "";
+      countChar = 0;
       readFlag = false;
     }
 
-    if(readFlag == true){
-        for(int j=0; j<4 ; j++){
-          if(strUID.equalsIgnoreCase(udid[j])){
-              if(strUID != lastChar){
-                subString = subString + moji[j];
-                countChar ++;
-                lastChar = strUID;
-              }
-            }
-          }
+    if(readFlag == true && strUID != lastChar && !strUID.equalsIgnoreCase(START_R)){
+        subString[countChar] = strUID;
+        countChar++;
+        lastChar = strUID;
       }
-   
   delay(100);
   
-}
-
-void ShowReaderDetails() {
-  // Get the MFRC522 software version
-  byte v = mfrc522.PCD_ReadRegister(mfrc522.VersionReg);
-  Serial.print(F("MFRC522 Software Version: 0x"));
-  Serial.print(v, HEX);
-  if (v == 0x91)
-    Serial.print(F(" = v1.0"));
-  else if (v == 0x92)
-    Serial.print(F(" = v2.0"));
-  else
-    Serial.print(F(" (unknown)"));
-  Serial.println("");
-  // When 0x00 or 0xFF is returned, communication probably failed
-  if ((v == 0x00) || (v == 0xFF)) {
-    Serial.println(F("WARNING: Communication failure, is the MFRC522 properly connected?"));
-  }
 }
 
 
