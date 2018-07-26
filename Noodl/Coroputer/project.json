@@ -19421,6 +19421,48 @@
                         "fromProperty": "messageReceived",
                         "toId": "203e5884-23aa-e51b-32de-ccfd32ad08e7",
                         "toProperty": "receivedChar"
+                    },
+                    {
+                        "fromId": "fc2b51f5-3dfb-5939-e7ce-7e86a82f58bc",
+                        "fromProperty": "sound",
+                        "toId": "40746f29-788d-f8ac-1bfd-1aab8cf5e684",
+                        "toProperty": "path"
+                    },
+                    {
+                        "fromId": "40746f29-788d-f8ac-1bfd-1aab8cf5e684",
+                        "fromProperty": "formatted",
+                        "toId": "921f3aad-ea82-f5d6-3f10-e1ea9f30c946",
+                        "toProperty": "videoPath"
+                    },
+                    {
+                        "fromId": "921f3aad-ea82-f5d6-3f10-e1ea9f30c946",
+                        "fromProperty": "currentTime",
+                        "toId": "0c8269f8-b797-f69a-0710-f745414b7b1d",
+                        "toProperty": "currentTime"
+                    },
+                    {
+                        "fromId": "921f3aad-ea82-f5d6-3f10-e1ea9f30c946",
+                        "fromProperty": "duration",
+                        "toId": "0c8269f8-b797-f69a-0710-f745414b7b1d",
+                        "toProperty": "Duration"
+                    },
+                    {
+                        "fromId": "0c8269f8-b797-f69a-0710-f745414b7b1d",
+                        "fromProperty": "result",
+                        "toId": "921f3aad-ea82-f5d6-3f10-e1ea9f30c946",
+                        "toProperty": "pause"
+                    },
+                    {
+                        "fromId": "921f3aad-ea82-f5d6-3f10-e1ea9f30c946",
+                        "fromProperty": "duration",
+                        "toId": "da9f8e9f-e543-553b-99b2-152f3d9c8498",
+                        "toProperty": "duration"
+                    },
+                    {
+                        "fromId": "da9f8e9f-e543-553b-99b2-152f3d9c8498",
+                        "fromProperty": "result",
+                        "toId": "188193d7-2c52-7b79-a2da-70dd8465f754",
+                        "toProperty": "duration"
                     }
                 ],
                 "roots": [
@@ -19435,6 +19477,26 @@
                         "ports": [],
                         "dynamicports": [],
                         "children": [
+                            {
+                                "id": "921f3aad-ea82-f5d6-3f10-e1ea9f30c946",
+                                "type": "Video",
+                                "x": 20,
+                                "y": 97,
+                                "parameters": {
+                                    "width": {
+                                        "value": 1,
+                                        "unit": "px"
+                                    },
+                                    "height": {
+                                        "value": 1,
+                                        "unit": "px"
+                                    },
+                                    "autoplay": true
+                                },
+                                "ports": [],
+                                "dynamicports": [],
+                                "children": []
+                            },
                             {
                                 "id": "eb458871-e0a8-bfdc-0b23-50f78ad0168b",
                                 "type": "Scroll View",
@@ -19769,10 +19831,10 @@
                         "id": "94ca5bec-d6e5-626d-88ee-93e11cf5844a",
                         "type": "Static Data",
                         "label": "Story Data",
-                        "x": -340.2053996281578,
-                        "y": 191.7696644707657,
+                        "x": -246.1874162946694,
+                        "y": 447.2510053441119,
                         "parameters": {
-                            "csv": "id,text,imgpath,ex\nst_1,\"僕は「タロムシ」。キミの名前は？ボビンを転がして教えてね\",story_togou01_01.png,mushi02.png\nst_2,君の名前は,story_togou01_02.png,mushi01.png\nst_3,こんにちは！,story_togou01_03.png,mushi02.png\nst_4,これからお花畑に行くんだけど一緒に行かない？,story_togou01_04.png,mushi04.png\nst_5,この「みち」をまっすぐだよ,story_togou02_01.png,mushi01.png\nst_6,あっ！「もり」が見えてきたね,story_togou02_02.png,mushi01.png\nst_7,あの森の中でひとやすみしよう,story_togou02_03.png,mushi01.png\nst_8,\"お腹が空いたなあ、「りんご」を探そうよ\",story_togou02_04.png,mushi01.png\nst_9,\"おなかもいっぱいになったことだし先に進もう！\",story_togou03_01.png,mushi03.png\nst_10,「かわ」が見えてきたね,story_togou03_02.png,mushi01.png\nst_11,渡れそうにないね、だれか道を知らないかな,story_togou03_03.png,mushi05.png\nst_12,\"あ、あそこに「しっぽ」が見えているよ。誰のだろう？\",story_togou03_04.png,mushi04.png\nst_13,あ！「りす」さんだ！話しかけてみようよ！,story_togou04_01.png,mushi01.png\nst_14,\"りすさん！りすさん！川を渡りたいんだけど道を知らないかい？\",story_togou04_02.png,mushi01.png\nst_15,おいら、知ってるぜ！あっちの方向に「はし」があるよ！そこからきっと渡れるさ！,story_togou04_03.png,mushi01.png\nst_16,「ありがとう」りすさん！行ってみるよ！,story_togou04_04.png,mushi01.png\nst_17,花畑はこっちだね、行こう,story_togou05_01.png,mushi01.png\nst_18,あ、「とり」さんだ！,story_togou05_02.png,mushi02.png\nst_19,とりさん、素敵な「はな」を持ってるね,story_togou05_03.png,mushi01.png\nst_20,そうでしょ？この先にそれは美しいお花畑があってね。そこから分けてもらったのさ,story_togou05_04.png,mushi04.png\nst_21,僕たちもお花畑に向かっているところさ！,story_togou06_01.png,mushi01.png\nst_22,\"それなら、もうすぐそこさ！楽しんでおいで！\",story_togou06_02.png,mushi01.png\nst_23,\"わあ！！みてごらん！とても素敵なお花畑だね！\",story_togou06_03.png,mushi02.png\nst_24,今日はとても楽しかった！また、来ようね！,story_togou06_04.png,mushi01.png"
+                            "csv": "id,text,imgpath,ex,sound\nst_1,\"僕は「コロムシ」。キミの名前は？ボビンを転がして教えてね\",story_togou01_01.png,mushi02.png,n01.mp3\nst_2,君の名前は,story_togou01_02.png,mushi01.png,n02.mp3\nst_3,こんにちは！,story_togou01_03.png,mushi02.png,n03.mp3\nst_4,これからお花畑に行くんだけど一緒に行かない？,story_togou01_04.png,mushi04.png,n04.mp3\nst_5,この「みち」をまっすぐだよ,story_togou02_01.png,mushi01.png,n05.mp3\nst_6,あっ！「もり」が見えてきたね,story_togou02_02.png,mushi01.png,n06.mp3\nst_7,あの森の中でひとやすみしよう,story_togou02_03.png,mushi01.png,n07.mp3\nst_8,\"お腹が空いたなあ、「りんご」を探そうよ\",story_togou02_04.png,mushi01.png,n08.mp3\nst_9,\"おなかもいっぱいになったことだし先に進もう！\",story_togou03_01.png,mushi03.png,n09.mp3\nst_10,「かわ」が見えてきたね,story_togou03_02.png,mushi01.png,n10.mp3\nst_11,渡れそうにないね、だれか道を知らないかな,story_togou03_03.png,mushi05.png,n11.mp3\nst_12,\"あ、あそこに「しっぽ」が見えているよ。誰のだろう？\",story_togou03_04.png,mushi04.png,n12.mp3\nst_13,あ！「りす」さんだ！話しかけてみようよ！,story_togou04_01.png,mushi01.png,n13.mp3\nst_14,\"りすさん！りすさん！川を渡りたいんだけど道を知らないかい？\",story_togou04_02.png,mushi01.png,n14.mp3\nst_15,おいら、知ってるぜ！あっちの方向に「はし」があるよ！そこからきっと渡れるさ！,story_togou04_03.png,mushi01.png,n15.mp3\nst_16,「ありがとう」りすさん！行ってみるよ！,story_togou04_04.png,mushi01.png,n16.mp3\nst_17,花畑はこっちだね、行こう,story_togou05_01.png,mushi01.png,n17.mp3\nst_18,あ、「とり」さんだ！,story_togou05_02.png,mushi02.png,n18.mp3\nst_19,とりさん、素敵な「はな」を持ってるね,story_togou05_03.png,mushi01.png,n19.mp3\nst_20,そうでしょ？この先にそれは美しいお花畑があってね。そこから分けてもらったのよ,story_togou05_04.png,mushi04.png,n20.mp3\nst_21,僕たちもお花畑に向かっているところさ！,story_togou06_01.png,mushi01.png,n21.mp3\nst_22,\"それなら、もうすぐそこよ！楽しんでおいで！\",story_togou06_02.png,mushi01.png,n22.mp3\nst_23,\"わあ！！みてごらん！とても素敵なお花畑だね！\",story_togou06_03.png,mushi02.png,n23.mp3\nst_24,今日はとても楽しかった！また、来ようね！,story_togou06_04.png,mushi01.png,n24.mp3\nst_25,おしまい,fin.png,mushi01.png,fin.mp3"
                         },
                         "ports": [],
                         "dynamicports": [],
@@ -19782,7 +19844,7 @@
                         "id": "b20b6244-aad5-2d1c-0b98-e675b6d93fa9",
                         "type": "Static Data",
                         "label": "question",
-                        "x": -578.8635365453706,
+                        "x": -577.5645351636391,
                         "y": -21.607164265609157,
                         "parameters": {
                             "type": "json",
@@ -19797,8 +19859,8 @@
                         "id": "4d66a913-462a-8f93-9108-b95b14ca0601",
                         "type": "Static Data",
                         "label": "charactor",
-                        "x": -571.5604783550477,
-                        "y": -101.87236817047065,
+                        "x": -575.2073776400767,
+                        "y": -105.51926745549969,
                         "parameters": {
                             "type": "csv",
                             "csv": "chara,id,imgPath\nあ,04 63 cc ca 4c 58 81,chara/1.png\nい,04 45 cc ca 4c 58 81,chara/2.png\nう,04 79 cd ca 4c 58 81,chara/3.png\nえ,04 64 cc ca 4c 58 81,chara/4.png\nお,04 5b cd ca 4c 58 81,chara/5.png\nか,04 78 cd ca 4c 58 81,chara/6.png\nき,04 3d cd ca 4c 58 81,chara/7.png\nく,04 5a cd ca 4c 58 81,chara/8.png\nけ,04 1f cd ca 4c 58 81,chara/9.png\nこ,04 3c cd ca 4c 58 81,chara/10.png\nさ,04 7f 77 d2 c7 55 81,chara/11.png\nし,04 70 77 d2 c7 55 81,chara/12.png\nす,04 61 77 d2 c7 55 81,chara/13.png\nせ,04 52 77 d2 c7 55 81,chara/14.png\nそ,04 43 77 d2 c7 55 81,chara/15.png\nた,04 69 76 d2 c7 55 80,chara/16.png\nち,04 78 76 d2 c7 55 80,chara/17.png\nつ,04 89 76 d2 c7 55 80,chara/18.png\nて,04 9a 76 d2 c7 55 80,chara/19.png\nと,04 a9 76 d2 c7 55 80,chara/20.png\nな,04 5c 77 d2 c7 55 80,chara/21.png\nに,04 6c 77 d2 c7 55 80,chara/22.png\nぬ,04 7b 77 d2 c7 55 80,chara/23.png\nね,04 8a 77 d2 c7 55 80,chara/24.png\nの,04 99 77 d2 c7 55 80,chara/25.png\nは,04 11 77 d2 c7 55 80,chara/26.png\nひ,04 20 77 d2 c7 55 80,chara/27.png\nふ,04 2f 77 d2 c7 55 80,chara/28.png\nへ,04 3e 77 d2 c7 55 80,chara/29.png\nほ,04 4d 77 d2 c7 55 80,chara/30.png\nま,04 c5 cd ca 4c 58 80,chara/31.png\nみ,04 00 cd ca 4c 58 81,chara/32.png\nむ,04 e3 cd ca 4c 58 80,chara/33.png\nめ,04 1e cd ca 4c 58 81,chara/34.png\nも,04 01 cd ca 4c 58 81,chara/35.png\nや,04 a6 cd ca 4c 58 80,chara/36.png\nゆ,04 89 cd ca 4c 58 80,chara/37.png\nよ,04 c4 cd ca 4c 58 80,chara/38.png\nら,04 a7 cd ca 4c 58 80,chara/39.png\nり,04 e2 cd ca 4c 58 80,chara/40.png\nる,04 0b 0f c2 4c 58 85,chara/41.png\nれ,04 cb 0f c2 4c 58 84,chara/42.png\nろ,04 eb 0f c2 4c 58 84,chara/43.png\nわ,04 ad 0f c2 4c 58 84,chara/44.png\nを,04 ca 0f c2 4c 58 84,chara/45.png\nん,04 05 0e c2 4c 58 85,chara/46.png\nゃ,04 e5 0e c2 4c 58 84,chara/47.png\nゅ,04 0c 0f c2 4c 58 85,chara/48.png\nょ,04 06 0e c2 4c 58 85,chara/49.png\nっ,04 ec 0f c2 4c 58 84,chara/50.png\n゛,04 fa f9 c2 4c 58 80,chara/51.png\n゜,04 dd f9 c2 4c 58 80,chara/52.png\nー,04 18 f9 c2 4c 58 81,chara/53.png",
@@ -19811,8 +19873,8 @@
                     {
                         "id": "b750a9c2-bd19-ad7b-e290-3c8408d4a874",
                         "type": "Collection",
-                        "x": -97.5848931116241,
-                        "y": 184.64436821980962,
+                        "x": -22.652955610992734,
+                        "y": 449.800420037083,
                         "parameters": {
                             "collectionId": "Scene"
                         },
@@ -19824,8 +19886,8 @@
                         "id": "188193d7-2c52-7b79-a2da-70dd8465f754",
                         "type": "Timer",
                         "label": "Timer",
-                        "x": -262.4127380447844,
-                        "y": -13.28532876275888,
+                        "x": -144.89275982449664,
+                        "y": -25.053104885258293,
                         "parameters": {
                             "duration": 5000,
                             "startDelay": 0
@@ -19838,8 +19900,8 @@
                         "id": "ecbb8955-86ec-4391-a3cb-764045fc67df",
                         "type": "Javascript2",
                         "label": "If",
-                        "x": -413.7986604150059,
-                        "y": 336.17037261939964,
+                        "x": -473.5858088948123,
+                        "y": 173.24598968965034,
                         "parameters": {
                             "code": "define({\n    inputs: {\n        index: \"number\",\n        finished:\"boolean\",\n        started:\"boolean\",\n        changed:\"boolean\",\n        showed:\"boolean\"\n    },\n    outputs: {\n        startTimer: \"boolean\",\n        visible:\"boolean\",\n        userName:\"boolean\"\n    },\n    destroy: function(inputs, outputs) {\n\n    },\n    setup: function(inputs, outputs) {\n        outputs.startTimer = false;\n        outputs.visible= false;\n        outputs.userName = false;\n    },\n    run: function(inputs, outputs, changedInputs) {\n        if( inputs.index === 1 && inputs.showed ||\n            inputs.index === 3||\n            inputs.index === 4 ||\n            inputs.index === 7 ||\n            inputs.index === 9 ||\n            inputs.index === 11 ||\n            inputs.index === 12 ||\n            inputs.index === 14 ||\n            inputs.index === 17 ||\n            inputs.index === 20 ||\n            inputs.index >= 20\n            ){\n                outputs.userName = false;\n                outputs.visible = false;\n            if(inputs.changed || inputs.started){\n                outputs.startTimer = true;  \n            }\n            outputs.userName = false;\n        }else if(inputs.index === 2){\n            outputs.userName = true;\n            outputs.visible = false;\n        }else{\n            outputs.startTimer = false;\n            outputs.visible = true;\n            outputs.userName = false;\n        }\n        \n        if(inputs.finished){\n            outputs.startTimer = false;\n        }\n    }\n});",
                             "changed": false
@@ -19924,8 +19986,8 @@
                     {
                         "id": "d6e03676-0e95-4654-bd4e-8b3c0efa4495",
                         "type": "Expression",
-                        "x": 797.580574928642,
-                        "y": 427.858538354492,
+                        "x": 965.5438562995174,
+                        "y": 377.46955394322924,
                         "parameters": {
                             "expression": "index +1"
                         },
@@ -20120,8 +20182,8 @@
                     {
                         "id": "8dfd62cc-c25e-9d17-c794-498efeadf178",
                         "type": "String Format",
-                        "x": 1051.7195463433027,
-                        "y": 424.9544860384258,
+                        "x": 1154.1771479795366,
+                        "y": 377.9247672545805,
                         "parameters": {
                             "format": "q{id}"
                         },
@@ -20152,8 +20214,8 @@
                     {
                         "id": "abdacab1-211e-0785-cd8d-55cd079e1e1a",
                         "type": "Javascript2",
-                        "x": 1073.1929308380973,
-                        "y": 535.0675959637372,
+                        "x": 1175.6505324743312,
+                        "y": 488.0378771798919,
                         "parameters": {
                             "code": "define({\n    inputs: {\n        word: \"string\",\n        id:\"string\",\n        index:\"number\",\n        charList:\"collection\"\n    },\n    outputs: {\n        charList: \"collection\",\n    },\n    destroy: function(inputs, outputs) {\n\n    },\n    setup: function(inputs, outputs) {\n        var myCollection;\n    },\n    run: function(inputs, outputs, changedInputs) {\n        var collection = Noodl.Collection.get(inputs.id);\n        var itemId;\n        if(inputs.index > 4){\n            var string = inputs.word.split(\"\");\n            for(var i=0; i<string.length; i++){\n              collection.add(Noodl.Model.create({\n              id: inputs.id + '_' + i,\n              char:string[i]\n              }));\n            } \n        }\n    }\n});"
                         },
@@ -20236,8 +20298,8 @@
                     {
                         "id": "5ff0dfae-d254-6ea3-70e7-562761169d9b",
                         "type": "String Format",
-                        "x": 621.4481458042046,
-                        "y": 422.67720117281897,
+                        "x": 821.8546578442875,
+                        "y": 370.6085839478475,
                         "parameters": {
                             "format": "st_{index}"
                         },
@@ -20255,11 +20317,11 @@
                     {
                         "id": "fc2b51f5-3dfb-5939-e7ce-7e86a82f58bc",
                         "type": "Model",
-                        "label": "Mushikun",
-                        "x": 427.730981424065,
-                        "y": 417.6915172002091,
+                        "label": "StoryData",
+                        "x": 647.7538313617516,
+                        "y": 284.3047444056198,
                         "parameters": {
-                            "properties": "ex"
+                            "properties": "ex,sound"
                         },
                         "ports": [],
                         "dynamicports": [
@@ -20272,6 +20334,16 @@
                                 "group": "Properties",
                                 "name": "ex",
                                 "index": 7
+                            },
+                            {
+                                "type": {
+                                    "name": "*",
+                                    "allowConnectionsOnly": true
+                                },
+                                "plug": "input/output",
+                                "group": "Properties",
+                                "name": "sound",
+                                "index": 8
                             }
                         ],
                         "children": []
@@ -20492,6 +20564,69 @@
                                 "name": "startState",
                                 "default": "On",
                                 "index": 19
+                            }
+                        ],
+                        "children": []
+                    },
+                    {
+                        "id": "40746f29-788d-f8ac-1bfd-1aab8cf5e684",
+                        "type": "String Format",
+                        "x": 425.3784631605159,
+                        "y": 301.3749306116387,
+                        "parameters": {
+                            "format": "sound/{path}"
+                        },
+                        "ports": [],
+                        "dynamicports": [
+                            {
+                                "name": "path",
+                                "type": "*",
+                                "plug": "input",
+                                "index": 2
+                            }
+                        ],
+                        "children": []
+                    },
+                    {
+                        "id": "0c8269f8-b797-f69a-0710-f745414b7b1d",
+                        "type": "Expression",
+                        "x": -90.0344426647109,
+                        "y": 241.97051415396447,
+                        "parameters": {
+                            "expression": "currentTime == Duration"
+                        },
+                        "ports": [],
+                        "dynamicports": [
+                            {
+                                "name": "currentTime",
+                                "type": "number",
+                                "plug": "input",
+                                "index": 2
+                            },
+                            {
+                                "name": "Duration",
+                                "type": "number",
+                                "plug": "input",
+                                "index": 3
+                            }
+                        ],
+                        "children": []
+                    },
+                    {
+                        "id": "da9f8e9f-e543-553b-99b2-152f3d9c8498",
+                        "type": "Expression",
+                        "x": -88.21837709601101,
+                        "y": 123.95821205682594,
+                        "parameters": {
+                            "expression": "duration *1000 + 2000"
+                        },
+                        "ports": [],
+                        "dynamicports": [
+                            {
+                                "name": "duration",
+                                "type": "number",
+                                "plug": "input",
+                                "index": 2
                             }
                         ],
                         "children": []

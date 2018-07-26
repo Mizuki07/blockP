@@ -13,11 +13,12 @@ MFRC522 mfrc522(SS_PIN, RST_PIN); // MFRC522のインスタンスを作成
 bool cardset;     // MFRC522にカードが検知されているかどうか
 int timeoutcount; // MFRC522からカードが連続で離れた回数を記録
 
-//const char* ssid = "SPWH_H32_D15FE1";
-//const char* password = "5b2dhen4ag37q75";
+const char* ssid = "SPWH_H32_D15FE1";
+const char* password = "5b2dhen4ag37q75";
 
-const char* ssid = "SPWN_H36_809AD8";
-const char* password = "2aaj4eb805539tj";
+//kisa-wifi
+//const char* ssid = "SPWN_H36_809AD8";
+//const char* password = "2aaj4eb805539tj";
 
 WiFiClient net;
 MQTTClient client;
@@ -100,11 +101,11 @@ void loop() {
     }
     
     if ( strUID.equalsIgnoreCase(END_R) && readFlag == true ){
-        for(int i; i<strNum; i++){
-            if(client.publish("/word", subString[i])){
-            Serial.println("Published");
+        for(int i=0; i<strNum; i++){
+            if(client.publish("/word/char"+ String(i), subString[i])){
+            Serial.println("Published" + subString[i]);
             }
-          }
+          }       
       Serial.println("End");
       
       for(int i; i<strNum; i++){

@@ -18390,6 +18390,12 @@
                         "fromProperty": "name",
                         "toId": "4b859604-b413-1356-c939-058a875ac2ec",
                         "toProperty": "name"
+                    },
+                    {
+                        "fromId": "9b143e28-dff6-d81e-3bd7-4abd0059ee56",
+                        "fromProperty": "itemId",
+                        "toId": "4b859604-b413-1356-c939-058a875ac2ec",
+                        "toProperty": "id"
                     }
                 ],
                 "roots": [
@@ -18398,8 +18404,8 @@
                         "type": "Group",
                         "version": 2,
                         "label": "Root",
-                        "x": 51.96874554708819,
-                        "y": 486.0625089058236,
+                        "x": 73.0056727782619,
+                        "y": 494.6965399928403,
                         "parameters": {},
                         "ports": [],
                         "dynamicports": [],
@@ -18478,8 +18484,8 @@
                     {
                         "id": "3a892177-ef26-a07b-aaff-d131a4a328a6",
                         "type": "String Format",
-                        "x": -147.57816280189843,
-                        "y": 648.1307005572943,
+                        "x": -152.254450340158,
+                        "y": 709.9653895142313,
                         "parameters": {
                             "format": "exp/{exp}.png"
                         },
@@ -18498,10 +18504,10 @@
                         "id": "5e5b01e9-58fc-c768-e0cb-c476f7364791",
                         "type": "Model",
                         "label": "Story text",
-                        "x": -350.3440952202562,
-                        "y": 606.5436052750288,
+                        "x": -381.25410438847683,
+                        "y": 556.3926594338479,
                         "parameters": {
-                            "properties": "text,expression,id,imgpath"
+                            "properties": "text,expression,id,imgpath,sound"
                         },
                         "ports": [],
                         "dynamicports": [
@@ -18544,6 +18550,16 @@
                                 "group": "Properties",
                                 "name": "imgpath",
                                 "index": 10
+                            },
+                            {
+                                "type": {
+                                    "name": "*",
+                                    "allowConnectionsOnly": true
+                                },
+                                "plug": "input/output",
+                                "group": "Properties",
+                                "name": "sound",
+                                "index": 11
                             }
                         ],
                         "children": []
@@ -18551,8 +18567,8 @@
                     {
                         "id": "9b143e28-dff6-d81e-3bd7-4abd0059ee56",
                         "type": "For Each Actions",
-                        "x": -560.6292256006643,
-                        "y": 636.3572190648276,
+                        "x": -693.681165269918,
+                        "y": 618.748537106767,
                         "parameters": {},
                         "ports": [],
                         "dynamicports": [],
@@ -18561,8 +18577,8 @@
                     {
                         "id": "5f98c21e-9377-b277-e3cc-4dee537d3a9e",
                         "type": "String Format",
-                        "x": -152.17451017793132,
-                        "y": 525.6967386701755,
+                        "x": -155.2295714243957,
+                        "y": 613.4710482958345,
                         "parameters": {
                             "format": "bg/{imgpath}"
                         },
@@ -18580,8 +18596,8 @@
                     {
                         "id": "283b7e17-53c0-6571-59ab-d9728b3787d8",
                         "type": "String Format",
-                        "x": -130.21559858098976,
-                        "y": 821.8526616491826,
+                        "x": -145.7994871447515,
+                        "y": 844.5574280945044,
                         "parameters": {
                             "format": "{name}{text}"
                         },
@@ -18605,10 +18621,10 @@
                     {
                         "id": "4b859604-b413-1356-c939-058a875ac2ec",
                         "type": "Javascript2",
-                        "x": -350.64329388181307,
-                        "y": 831.0470044649661,
+                        "x": -354.8454982316029,
+                        "y": 797.4293696666474,
                         "parameters": {
-                            "code": "define({\n    inputs: {\n        id: \"string\",\n        name: \"string\"\n    },\n    outputs: {\n        name: \"string\"\n    },\n    destroy: function(inputs, outputs) {\n\n    },\n    setup: function(inputs, outputs) {\n\n    },\n    run: function(inputs, outputs, changedInputs) {\n        if(inputs.id == \"st_3\"){\n            outputs.name = inputs.name;\n        }else{\n            outputs.name = \"\";\n        }\n    }\n});"
+                            "code": "define({\n    inputs: {\n        id: \"string\",\n        name: \"string\"\n    },\n    outputs: {\n        name: \"string\"\n    },\n    destroy: function(inputs, outputs) {\n\n    },\n    setup: function(inputs, outputs) {\n\n    },\n    run: function(inputs, outputs, changedInputs) {\n        if(inputs.id == \"st_3\"){\n            outputs.name = inputs.name + \"っち、\";\n        }else{\n            outputs.name = \"\";\n        }\n    }\n});"
                         },
                         "ports": [],
                         "dynamicports": [
@@ -18646,8 +18662,8 @@
                         "id": "b3431a67-5f8f-55f9-94ad-762563dafd47",
                         "type": "Globals",
                         "label": "Name",
-                        "x": -564.9994373146458,
-                        "y": 812.4049178808398,
+                        "x": -624.9848101110657,
+                        "y": 803.6373118962687,
                         "parameters": {},
                         "ports": [
                             {
@@ -19141,12 +19157,6 @@
                         "toProperty": "index"
                     },
                     {
-                        "fromId": "ecbb8955-86ec-4391-a3cb-764045fc67df",
-                        "fromProperty": "startTimer",
-                        "toId": "188193d7-2c52-7b79-a2da-70dd8465f754",
-                        "toProperty": "start"
-                    },
-                    {
                         "fromId": "eb458871-e0a8-bfdc-0b23-50f78ad0168b",
                         "fromProperty": "indexChanged",
                         "toId": "ecbb8955-86ec-4391-a3cb-764045fc67df",
@@ -19315,34 +19325,154 @@
                         "toProperty": "sendName"
                     },
                     {
-                        "fromId": "6d211cce-168d-f7d5-0acc-d5b5fb5abf01",
-                        "fromProperty": "messageReceived",
-                        "toId": "203e5884-23aa-e51b-32de-ccfd32ad08e7",
-                        "toProperty": "receivedChar"
-                    },
-                    {
-                        "fromId": "6d211cce-168d-f7d5-0acc-d5b5fb5abf01",
-                        "fromProperty": "word",
-                        "toId": "5ebb7549-6a4b-9dfd-46f1-779cc89691f1",
-                        "toProperty": "modelId"
-                    },
-                    {
-                        "fromId": "5ebb7549-6a4b-9dfd-46f1-779cc89691f1",
-                        "fromProperty": "chara",
-                        "toId": "203e5884-23aa-e51b-32de-ccfd32ad08e7",
-                        "toProperty": "chara"
-                    },
-                    {
                         "fromId": "42b07b30-4630-5728-d6bb-9fe1b1eb910c",
                         "fromProperty": "timerFinished",
                         "toId": "203e5884-23aa-e51b-32de-ccfd32ad08e7",
                         "toProperty": "finished"
                     },
                     {
-                        "fromId": "a8bc6b5d-9977-1146-04ef-4eba7b3cfb8d",
-                        "fromProperty": "touch.tap",
+                        "fromId": "50876487-37f4-b18d-ce23-e6c60a3bd822",
+                        "fromProperty": "word",
+                        "toId": "b1bed1ef-9095-a321-1c52-7bf5badf0d81",
+                        "toProperty": "data2"
+                    },
+                    {
+                        "fromId": "a1211b39-0974-8e28-9123-a5a17e07f7ad",
+                        "fromProperty": "word",
+                        "toId": "b1bed1ef-9095-a321-1c52-7bf5badf0d81",
+                        "toProperty": "data3"
+                    },
+                    {
+                        "fromId": "ae9009b2-8df9-2bd5-938a-62d6d5964f72",
+                        "fromProperty": "word",
+                        "toId": "b1bed1ef-9095-a321-1c52-7bf5badf0d81",
+                        "toProperty": "data4"
+                    },
+                    {
+                        "fromId": "85650f82-7957-d776-5216-7137053b73e4",
+                        "fromProperty": "word",
+                        "toId": "b1bed1ef-9095-a321-1c52-7bf5badf0d81",
+                        "toProperty": "data5"
+                    },
+                    {
+                        "fromId": "6d211cce-168d-f7d5-0acc-d5b5fb5abf01",
+                        "fromProperty": "word",
+                        "toId": "b1bed1ef-9095-a321-1c52-7bf5badf0d81",
+                        "toProperty": "data1"
+                    },
+                    {
+                        "fromId": "b1bed1ef-9095-a321-1c52-7bf5badf0d81",
+                        "fromProperty": "data",
+                        "toId": "203e5884-23aa-e51b-32de-ccfd32ad08e7",
+                        "toProperty": "chara"
+                    },
+                    {
+                        "fromId": "b896d571-8479-8ed1-1821-fd26e8ac51e0",
+                        "fromProperty": "timerFinished",
+                        "toId": "203e5884-23aa-e51b-32de-ccfd32ad08e7",
+                        "toProperty": "receivedChar"
+                    },
+                    {
+                        "fromId": "a1dcfa35-ca63-29ca-7e46-a7c15e552676",
+                        "fromProperty": "messageReceived",
+                        "toId": "b1bed1ef-9095-a321-1c52-7bf5badf0d81",
+                        "toProperty": "received"
+                    },
+                    {
+                        "fromId": "a1dcfa35-ca63-29ca-7e46-a7c15e552676",
+                        "fromProperty": "messageReceived",
+                        "toId": "b896d571-8479-8ed1-1821-fd26e8ac51e0",
+                        "toProperty": "start"
+                    },
+                    {
+                        "fromId": "c07aaeb3-e3e1-7bda-0277-82be62ea4e8a",
+                        "fromProperty": "word",
+                        "toId": "b1bed1ef-9095-a321-1c52-7bf5badf0d81",
+                        "toProperty": "data6"
+                    },
+                    {
+                        "fromId": "be5354fd-094e-cb63-6e55-b2d57c4baa1d",
+                        "fromProperty": "word",
+                        "toId": "b1bed1ef-9095-a321-1c52-7bf5badf0d81",
+                        "toProperty": "data7"
+                    },
+                    {
+                        "fromId": "40445140-65df-3a98-b92a-b167f0ddbbf7",
+                        "fromProperty": "word",
+                        "toId": "b1bed1ef-9095-a321-1c52-7bf5badf0d81",
+                        "toProperty": "data8"
+                    },
+                    {
+                        "fromId": "6e7122ea-31c8-b58c-58d9-6a22f269eed8",
+                        "fromProperty": "word",
+                        "toId": "b1bed1ef-9095-a321-1c52-7bf5badf0d81",
+                        "toProperty": "data9"
+                    },
+                    {
+                        "fromId": "a1dcfa35-ca63-29ca-7e46-a7c15e552676",
+                        "fromProperty": "word",
+                        "toId": "b1bed1ef-9095-a321-1c52-7bf5badf0d81",
+                        "toProperty": "data10"
+                    },
+                    {
+                        "fromId": "a1dcfa35-ca63-29ca-7e46-a7c15e552676",
+                        "fromProperty": "messageReceived",
                         "toId": "203e5884-23aa-e51b-32de-ccfd32ad08e7",
                         "toProperty": "deleteChara"
+                    },
+                    {
+                        "fromId": "2e05d447-f8b3-c932-0757-1c392988fed4",
+                        "fromProperty": "index",
+                        "toId": "203e5884-23aa-e51b-32de-ccfd32ad08e7",
+                        "toProperty": "qNum"
+                    },
+                    {
+                        "fromId": "ecbb8955-86ec-4391-a3cb-764045fc67df",
+                        "fromProperty": "startTimer",
+                        "toId": "188193d7-2c52-7b79-a2da-70dd8465f754",
+                        "toProperty": "start"
+                    },
+                    {
+                        "fromId": "fc2b51f5-3dfb-5939-e7ce-7e86a82f58bc",
+                        "fromProperty": "sound",
+                        "toId": "1e2ec68e-f983-39c0-8a2c-c674f2882f2f",
+                        "toProperty": "path"
+                    },
+                    {
+                        "fromId": "1e2ec68e-f983-39c0-8a2c-c674f2882f2f",
+                        "fromProperty": "formatted",
+                        "toId": "80cdf0ac-b03d-0c81-0f3d-111e60fde51d",
+                        "toProperty": "videoPath"
+                    },
+                    {
+                        "fromId": "80cdf0ac-b03d-0c81-0f3d-111e60fde51d",
+                        "fromProperty": "currentTime",
+                        "toId": "f169779a-dcac-047b-b0db-e0304ddf796b",
+                        "toProperty": "currentTime"
+                    },
+                    {
+                        "fromId": "80cdf0ac-b03d-0c81-0f3d-111e60fde51d",
+                        "fromProperty": "duration",
+                        "toId": "f169779a-dcac-047b-b0db-e0304ddf796b",
+                        "toProperty": "Duration"
+                    },
+                    {
+                        "fromId": "f169779a-dcac-047b-b0db-e0304ddf796b",
+                        "fromProperty": "result",
+                        "toId": "80cdf0ac-b03d-0c81-0f3d-111e60fde51d",
+                        "toProperty": "pause"
+                    },
+                    {
+                        "fromId": "80cdf0ac-b03d-0c81-0f3d-111e60fde51d",
+                        "fromProperty": "duration",
+                        "toId": "50e75b4c-1a1c-0ae5-ddc3-0332f4d417d2",
+                        "toProperty": "duration"
+                    },
+                    {
+                        "fromId": "50e75b4c-1a1c-0ae5-ddc3-0332f4d417d2",
+                        "fromProperty": "result",
+                        "toId": "188193d7-2c52-7b79-a2da-70dd8465f754",
+                        "toProperty": "duration"
                     }
                 ],
                 "roots": [
@@ -19358,14 +19488,34 @@
                         "dynamicports": [],
                         "children": [
                             {
-                                "id": "eb458871-e0a8-bfdc-0b23-50f78ad0168b",
-                                "type": "Scroll View",
+                                "id": "80cdf0ac-b03d-0c81-0f3d-111e60fde51d",
+                                "type": "Video",
                                 "x": 20,
                                 "y": 97,
                                 "parameters": {
+                                    "width": {
+                                        "value": 1,
+                                        "unit": "px"
+                                    },
+                                    "height": {
+                                        "value": 1,
+                                        "unit": "px"
+                                    },
+                                    "autoplay": true
+                                },
+                                "ports": [],
+                                "dynamicports": [],
+                                "children": []
+                            },
+                            {
+                                "id": "eb458871-e0a8-bfdc-0b23-50f78ad0168b",
+                                "type": "Scroll View",
+                                "x": 20,
+                                "y": 219,
+                                "parameters": {
                                     "snap": "item",
                                     "scrollAxis": "0",
-                                    "touchPropagation": true,
+                                    "touchPropagation": false,
                                     "scrollDuration": 5000,
                                     "scrollToIndex.duration": 2000
                                 },
@@ -19474,39 +19624,14 @@
                                         "ports": [],
                                         "dynamicports": [],
                                         "children": []
-                                    },
-                                    {
-                                        "id": "a8bc6b5d-9977-1146-04ef-4eba7b3cfb8d",
-                                        "type": "Image",
-                                        "version": 2,
-                                        "x": 20,
-                                        "y": 322,
-                                        "parameters": {
-                                            "image": "delete.png.png",
-                                            "alignY": "bottom",
-                                            "alignX": "center",
-                                            "sizeMode": "explicit",
-                                            "width": {
-                                                "value": 400,
-                                                "unit": "px"
-                                            },
-                                            "height": {
-                                                "value": 120,
-                                                "unit": "px"
-                                            },
-                                            "y": -20
-                                        },
-                                        "ports": [],
-                                        "dynamicports": [],
-                                        "children": []
                                     }
                                 ]
                             },
                             {
                                 "id": "b55ebf08-78f5-5ef8-bc05-24ac69f3f80e",
                                 "type": "Circle",
-                                "x": 169.50285341233712,
-                                "y": 977.8862269602812,
+                                "x": 20,
+                                "y": 720,
                                 "parameters": {
                                     "width": {
                                         "value": 720,
@@ -19588,8 +19713,8 @@
                     {
                         "id": "06357783-322b-2481-67c3-557133c6f689",
                         "type": "Component Inputs",
-                        "x": 195.893098583574,
-                        "y": -71.72895139095519,
+                        "x": 486.2905050307377,
+                        "y": -193.00754721994312,
                         "parameters": {},
                         "ports": [
                             {
@@ -19632,8 +19757,8 @@
                         "id": "2e05d447-f8b3-c932-0757-1c392988fed4",
                         "type": "Javascript2",
                         "label": "Javascript",
-                        "x": 502.81325933511914,
-                        "y": 150.1378586240429,
+                        "x": 570.4617529566352,
+                        "y": 56.19101306568189,
                         "parameters": {
                             "code": "define({\n    inputs: {\n        goToNext: \"boolean\",\n        indexChanged:\"boolean\",\n        init:\"boolean\"\n    },\n    outputs: {\n        goto: \"boolean\",\n        index:'number'\n    },\n    destroy: function(inputs, outputs) {\n\n    },\n    setup: function(inputs, outputs) {\n        this.index = 0;\n    },\n    run: function(inputs, outputs, changedInputs) {\n        \n        if(inputs.init){\n            this.index = 0;\n            outputs.index=0;\n            this.sendSignalOnOutput('goto');\n        }\n        \n        if(inputs.goToNext){\n            this.index ++;\n        }\n        outputs.index = this.index;\n        this.sendSignalOnOutput('goto');\n        \n    }\n});"
                         },
@@ -19691,10 +19816,10 @@
                         "id": "94ca5bec-d6e5-626d-88ee-93e11cf5844a",
                         "type": "Static Data",
                         "label": "Story Data",
-                        "x": -340.2053996281578,
-                        "y": 191.7696644707657,
+                        "x": -216.06996905207365,
+                        "y": 492.0388021588523,
                         "parameters": {
-                            "csv": "id,text,imgpath,ex\nst_1,\"僕は「タロムシ」。キミの名前は？ボビンを転がして教えてね\",story_togou01_01.png,komoji02.png\nst_2,君の名前は,story_togou01_02.png,komoji01.png\nst_3,こんにちは！,story_togou01_03.png,komoji02.png\nst_4,これからお花畑に行くんだけど一緒に行かない？,story_togou01_04.png,komoji04.png\nst_5,この「みち」をまっすぐだよ,story_togou02_01.png,komoji01.png\nst_6,あっ！「もり」が見えてきたね,story_togou02_02.png,komoji01.png\nst_7,あの森の中でひとやすみしよう,story_togou02_03.png,komoji01.png\nst_8,\"お腹が空いたなあ、「りんご」を探そうよ\",story_togou02_04.png,komoji01.png\nst_9,\"おなかもいっぱいになったことだし先に進もう！\",story_togou03_01.png,komoji03.png\nst_10,「かわ」が見えてきたね,story_togou03_02.png,komoji01.png\nst_11,渡れそうにないね、だれか道を知らないかな,story_togou03_03.png,komoji05.png\nst_12,\"あ、あそこに「しっぽ」が見えているよ。誰のだろう？\",story_togou03_04.png,komoji04.png\nst_13,あ！「りす」さんだ！話しかけてみようよ！,story_togou04_01.png,komoji01.png\nst_14,\"りすさん！りすさん！川を渡りたいんだけど道を知らないかい？\",story_togou04_02.png,komoji01.png\nst_15,おいら、知ってるぜ！あっちの方向に「はし」があるよ！そこからきっと渡れるさ！,story_togou04_03.png,komoji01.png\nst_16,「ありがとう」りすさん！行ってみるよ！,story_togou04_04.png,komoji01.png\nst_17,橋はこっちだね、行こう,story_togou05_01.png,komoji01.png\nst_18,あ、「とり」さんだ！,story_togou05_02.png,komoji02.png\nst_19,とりさん、素敵な「はな」を持ってるね,story_togou05_03.png,komoji01.png\nst_20,そうでしょ？この先にそれは美しいお花畑あってね。そこから分けてもらったのさ,story_togou05_04.png,komoji04.png\nst_21,僕たちもお花畑に向かっているところさ！,story_togou06_01.png,komoji01.png\nst_22,\"それなら、もうすぐそこさ！楽しんでおいで！\",story_togou06_02.png,komoji01.png\nst_23,\"わあ！！みてごらん！とても素敵なお花畑だね！\",story_togou06_03.png,komoji02.png\nst_24,今日はとても楽しかった！また、来ようね！,story_togou06_04.png,komoji01.png"
+                            "csv": "id,text,imgpath,ex,sound\nst_1,\"僕は「こもじー」。キミの名前は？文字を並べて教えてね\",story_togou01_01.png,komoji02.png,n01.mp3\nst_2,君の名前は,story_togou01_02.png,komoji01.png,\"\"\nst_3,こんにちは！,story_togou01_03.png,komoji02.png,n03.mp3\nst_4,これからお花畑に行くんだけど一緒に行かない？,story_togou01_04.png,komoji04.png,n04.mp3\nst_5,この「みち」をまっすぐだよ,story_togou02_01.png,komoji01.png,n05.mp3\nst_6,あっ！「もり」が見えてきたね,story_togou02_02.png,komoji01.png,n06.mp3\nst_7,あの森の中でひとやすみしよう,story_togou02_03.png,komoji01.png,n07.mp3\nst_8,\"お腹が空いたなあ、「りんご」を探そうよ\",story_togou02_04.png,komoji01.png,n08.mp3\nst_9,\"おなかもいっぱいになったことだし先に進もう！\",story_togou03_01.png,komoji03.png,n09.mp3\nst_10,「かわ」が見えてきたね,story_togou03_02.png,komoji01.png,n10.mp3\nst_11,渡れそうにないね、だれか道を知らないかな,story_togou03_03.png,komoji05.png,n11.mp3\nst_12,\"あ、あそこに「しっぽ」が見えているよ。誰のだろう？\",story_togou03_04.png,komoji04.png,n12.mp3\nst_13,あ！「りす」さんだ！話しかけてみようよ！,story_togou04_01.png,komoji01.png,n13.mp3\nst_14,\"りすさん！りすさん！川を渡りたいんだけど道を知らないかい？\",story_togou04_02.png,komoji01.png,n14.mp3\nst_15,おいら、知ってるぜ！あっちの方向に「はし」があるよ！そこからきっと渡れるさ！,story_togou04_03.png,komoji01.png,n15.mp3\nst_16,「ありがとう」りすさん！行ってみるよ！,story_togou04_04.png,komoji01.png,n16.mp3\nst_17,橋はこっちだね、行こう,story_togou05_01.png,komoji01.png,n17.mp3\nst_18,あ、「とり」さんだ！,story_togou05_02.png,komoji02.png,n18.mp3\nst_19,とりさん、素敵な「はな」を持ってるね,story_togou05_03.png,komoji01.png,n19.mp3\nst_20,そうでしょ？この先にそれは美しいお花畑あってね。そこから分けてもらったのよ,story_togou05_04.png,komoji04.png,n20.mp3\nst_21,僕たちもお花畑に向かっているところさ！,story_togou06_01.png,komoji01.png,n21.mp3\nst_22,\"それなら、もうすぐそこよ！楽しんでおいで！\",story_togou06_02.png,komoji01.png,n22.mp3\nst_23,\"わあ！！みてごらん！とても素敵なお花畑だね！\",story_togou06_03.png,komoji02.png,n23.mp3\nst_24,今日はとても楽しかった！また、来ようね！,story_togou06_04.png,komoji01.png,n24.mp3\nst_25,おしまい,fin.png,komoji01.png,fin.mp3"
                         },
                         "ports": [],
                         "dynamicports": [],
@@ -19704,8 +19829,8 @@
                         "id": "b20b6244-aad5-2d1c-0b98-e675b6d93fa9",
                         "type": "Static Data",
                         "label": "question",
-                        "x": -702.7905806577847,
-                        "y": 266.5500698718369,
+                        "x": -705.0112868736104,
+                        "y": -8.817500890546839,
                         "parameters": {
                             "type": "json",
                             "csv": "りんご,みかん,くま,うみ",
@@ -19719,11 +19844,11 @@
                         "id": "4d66a913-462a-8f93-9108-b95b14ca0601",
                         "type": "Static Data",
                         "label": "charactor",
-                        "x": -699.9195553509606,
-                        "y": 200.54518967899057,
+                        "x": -702.1402615667863,
+                        "y": -74.82238108339318,
                         "parameters": {
                             "type": "csv",
-                            "csv": "chara,id,imgPath\r\nあ,04 63 cc ca 4c 58 81,chara/1.png\r\nい,04 45 cc ca 4c 58 81,chara/2.png\r\nう,04 79 cd ca 4c 58 81,chara/3.png\r\nえ,04 64 cc ca 4c 58 81,chara/4.png\r\nお,04 5b cd ca 4c 58 81,chara/5.png\r\nか,04 78 cd ca 4c 58 81,chara/6.png\r\nき,04 3d cd ca 4c 58 81,chara/7.png\r\nく,04 5a cd ca 4c 58 81,chara/8.png\r\nけ,04 1f cd ca 4c 58 81,chara/9.png\r\nこ,04 3c cd ca 4c 58 81,chara/10.png\r\nさ,04 7f 77 d2 c7 55 81,chara/11.png\r\nし,04 70 77 d2 c7 55 81,chara/12.png\r\nす,04 61 77 d2 c7 55 81,chara/13.png\r\nせ,04 52 77 d2 c7 55 81,chara/14.png\r\nそ,04 43 77 d2 c7 55 81,chara/15.png\r\nた,04 69 76 d2 c7 55 80,chara/16.png\r\nち,04 78 76 d2 c7 55 80,chara/17.png\r\nつ,04 89 76 d2 c7 55 80,chara/18.png\r\nて,04 9a 76 d2 c7 55 80,chara/19.png\r\nと,04 a9 76 d2 c7 55 80,chara/20.png\r\nな,04 5c 77 d2 c7 55 80,chara/21.png\r\nに,04 6c 77 d2 c7 55 80,chara/22.png\r\nぬ,04 7b 77 d2 c7 55 80,chara/23.png\r\nね,04 8a 77 d2 c7 55 80,chara/24.png\r\nの,04 99 77 d2 c7 55 80,chara/25.png\r\nは,04 11 77 d2 c7 55 80,chara/26.png\r\nひ,04 20 77 d2 c7 55 80,chara/27.png\r\nふ,04 2f 77 d2 c7 55 80,chara/28.png\r\nへ,04 3e 77 d2 c7 55 80,chara/29.png\r\nほ,04 4d 77 d2 c7 55 80,chara/30.png\r\nま,04 c5 cd ca 4c 58 80,chara/31.png\r\nみ,04 00 cd ca 4c 58 81,chara/32.png\r\nむ,04 e3 cd ca 4c 58 80,chara/33.png\r\nめ,04 1e cd ca 4c 58 81,chara/34.png\r\nも,04 01 cd ca 4c 58 81,chara/35.png\r\nや,04 a6 cd ca 4c 58 80,chara/36.png\r\nゆ,04 89 cd ca 4c 58 80,chara/37.png\r\nよ,04 c4 cd ca 4c 58 80,chara/38.png\r\nら,04 a7 cd ca 4c 58 80,chara/39.png\r\nり,04 e2 cd ca 4c 58 80,chara/40.png\r\nる,04 0b 0f c2 4c 58 85,chara/41.png\r\nれ,04 cb 0f c2 4c 58 84,chara/42.png\r\nろ,04 eb 0f c2 4c 58 84,chara/43.png\r\nわ,04 ad 0f c2 4c 58 84,chara/44.png\r\nを,04 ca 0f c2 4c 58 84,chara/45.png\r\nん,04 05 0e c2 4c 58 85,chara/46.png\r\nゃ,04 e5 0e c2 4c 58 84,chara/47.png\r\nゅ,04 0c 0f c2 4c 58 85,chara/48.png\r\nょ,04 06 0e c2 4c 58 85,chara/49.png\r\nっ,04 ec 0f c2 4c 58 84,chara/50.png\r\n゛,04 fa f9 c2 4c 58 80,chara/51.png\r\n゜,04 dd f9 c2 4c 58 80,chara/52.png\r\nー,04 18 f9 c2 4c 58 81,chara/53.png",
+                            "csv": "chara,id,imgPath\r\nあ,04 ad 71 ca 4c 58 80,chara/1.png\r\nい,04 e9 71 ca 4c 58 80,chara/2.png\r\nう,04 cc 71 ca 4c 58 80,chara/3.png\r\nえ,04 08 71 ca 4c 58 81,chara/4.png\r\nお,04 ea 71 ca 4c 58 80,chara/5.png\r\nか,04 26 71 ca 4c 58 81,chara/6.png\r\nき,04 09 71 ca 4c 58 81,chara/7.png\r\nく,04 44 71 ca 4c 58 81,chara/8.png\r\nけ,04 27 71 ca 4c 58 81,chara/9.png\r\nこ,04 62 71 ca 4c 58 81,chara/10.png\r\nさ,04 f4 05 c2 4c 58 84,chara/11.png\r\nし,04 b7 05 c2 4c 58 84,chara/12.png\r\nす,04 d6 05 c2 4c 58 84,chara/13.png\r\nせ,04 97 05 c2 4c 58 84,chara/14.png\r\nそ,04 b6 05 c2 4c 58 84,chara/15.png\r\nた,04 01 0a ca 4c 58 81,chara/16.png\r\nち,04 c6 0a ca 4c 58 80,chara/17.png\r\nつ,04 e3 0a ca 4c 58 80,chara/18.png\r\nて,04 a6 0a ca 4c 58 80,chara/19.png\r\nと,04 c5 0a ca 4c 58 80,chara/20.png\r\nな,04 d8 0a c2 4c 58 84,chara/21.png\r\nに,04 f5 0a c2 4c 58 84,chara/22.png\r\nぬ,04 b7 0a c2 4c 58 84,chara/23.png\r\nね,04 d7 0a c2 4c 58 84,chara/24.png\r\nの,04 97 0a c2 4c 58 84,chara/25.png\r\nは,04 2b 07 c2 4c 58 85,chara/26.png\r\nひ,04 f6 06 c2 4c 58 84,chara/27.png\r\nふ,04 15 06 c2 4c 58 85,chara/28.png\r\nへ,04 d8 06 c2 4c 58 84,chara/29.png\r\nほ,04 f5 06 c2 4c 58 84,chara/30.png\r\nま,04 0b 07 c2 4c 58 85,chara/31.png\r\nみ,04 ec 07 c2 4c 58 84,chara/32.png\r\nむ,04 2a 07 c2 4c 58 85,chara/33.png\r\nめ,04 0c 07 c2 4c 58 85,chara/34.png\r\nも,04 16 06 c2 4c 58 85,chara/35.png\r\nや,04 8e 07 c2 4c 58 84,chara/36.png\r\nゆ,04 cb 07 c2 4c 58 84,chara/37.png\r\nよ,04 ae 07 c2 4c 58 84,chara/38.png\r\nら,04 eb 07 c2 4c 58 84,chara/39.png\r\nり,04 ce 07 c2 4c 58 84,chara/40.png\r\nる,04 79 05 c2 4c 58 84,chara/41.png\r\nれ,04 96 05 c2 4c 58 84,chara/42.png\r\nろ,04 79 06 c2 4c 58 84,chara/43.png\r\nわ,04 78 05 c2 4c 58 84,chara/44.png\r\nを,04 97 06 c2 4c 58 84,chara/45.png\r\nん,04 bc 0c c2 4c 58 84,chara/46.png\r\nゃ,04 db 0c c2 4c 58 84,chara/47.png\r\nゅ,04 9e 0c c2 4c 58 84,chara/48.png\r\nょ,04 bb 0c c2 4c 58 84,chara/49.png\r\nっ,04 7e 0c c2 4c 58 84,chara/50.png\r\n゛,04 ad 07 c2 4c 58 84,chara/51.png\r\n゜,04 6f 07 c2 4c 58 84,chara/52.png\r\nー,04 8d 07 c2 4c 58 84,chara/53.png",
                             "json": "[\n    {\n        \"id\" :\"q0\",\n        \"question\" :\"みち\"\n    }\n]"
                         },
                         "ports": [],
@@ -19733,8 +19858,8 @@
                     {
                         "id": "b750a9c2-bd19-ad7b-e290-3c8408d4a874",
                         "type": "Collection",
-                        "x": -97.5848931116241,
-                        "y": 184.64436821980962,
+                        "x": -8.39055390390385,
+                        "y": 492.8454466073375,
                         "parameters": {
                             "collectionId": "Scene"
                         },
@@ -19746,11 +19871,11 @@
                         "id": "188193d7-2c52-7b79-a2da-70dd8465f754",
                         "type": "Timer",
                         "label": "Timer",
-                        "x": -262.4127380447844,
-                        "y": -13.28532876275888,
+                        "x": 117.99032189040989,
+                        "y": -129.33380158051452,
                         "parameters": {
-                            "duration": 5000,
-                            "startDelay": 0
+                            "startDelay": 2000,
+                            "duration": 5000
                         },
                         "ports": [],
                         "dynamicports": [],
@@ -19760,10 +19885,10 @@
                         "id": "ecbb8955-86ec-4391-a3cb-764045fc67df",
                         "type": "Javascript2",
                         "label": "If",
-                        "x": -413.7986604150059,
-                        "y": 336.17037261939964,
+                        "x": -303.7054573309227,
+                        "y": -6.079130171962447,
                         "parameters": {
-                            "code": "define({\n    inputs: {\n        index: \"number\",\n        finished:\"boolean\",\n        started:\"boolean\",\n        changed:\"boolean\",\n        showed:\"boolean\"\n    },\n    outputs: {\n        startTimer: \"boolean\",\n        visible:\"boolean\",\n        userName:\"boolean\"\n    },\n    destroy: function(inputs, outputs) {\n\n    },\n    setup: function(inputs, outputs) {\n        outputs.startTimer = false;\n        outputs.visible= false;\n        outputs.userName = false;\n    },\n    run: function(inputs, outputs, changedInputs) {\n        if( inputs.index === 1 && inputs.showed ||\n            inputs.index === 3||\n            inputs.index === 4 ||\n            inputs.index === 7 ||\n            inputs.index === 9 ||\n            inputs.index === 11 ||\n            inputs.index === 12 ||\n            inputs.index === 14 ||\n            inputs.index === 17 ||\n            inputs.index === 20 ||\n            inputs.index >= 20\n            ){\n                outputs.userName = false;\n                outputs.visible = false;\n            if(inputs.changed || inputs.started){\n                outputs.startTimer = true;  \n            }\n            outputs.userName = false;\n        }else if(inputs.index === 2){\n            outputs.userName = true;\n            outputs.visible = false;\n        }else{\n            outputs.startTimer = false;\n            outputs.visible = true;\n            outputs.userName = false;\n        }\n        \n        if(inputs.finished){\n            outputs.startTimer = false;\n        }\n    }\n});",
+                            "code": "define({\n    inputs: {\n        index: \"number\",\n        finished:\"boolean\",\n        started:\"boolean\",\n        changed:\"boolean\",\n        showed:\"boolean\"\n    },\n    outputs: {\n        startTimer: \"boolean\",\n        visible:\"boolean\",\n        userName:\"boolean\"\n    },\n    destroy: function(inputs, outputs) {\n\n    },\n    setup: function(inputs, outputs) {\n        outputs.startTimer = false;\n        outputs.visible= false;\n        outputs.userName = false;\n    },\n    run: function(inputs, outputs, changedInputs) {\n        if( inputs.index === 1 && inputs.showed ||\n            inputs.index === 3||\n            inputs.index === 4 ||\n            inputs.index === 7 ||\n            inputs.index === 9 ||\n            inputs.index === 11 ||\n            inputs.index === 12 ||\n            inputs.index === 14 ||\n            inputs.index === 17 ||\n            inputs.index === 20 ||\n            inputs.index >= 20\n            ){\n                outputs.userName = false;\n                outputs.visible = false;\n            if(inputs.changed || inputs.started){\n                outputs.startTimer = true;  \n            }\n            outputs.userName = false;\n        }else if(inputs.index === 2){\n            outputs.userName = true;\n            outputs.visible = false;\n            outputs.startTimer = false;\n        }else{\n            outputs.startTimer = false;\n            outputs.visible = true;\n            outputs.userName = false;\n        }\n        \n        if(inputs.finished){\n            outputs.startTimer = false;\n        }\n    }\n});",
                             "changed": false
                         },
                         "ports": [],
@@ -19846,8 +19971,8 @@
                     {
                         "id": "d6e03676-0e95-4654-bd4e-8b3c0efa4495",
                         "type": "Expression",
-                        "x": 797.580574928642,
-                        "y": 427.858538354492,
+                        "x": 795.8945388308401,
+                        "y": 222.16213442265348,
                         "parameters": {
                             "expression": "index +1"
                         },
@@ -19866,10 +19991,10 @@
                         "id": "203e5884-23aa-e51b-32de-ccfd32ad08e7",
                         "type": "Javascript2",
                         "label": "Jadgement",
-                        "x": -193.68147777340573,
-                        "y": 799.780586322685,
+                        "x": -52.96040836359299,
+                        "y": 708.356354335457,
                         "parameters": {
-                            "code": "var str = \"\";\nvar lastChar = \"\";\ndefine({\n    inputs: {\n        quest:\"string\",\n        qNum:\"string\",\n        deleteChara:\"boolean\",\n        chara: \"string\",\n        finished:\"boolean\",\n        sendName:\"boolean\",\n        receivedChar:\"boolean\"\n    },\n    outputs: {\n        goToNext:\"boolean\",\n        word:\"string\",\n        name:\"string\",\n        count:\"number\"\n    },\n    destroy: function(inputs, outputs) {\n\n    },\n    setup: function(inputs, outputs) {\n        outputs.count= 0;\n    },\n    run: function(inputs, outputs, changedInputs) {\n\n        if(inputs.quest === outputs.word || inputs.sendName){\n            outputs.goToNext = true;\n        }else{\n            outputs.goToNext = false;\n        }\n        \n        if(inputs.chara && inputs.chara !== lastChar && inputs.receivedChar){\n            str = str + inputs.chara;\n            outputs.word = str;\n            lastChar = inputs.chara;\n            console.log(outputs.word);\n        }\n        \n        if(inputs.finished || inputs.deleteChara){\n          str= \"\";\n          inputs.chara = \"\";\n          outputs.word = \"\";\n        }\n    }\n});",
+                            "code": "var str = \"\";\nvar lastChar = \"\";\ndefine({\n    inputs: {\n        quest:\"string\",\n        qNum:\"number\",\n        deleteChara:\"boolean\",\n        chara: \"style\",\n        finished:\"boolean\",\n        sendName:\"boolean\",\n        receivedChar:\"boolean\"\n    },\n    outputs: {\n        goToNext:\"boolean\",\n        word:\"string\",\n        name:\"string\",\n        count:\"number\"\n    },\n    destroy: function(inputs, outputs) {\n\n    },\n    setup: function(inputs, outputs) {\n        outputs.count= 0;\n    },\n    run: function(inputs, outputs, changedInputs) {\n\n        if(inputs.quest === outputs.word || inputs.sendName){\n            outputs.goToNext = true;\n        }else{\n            outputs.goToNext = false;\n        }\n        \n        if(inputs.receivedChar){\n            for(var i=0; i<10; i++){\n                if(inputs.chara[i] !== undefined){\n                    str = str + inputs.chara[i];\n                }\n            }\n            outputs.word = str;\n            console.log(outputs.word);\n        }\n        \n        if(inputs.finished || inputs.deleteChara){\n            str= \"\";\n            for(var r=0; r<10; r++){\n                inputs.chara[r]=\"\";\n            }\n            outputs.word = \"\";\n        }\n        \n        if(inputs.qNum === 1 && inputs.sendName){\n            outputs.name = outputs.word;\n        }\n        \n    }\n    \n});\n\n",
                             "useExternalFile": "no"
                         },
                         "ports": [],
@@ -19887,7 +20012,7 @@
                                 "name": "qNum",
                                 "plug": "input",
                                 "type": {
-                                    "name": "string"
+                                    "name": "number"
                                 },
                                 "group": "Inputs",
                                 "index": 3
@@ -19905,7 +20030,7 @@
                                 "name": "chara",
                                 "plug": "input",
                                 "type": {
-                                    "name": "string"
+                                    "name": "style"
                                 },
                                 "group": "Inputs",
                                 "index": 5
@@ -19979,8 +20104,8 @@
                     {
                         "id": "877a98ab-19bf-7bf5-2116-8e9cd251103c",
                         "type": "Model",
-                        "x": 514.5588658829718,
-                        "y": 740.1776328651231,
+                        "x": 658.9047699116406,
+                        "y": 766.8261074550312,
                         "parameters": {
                             "properties": "question",
                             "modelId": ""
@@ -20023,8 +20148,8 @@
                         "id": "42b07b30-4630-5728-d6bb-9fe1b1eb910c",
                         "type": "Timer",
                         "label": "1sec",
-                        "x": -652.5879140982005,
-                        "y": 1139.5409210359805,
+                        "x": -388.1828118386257,
+                        "y": 1010.7629621616031,
                         "parameters": {
                             "duration": 1000
                         },
@@ -20035,8 +20160,8 @@
                     {
                         "id": "abdacab1-211e-0785-cd8d-55cd079e1e1a",
                         "type": "Javascript2",
-                        "x": 991.3747490199155,
-                        "y": 725.9766868728279,
+                        "x": 924.7535625451452,
+                        "y": 768.1701049735159,
                         "parameters": {
                             "code": "define({\n    inputs: {\n        word: \"string\",\n        id:\"string\",\n        index:\"number\",\n        charList:\"collection\"\n    },\n    outputs: {\n        charList: \"collection\",\n    },\n    destroy: function(inputs, outputs) {\n\n    },\n    setup: function(inputs, outputs) {\n        var myCollection;\n    },\n    run: function(inputs, outputs, changedInputs) {\n        var collection = Noodl.Collection.get(inputs.id);\n        var itemId;\n        if(inputs.index > 4){\n            var string = inputs.word.split(\"\");\n            for(var i=0; i<string.length; i++){\n              collection.add(Noodl.Model.create({\n              id: inputs.id + '_' + i,\n              char:string[i]\n              }));\n            } \n        }\n    }\n});"
                         },
@@ -20093,8 +20218,8 @@
                     {
                         "id": "1ab4dd5f-a1a3-a301-5f18-1657e5bee52d",
                         "type": "Text Input",
-                        "x": 786.4350949645797,
-                        "y": 969.4076143726604,
+                        "x": 444.44633772742566,
+                        "y": 807.296060617386,
                         "parameters": {
                             "text": "",
                             "fontFamily": "YuGothic"
@@ -20119,8 +20244,8 @@
                     {
                         "id": "5ff0dfae-d254-6ea3-70e7-562761169d9b",
                         "type": "String Format",
-                        "x": 621.4481458042046,
-                        "y": 422.67720117281897,
+                        "x": 524.3830531007362,
+                        "y": 422.16888806234067,
                         "parameters": {
                             "format": "st_{index}"
                         },
@@ -20138,11 +20263,11 @@
                     {
                         "id": "fc2b51f5-3dfb-5939-e7ce-7e86a82f58bc",
                         "type": "Model",
-                        "label": "Mushikun",
-                        "x": 427.730981424065,
-                        "y": 417.6915172002091,
+                        "label": "StoryData",
+                        "x": 582.1988051800508,
+                        "y": 232.93575594360607,
                         "parameters": {
-                            "properties": "ex"
+                            "properties": "ex,sound"
                         },
                         "ports": [],
                         "dynamicports": [
@@ -20155,6 +20280,16 @@
                                 "group": "Properties",
                                 "name": "ex",
                                 "index": 7
+                            },
+                            {
+                                "type": {
+                                    "name": "*",
+                                    "allowConnectionsOnly": true
+                                },
+                                "plug": "input/output",
+                                "group": "Properties",
+                                "name": "sound",
+                                "index": 8
                             }
                         ],
                         "children": []
@@ -20163,8 +20298,8 @@
                         "id": "7bf9ab7a-0c68-0e00-b52e-7140f6c95157",
                         "type": "Globals",
                         "label": "Name",
-                        "x": -522.525991981495,
-                        "y": 947.160774604221,
+                        "x": -414.133248131598,
+                        "y": 879.1430259057171,
                         "parameters": {},
                         "ports": [
                             {
@@ -20182,8 +20317,8 @@
                     {
                         "id": "8d997148-a169-c177-9a72-633e0fa861cb",
                         "type": "States",
-                        "x": -338.2524249081326,
-                        "y": 1189.3584186690305,
+                        "x": -99.22659084634674,
+                        "y": 1023.7287922293751,
                         "parameters": {
                             "states": "On,Off",
                             "values": "Opacity",
@@ -20382,10 +20517,10 @@
                     {
                         "id": "6d211cce-168d-f7d5-0acc-d5b5fb5abf01",
                         "type": "Receive Message",
-                        "x": -778.2662594409246,
-                        "y": 842.4624202470883,
+                        "x": -733.3823118581049,
+                        "y": 82.9474715175141,
                         "parameters": {
-                            "topic": "/word"
+                            "topic": "/word/char0"
                         },
                         "ports": [
                             {
@@ -20403,24 +20538,415 @@
                         "children": []
                     },
                     {
-                        "id": "5ebb7549-6a4b-9dfd-46f1-779cc89691f1",
-                        "type": "Model",
-                        "x": -491.6664914362095,
-                        "y": 781.2955437032048,
+                        "id": "b1bed1ef-9095-a321-1c52-7bf5badf0d81",
+                        "type": "Javascript2",
+                        "label": "Parse",
+                        "x": -433.35333864879766,
+                        "y": 384.9533112232722,
                         "parameters": {
-                            "properties": "chara"
+                            "code": "var data;\nvar word;\n\ndefine({\n    inputs: {\n        data1: \"string\",\n        data2: \"string\",\n        data3: \"string\",\n        data4: \"string\",\n        data5: \"string\",\n        data6: \"string\",\n        data7: \"string\",\n        data8: \"string\",\n        data9: \"string\",\n        data10: \"string\",\n        received:\"boolean\",\n        timer:\"boolean\"\n    },\n    outputs: {\n        data:\"style\"\n    },\n    destroy: function(inputs, outputs) {\n    },\n    setup: function(inputs, outputs) {\n    },\n    run: function(inputs, outputs, changedInputs) {\n        outputs.data = [Noodl.Model.get(inputs.data1).data.chara,Noodl.Model.get(inputs.data2).data.chara,Noodl.Model.get(inputs.data3).data.chara,Noodl.Model.get(inputs.data4).data.chara,Noodl.Model.get(inputs.data5).data.chara,Noodl.Model.get(inputs.data6).data.chara,Noodl.Model.get(inputs.data7).data.chara,Noodl.Model.get(inputs.data8).data.chara,Noodl.Model.get(inputs.data9).data.chara,Noodl.Model.get(inputs.data10).data.chara];\n       \n    }\n});",
+                            "useExternalFile": "no"
                         },
                         "ports": [],
                         "dynamicports": [
                             {
+                                "name": "data1",
+                                "plug": "input",
+                                "type": {
+                                    "name": "string"
+                                },
+                                "group": "Inputs",
+                                "index": 2
+                            },
+                            {
+                                "name": "data2",
+                                "plug": "input",
+                                "type": {
+                                    "name": "string"
+                                },
+                                "group": "Inputs",
+                                "index": 3
+                            },
+                            {
+                                "name": "data3",
+                                "plug": "input",
+                                "type": {
+                                    "name": "string"
+                                },
+                                "group": "Inputs",
+                                "index": 4
+                            },
+                            {
+                                "name": "data4",
+                                "plug": "input",
+                                "type": {
+                                    "name": "string"
+                                },
+                                "group": "Inputs",
+                                "index": 5
+                            },
+                            {
+                                "name": "data5",
+                                "plug": "input",
+                                "type": {
+                                    "name": "string"
+                                },
+                                "group": "Inputs",
+                                "index": 6
+                            },
+                            {
+                                "name": "data6",
+                                "plug": "input",
+                                "type": {
+                                    "name": "string"
+                                },
+                                "group": "Inputs",
+                                "index": 7
+                            },
+                            {
+                                "name": "data7",
+                                "plug": "input",
+                                "type": {
+                                    "name": "string"
+                                },
+                                "group": "Inputs",
+                                "index": 8
+                            },
+                            {
+                                "name": "data8",
+                                "plug": "input",
+                                "type": {
+                                    "name": "string"
+                                },
+                                "group": "Inputs",
+                                "index": 9
+                            },
+                            {
+                                "name": "data9",
+                                "plug": "input",
+                                "type": {
+                                    "name": "string"
+                                },
+                                "group": "Inputs",
+                                "index": 10
+                            },
+                            {
+                                "name": "data10",
+                                "plug": "input",
+                                "type": {
+                                    "name": "string"
+                                },
+                                "group": "Inputs",
+                                "index": 11
+                            },
+                            {
+                                "name": "received",
+                                "plug": "input",
+                                "type": {
+                                    "name": "boolean"
+                                },
+                                "group": "Inputs",
+                                "index": 12
+                            },
+                            {
+                                "name": "timer",
+                                "plug": "input",
+                                "type": {
+                                    "name": "boolean"
+                                },
+                                "group": "Inputs",
+                                "index": 13
+                            },
+                            {
+                                "name": "data",
+                                "type": {
+                                    "name": "style"
+                                },
+                                "plug": "output",
+                                "group": "Outputs",
+                                "index": 14
+                            }
+                        ],
+                        "children": []
+                    },
+                    {
+                        "id": "50876487-37f4-b18d-ce23-e6c60a3bd822",
+                        "type": "Receive Message",
+                        "x": -735.7945679598204,
+                        "y": 186.95247826562183,
+                        "parameters": {
+                            "topic": "/word/char1"
+                        },
+                        "ports": [
+                            {
+                                "name": "word",
+                                "plug": "outputs",
                                 "type": {
                                     "name": "*",
-                                    "allowConnectionsOnly": true
+                                    "allowConnectionOnly": true
                                 },
-                                "plug": "input/output",
-                                "group": "Properties",
-                                "name": "chara",
-                                "index": 7
+                                "group": "Payload",
+                                "index": 1
+                            }
+                        ],
+                        "dynamicports": [],
+                        "children": []
+                    },
+                    {
+                        "id": "a1211b39-0974-8e28-9123-a5a17e07f7ad",
+                        "type": "Receive Message",
+                        "x": -729.7310935023321,
+                        "y": 283.9680695854393,
+                        "parameters": {
+                            "topic": "/word/char2"
+                        },
+                        "ports": [
+                            {
+                                "name": "word",
+                                "plug": "outputs",
+                                "type": {
+                                    "name": "*",
+                                    "allowConnectionOnly": true
+                                },
+                                "group": "Payload",
+                                "index": 1
+                            }
+                        ],
+                        "dynamicports": [],
+                        "children": []
+                    },
+                    {
+                        "id": "ae9009b2-8df9-2bd5-938a-62d6d5964f72",
+                        "type": "Receive Message",
+                        "x": -734.2786993454484,
+                        "y": 397.65821566335075,
+                        "parameters": {
+                            "topic": "/word/char3"
+                        },
+                        "ports": [
+                            {
+                                "name": "word",
+                                "plug": "outputs",
+                                "type": {
+                                    "name": "*",
+                                    "allowConnectionOnly": true
+                                },
+                                "group": "Payload",
+                                "index": 1
+                            }
+                        ],
+                        "dynamicports": [],
+                        "children": []
+                    },
+                    {
+                        "id": "85650f82-7957-d776-5216-7137053b73e4",
+                        "type": "Receive Message",
+                        "x": -736.0190632373187,
+                        "y": 494.7354767703284,
+                        "parameters": {
+                            "topic": "/word/char4"
+                        },
+                        "ports": [
+                            {
+                                "name": "word",
+                                "plug": "outputs",
+                                "type": {
+                                    "name": "*",
+                                    "allowConnectionOnly": true
+                                },
+                                "group": "Payload",
+                                "index": 1
+                            }
+                        ],
+                        "dynamicports": [],
+                        "children": []
+                    },
+                    {
+                        "id": "c07aaeb3-e3e1-7bda-0277-82be62ea4e8a",
+                        "type": "Receive Message",
+                        "x": -733.1127118390634,
+                        "y": 611.6388972300318,
+                        "parameters": {
+                            "topic": "/word/char5"
+                        },
+                        "ports": [
+                            {
+                                "name": "word",
+                                "plug": "outputs",
+                                "type": {
+                                    "name": "*",
+                                    "allowConnectionOnly": true
+                                },
+                                "group": "Payload",
+                                "index": 1
+                            }
+                        ],
+                        "dynamicports": [],
+                        "children": []
+                    },
+                    {
+                        "id": "b896d571-8479-8ed1-1821-fd26e8ac51e0",
+                        "type": "Timer",
+                        "x": -404.3644265702306,
+                        "y": 756.7898522498248,
+                        "parameters": {
+                            "duration": 200
+                        },
+                        "ports": [],
+                        "dynamicports": [],
+                        "children": []
+                    },
+                    {
+                        "id": "be5354fd-094e-cb63-6e55-b2d57c4baa1d",
+                        "type": "Receive Message",
+                        "x": -733.8573333807701,
+                        "y": 711.161981282094,
+                        "parameters": {
+                            "topic": "/word/char6"
+                        },
+                        "ports": [
+                            {
+                                "name": "word",
+                                "plug": "outputs",
+                                "type": {
+                                    "name": "*",
+                                    "allowConnectionOnly": true
+                                },
+                                "group": "Payload",
+                                "index": 1
+                            }
+                        ],
+                        "dynamicports": [],
+                        "children": []
+                    },
+                    {
+                        "id": "40445140-65df-3a98-b92a-b167f0ddbbf7",
+                        "type": "Receive Message",
+                        "x": -725.6670923281326,
+                        "y": 810.1036842829784,
+                        "parameters": {
+                            "topic": "/word/char7"
+                        },
+                        "ports": [
+                            {
+                                "name": "word",
+                                "plug": "outputs",
+                                "type": {
+                                    "name": "*",
+                                    "allowConnectionOnly": true
+                                },
+                                "group": "Payload",
+                                "index": 1
+                            }
+                        ],
+                        "dynamicports": [],
+                        "children": []
+                    },
+                    {
+                        "id": "6e7122ea-31c8-b58c-58d9-6a22f269eed8",
+                        "type": "Receive Message",
+                        "x": -731.333111589439,
+                        "y": 932.5932910265064,
+                        "parameters": {
+                            "topic": "/word/char8"
+                        },
+                        "ports": [
+                            {
+                                "name": "word",
+                                "plug": "outputs",
+                                "type": {
+                                    "name": "*",
+                                    "allowConnectionOnly": true
+                                },
+                                "group": "Payload",
+                                "index": 1
+                            }
+                        ],
+                        "dynamicports": [],
+                        "children": []
+                    },
+                    {
+                        "id": "a1dcfa35-ca63-29ca-7e46-a7c15e552676",
+                        "type": "Receive Message",
+                        "x": -740.4537447550439,
+                        "y": 1049.696800003,
+                        "parameters": {
+                            "topic": "/word/char9"
+                        },
+                        "ports": [
+                            {
+                                "name": "word",
+                                "plug": "outputs",
+                                "type": {
+                                    "name": "*",
+                                    "allowConnectionOnly": true
+                                },
+                                "group": "Payload",
+                                "index": 1
+                            }
+                        ],
+                        "dynamicports": [],
+                        "children": []
+                    },
+                    {
+                        "id": "1e2ec68e-f983-39c0-8a2c-c674f2882f2f",
+                        "type": "String Format",
+                        "x": 405.71229800691015,
+                        "y": 284.64884154174064,
+                        "parameters": {
+                            "format": "sound/{path}"
+                        },
+                        "ports": [],
+                        "dynamicports": [
+                            {
+                                "name": "path",
+                                "type": "*",
+                                "plug": "input",
+                                "index": 2
+                            }
+                        ],
+                        "children": []
+                    },
+                    {
+                        "id": "f169779a-dcac-047b-b0db-e0304ddf796b",
+                        "type": "Expression",
+                        "x": -58.596155586325665,
+                        "y": 265.28464670106473,
+                        "parameters": {
+                            "expression": "currentTime == Duration"
+                        },
+                        "ports": [],
+                        "dynamicports": [
+                            {
+                                "name": "currentTime",
+                                "type": "number",
+                                "plug": "input",
+                                "index": 2
+                            },
+                            {
+                                "name": "Duration",
+                                "type": "number",
+                                "plug": "input",
+                                "index": 3
+                            }
+                        ],
+                        "children": []
+                    },
+                    {
+                        "id": "50e75b4c-1a1c-0ae5-ddc3-0332f4d417d2",
+                        "type": "Expression",
+                        "x": 196.55046910740379,
+                        "y": 21.334635726580075,
+                        "parameters": {
+                            "expression": "duration*1000"
+                        },
+                        "ports": [],
+                        "dynamicports": [
+                            {
+                                "name": "duration",
+                                "type": "number",
+                                "plug": "input",
+                                "index": 2
                             }
                         ],
                         "children": []
