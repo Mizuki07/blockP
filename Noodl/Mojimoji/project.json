@@ -169,7 +169,8 @@
                                     "alignY": "center",
                                     "alignX": "center",
                                     "orientation": "horizontal",
-                                    "itemSpacing": 40
+                                    "itemSpacing": 40,
+                                    "y": 60
                                 },
                                 "ports": [],
                                 "dynamicports": [],
@@ -317,12 +318,12 @@
                                 "type": "Group",
                                 "version": 2,
                                 "x": 20,
-                                "y": 961,
+                                "y": 1021,
                                 "parameters": {
                                     "sizeMode": "childSize",
                                     "alignX": "left",
-                                    "x": 20,
-                                    "y": 20,
+                                    "x": 100,
+                                    "y": 100,
                                     "visible": false
                                 },
                                 "ports": [],
@@ -19473,6 +19474,18 @@
                         "fromProperty": "result",
                         "toId": "188193d7-2c52-7b79-a2da-70dd8465f754",
                         "toProperty": "duration"
+                    },
+                    {
+                        "fromId": "eb458871-e0a8-bfdc-0b23-50f78ad0168b",
+                        "fromProperty": "indexChanged",
+                        "toId": "80cdf0ac-b03d-0c81-0f3d-111e60fde51d",
+                        "toProperty": "play"
+                    },
+                    {
+                        "fromId": "06357783-322b-2481-67c3-557133c6f689",
+                        "fromProperty": "start",
+                        "toId": "80cdf0ac-b03d-0c81-0f3d-111e60fde51d",
+                        "toProperty": "play"
                     }
                 ],
                 "roots": [
@@ -19511,11 +19524,11 @@
                                 "id": "eb458871-e0a8-bfdc-0b23-50f78ad0168b",
                                 "type": "Scroll View",
                                 "x": 20,
-                                "y": 219,
+                                "y": 259,
                                 "parameters": {
                                     "snap": "item",
                                     "scrollAxis": "0",
-                                    "touchPropagation": false,
+                                    "touchPropagation": true,
                                     "scrollDuration": 5000,
                                     "scrollToIndex.duration": 2000
                                 },
@@ -19541,7 +19554,7 @@
                                 "type": "Image",
                                 "version": 2,
                                 "x": 20,
-                                "y": 301,
+                                "y": 463,
                                 "parameters": {
                                     "image": "moji.png",
                                     "alignY": "bottom",
@@ -19555,7 +19568,7 @@
                                         "value": 300,
                                         "unit": "px"
                                     },
-                                    "x": 10
+                                    "x": 40
                                 },
                                 "ports": [],
                                 "dynamicports": [],
@@ -19675,7 +19688,7 @@
                                                 "value": 120,
                                                 "unit": "px"
                                             },
-                                            "alignX": "right",
+                                            "alignX": "center",
                                             "alignY": "bottom",
                                             "y": -40
                                         },
